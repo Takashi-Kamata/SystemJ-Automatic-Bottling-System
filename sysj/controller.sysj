@@ -1,0 +1,136 @@
+Controller(
+		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty,request;
+		output signal pusherExtend,vacOn,armSource,armDest;
+		input Integer signal mode;
+		input signal pusherExtendM,vacOnM,armSourceM,armDestM;
+		)
+->{
+/* TODO: Write control-logic */
+		
+		signal manual_signal;
+		{
+			int modeint = 0;
+			while (true) {
+				present(mode) {
+					modeint = #mode;
+					
+					if (modeint == 1) {
+						emit manual_signal;
+					}
+				
+				
+				}
+				pause;
+			}
+		
+		}
+		||
+		/* PUSS */
+		{			
+			while(true) {	
+				present (!manual_signal) {
+					present(request && !empty && !armAtSource){
+						System.out.println("request");
+						
+						abort(pusherExtended) {
+							sustain pusherExtend;
+						}	
+					}
+				}
+				pause;
+			}
+			
+		}
+		|| /* FIST */
+		{
+			while(true) {
+				present (!manual_signal) {	
+					present(pusherExtended){
+						System.out.println("pusherExtended");
+						abort(WPgripped) {
+							sustain armSource;
+							System.out.println("armSource");
+						} 
+						
+					}
+					present (WPgripped){
+						abort(!WPgripped) {
+							sustain armDest;
+						}
+					}
+				}
+				pause;
+			}
+			
+		}
+		|| /* SUCC */
+		{
+			while(true) {
+				present (!manual_signal) {
+					present(armAtSource) {
+						abort(armAtDest) {
+							sustain vacOn;
+							System.out.println("vacOn");
+						}
+					}
+				}
+				pause;
+			}
+		}
+		||
+		{ /* manual mode */
+			while (true) {
+				present (manual_signal) {
+					{
+					while (true) {
+						present(pusherExtendM) {
+							abort (!pusherExtendM) {
+								sustain pusherExtend;
+							}
+						}
+						pause;
+					}}
+					||{
+					while (true) {
+						present(vacOnM) {
+							abort (!vacOnM) {
+								sustain vacOn;
+							}
+						}
+						pause;
+					}}
+					||{
+					while (true) {
+						present(armSourceM) {
+							abort (!armSourceM) {
+								sustain armSource;
+							}
+						}
+						pause;
+					}}
+					||{
+					while (true) {
+					present(armDestM) {
+						abort (!armDestM) {
+							sustain armDest;
+						}
+					}
+					pause;
+					}}					
+				}
+				pause;
+			}
+		}		
+		||
+		{
+		System.out.println("Starting");
+			while (true) {
+				present(manual_signal){
+					System.out.println("manual_signal");
+				}
+				pause;
+			}
+		}
+		
+
+}
