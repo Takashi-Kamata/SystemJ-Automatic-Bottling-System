@@ -26,7 +26,7 @@ public class CapLoader extends JFrame {
 		panel.setPreferredSize(new Dimension(302, 224));
 		panel.setBackground(Color.WHITE);
 		JButton enable = new JButton("enable");
-		enable.addActionListener(new SignalClient(Ports.PORT_LOADER_CONTROLLER, Ports.ENABLE_SIGNAL));
+		enable.addActionListener(new SignalClient(Ports.PORT_LOADER_PLANT, Ports.ENABLE_SIGNAL));
 		JButton request = new JButton("request");
 		request.addActionListener(new SignalClient(Ports.PORT_LOADER_CONTROLLER, Ports.REQUEST_SIGNAL));
 		JButton recipe = new JButton("recipe");
