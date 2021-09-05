@@ -1,136 +1,192 @@
-Controller(
-		input signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty,request;
-		output signal pusherExtend,vacOn,armSource,armDest;
-		input Integer signal mode;
-		input signal pusherExtendM,vacOnM,armSourceM,armDestM;
-		)
-->{
-/* TODO: Write control-logic */
-		
-		signal manual_signal;
+reaction ControllerCD(:
+		input signal enable, input signal request,
+        input int channel FirstLiquid, input int channel SecondLiquid, input int channel ThirdLiquid, input int channel FourthLiquid,
+        input int channel FirstLiquidAmount, input int channel SecondLiquidAmount, input int channel ThirdLiquidAmount, input int channel FourthLiquidAmount,
+        input int channel LiquidFlow,
+     	output signal Liquid1On, output signal Liquid2On, output signal Liquid3On, output signal Liquid4On, output signal LiquidFillerDone
+
+		){
 		{
-			int modeint = 0;
-			while (true) {
-				present(mode) {
-					modeint = #mode;
+		
+			while(true) {
+				present(enable) {
+					System.out.println("ENABLE");
 					
-					if (modeint == 1) {
-						emit manual_signal;
-					}
+					System.out.println("Controller Emit Start");
+					emit Liquid1On;
+					emit Liquid2On;
+					emit Liquid3On;
+					emit Liquid4On;
+					emit LiquidFillerDone;
+					System.out.println("Controller Emit Finish");
+				}
 				
 				
+				present(request) {
+					
+					
+					
 				}
+				
+
+		        //System.out.println("Controller Receive Start");
+
+		        
+		        /*
+		        
+		        // Liquid Order Array
+				int[] liquidOrder;
+		        liquidOrder = new int[4];
+		        
+		        receive FirstLiquid;
+		        receive SecondLiquid;
+		        receive ThirdLiquid;
+		        receive FourthLiquid;
+		        
+		        liquidOrder[0] = (Integer) #FirstLiquid;
+				liquidOrder[1] = (Integer) #SecondLiquid;
+				liquidOrder[2] = (Integer) #ThirdLiquid;
+				liquidOrder[3] = (Integer) #FourthLiquid;
+		        
+		        System.out.println("LOG: Liquid Order "+liquidOrder[0] + " "+ liquidOrder[1] + " "+ liquidOrder[2] + " "+ liquidOrder[3] );
+		       	*/
+		       	
+		        
+		        /*
+				
+				// Liquid Amount Array
+				int[] liquidAmount;
+		        liquidAmount = new int[4];
+		        
+		      	receive FirstLiquidAmount;
+		        receive SecondLiquidAmount;
+		        receive ThirdLiquidAmount;
+		        receive FourthLiquidAmount;
+				
+				liquidAmount[0] = (Integer) #FirstLiquidAmount;
+				liquidAmount[1] = (Integer) #SecondLiquidAmount;
+				liquidAmount[2] = (Integer) #ThirdLiquidAmount;
+				liquidAmount[3] = (Integer) #FourthLiquidAmount;
+				
+				System.out.println("LOG: Liquid Amount "+liquidAmount[0] + " "+ liquidAmount[1] + " "+ liquidAmount[2] + " "+ liquidAmount[3] );
+				*/
+				
+				
+				/*
+				
+		        // Liquid Flow
+		        int liquidFlow = 0;
+		        
+				receive LiquidFlow;
+				
+				liquidFlow = (Integer) #LiquidFlow;
+				
+				System.out.println("LOG: Liquid Flow "+liquidFlow);
+				*/
+				
+				
+				
+				//System.out.println("Controller Receive Finish");
+				
+				
+				
+				
+				
+
+				
+				
 				pause;
-			}
-		
-		}
-		||
-		/* PUSS */
-		{			
-			while(true) {	
-				present (!manual_signal) {
-					present(request && !empty && !armAtSource){
-						System.out.println("request");
-						
-						abort(pusherExtended) {
-							sustain pusherExtend;
-						}	
-					}
-				}
-				pause;
-			}
 			
-		}
-		|| /* FIST */
-		{
-			while(true) {
-				present (!manual_signal) {	
-					present(pusherExtended){
-						System.out.println("pusherExtended");
-						abort(WPgripped) {
-							sustain armSource;
-							System.out.println("armSource");
-						} 
-						
-					}
-					present (WPgripped){
-						abort(!WPgripped) {
-							sustain armDest;
-						}
-					}
-				}
-				pause;
-			}
-			
-		}
-		|| /* SUCC */
-		{
-			while(true) {
-				present (!manual_signal) {
-					present(armAtSource) {
-						abort(armAtDest) {
-							sustain vacOn;
-							System.out.println("vacOn");
-						}
-					}
-				}
-				pause;
 			}
 		}
-		||
-		{ /* manual mode */
-			while (true) {
-				present (manual_signal) {
-					{
-					while (true) {
-						present(pusherExtendM) {
-							abort (!pusherExtendM) {
-								sustain pusherExtend;
-							}
-						}
-						pause;
-					}}
-					||{
-					while (true) {
-						present(vacOnM) {
-							abort (!vacOnM) {
-								sustain vacOn;
-							}
-						}
-						pause;
-					}}
-					||{
-					while (true) {
-						present(armSourceM) {
-							abort (!armSourceM) {
-								sustain armSource;
-							}
-						}
-						pause;
-					}}
-					||{
-					while (true) {
-					present(armDestM) {
-						abort (!armDestM) {
-							sustain armDest;
-						}
-					}
-					pause;
-					}}					
-				}
-				pause;
-			}
-		}		
-		||
-		{
-		System.out.println("Starting");
-			while (true) {
-				present(manual_signal){
-					System.out.println("manual_signal");
-				}
-				pause;
-			}
-		}
-		
 
 }
+
+reaction PlantCD(:
+		input signal LiquidFillerDone, input signal recipe,
+		input signal Liquid1On, input signal Liquid2On, input signal Liquid3On, input signal Liquid4On,
+		output int channel FirstLiquid, output int channel SecondLiquid, output int channel ThirdLiquid, output int channel FourthLiquid,
+        output int channel FirstLiquidAmount, output int channel SecondLiquidAmount, output int channel ThirdLiquidAmount, output int channel FourthLiquidAmount,
+        output int channel LiquidFlow,
+        
+        
+        output signal Liquid1OnE, output signal Liquid2OnE, output signal Liquid3OnE, output signal Liquid4OnE, output signal LiquidFillerDoneE
+
+		){
+	{
+		//class GUI implements java.lang.Runnable {
+		//	public void run() {
+		//		org.compsys704.CapLoader.main(null);
+		//	}
+		//}
+		//new Thread(new GUI()).start();
+	
+ 		// Liquid Order Array
+		int[] liquidOrder;
+        liquidOrder = new int[4];
+        liquidOrder[0] = 1;
+        liquidOrder[1] = 2;
+        liquidOrder[2] = 4;
+        liquidOrder[3] = 3;
+        
+        // Liquid Amount Array
+		int[] liquidAmount;
+        liquidAmount = new int[4];
+        liquidAmount[0] = 40;
+        liquidAmount[1] = 20;
+        liquidAmount[2] = 10;
+        liquidAmount[3] = 30;
+        
+        
+		while(true) {
+			
+			
+			
+			present(recipe) {
+				sustain Liquid1OnE;
+				
+				System.out.println("Plant Send Start");
+				
+				/*
+				// Send Liquid Order
+				send FirstLiquid(liquidOrder[0]);
+				send SecondLiquid(liquidOrder[1]);
+				send ThirdLiquid(liquidOrder[2]);
+				send FourthLiquid(liquidOrder[3]);
+				*/
+				
+				/*		
+				// Send Liquid Order
+				send FirstLiquidAmount(liquidAmount[0]);
+				send SecondLiquidAmount(liquidAmount[1]);
+				send ThirdLiquidAmount(liquidAmount[2]);
+				send FourthLiquidAmount(liquidAmount[3]);
+				*/
+				
+				/*
+				// Send Liquid Flow
+				send LiquidFlow(69);
+				*/
+				
+				
+				
+				System.out.println("Plant Send Finish");
+			}
+			
+			present(Liquid1On && Liquid2On && Liquid3On && Liquid4On && LiquidFillerDone) {
+				System.out.println("Liquid Status Received");
+			}
+			
+			
+			pause;
+		
+		}
+		
+		
+		
+	}
+}
+
+
+Plant(..)->PlantCD
+Controller(..)->ControllerCD
