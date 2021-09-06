@@ -6,6 +6,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Arrays;
+import java.io.*;
 
 public class SignalServer <T extends Worker> implements Runnable {
 	private int SERVER_PORT;
@@ -26,6 +27,7 @@ public class SignalServer <T extends Worker> implements Runnable {
 				try{
 					ObjectInputStream ois = new ObjectInputStream(s.getInputStream());
 					String signame = ((String)ois.readObject()).split("\\.")[1];
+					//System.out.println(signame);
 					T w = (T) clz.newInstance();
 					if(w.hasSignal(signame))
 						s.getOutputStream().write(0);

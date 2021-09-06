@@ -43,8 +43,9 @@ public abstract class Worker implements Runnable {
 		try {
 			while (true) {
 				Object[] o = (Object[]) ois.readObject();
-				if(initTimeElapsed())
+				if(initTimeElapsed()) {
 					setSignal((Boolean) o[0]);
+				}
 			}
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {

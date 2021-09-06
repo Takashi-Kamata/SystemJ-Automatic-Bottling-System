@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
@@ -29,6 +30,9 @@ public class Canvas extends JPanel {
 	BufferedImage f2on;
 	BufferedImage f3on;
 	BufferedImage f4on;
+	
+	int bottle_on = 0;
+	int counter = 0;
 	
 	public Canvas(){
 		try {
@@ -67,33 +71,61 @@ public class Canvas extends JPanel {
 		//g.drawImage(loader, 0, 100, null);
 		
 		g.drawImage(background, 0, 0, null);
-		
+		if (States.LIQUIDFILLERDONE) {
+				System.out.println("FINISHED");
+				bottle_on = 0;	
+		}
 		
 		if (States.LIQUID1ON) {
 			g.drawImage(l1on, 0, 0, null);
+			//counter++;
+		} else {
+			
+		}
+		
+		if (States.LIQUID2ON) {
 			g.drawImage(l2on, 0, 0, null);
+			//counter++;
+		} else {
+			
+		}
+		if (States.LIQUID3ON) {
 			g.drawImage(l3on, 0, 0, null);
+			//counter++;
+		} else {
+			
+		}
+		if (States.LIQUID4ON) {
 			g.drawImage(l4on, 0, 0, null);
-
+			//counter++;
 		} else {
 			
 		}
 		
-		if (States.LIQUID1ON) {
-			
-			g.drawImage(f1on, 0, 0, null);
-			g.drawImage(f2on, 0, 0, null);
-			g.drawImage(f3on, 0, 0, null);
-			g.drawImage(f4on, 0, 0, null);
-
-
-		} else {
-			
+		if (States.REQUESTE) {
+			if (bottle_on == 0) {
+				bottle_on = 1;
+			}
 		}
-		
-		if (true) {
+		if (bottle_on == 1) {
 			g.drawImage(bottle, 0, 0, null);
+		} else {
+			
 		}
+		/*
+		if (counter == 1) {
+			g.drawImage(f1on, 0, 0, null);
+		}
+		if (counter == 2) {
+			g.drawImage(f2on, 0, 0, null);
+		}
+		if (counter == 3) {
+			g.drawImage(f3on, 0, 0, null);
+		}
+		if (counter == 4) {
+			g.drawImage(f4on, 0, 0, null);
+		}
+		*/
 		
 //		if(States.ARM_AT_DEST)
 //			g.drawImage(arm1, 0, 0, null);

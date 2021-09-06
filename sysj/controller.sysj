@@ -2,91 +2,301 @@ reaction ControllerCD(:
 		input signal request,
         input int channel FirstLiquid, input int channel SecondLiquid, input int channel ThirdLiquid, input int channel FourthLiquid,
         input int channel FirstLiquidAmount, input int channel SecondLiquidAmount, input int channel ThirdLiquidAmount, input int channel FourthLiquidAmount,
-        input int channel LiquidFlow,
+        input int channel LiquidFlow, 
         input signal FirstLiquidDone, input signal SecondLiquidDone, input signal ThirdLiquidDone, input signal FourthLiquidDone,
-     	output signal Liquid1On, output signal Liquid2On, output signal Liquid3On, output signal Liquid4On, output signal LiquidFillerDone
+     	output signal Liquid1On, output signal Liquid2On, output signal Liquid3On, output signal Liquid4On, output signal LiquidFillerDone, output signal Counter,
+     	output int signal RequestE
      	
 
 		){
 		
 			int signal FirstLiquidInt, SecondLiquidInt, ThirdLiquidInt, FourthLiquidInt;
 			int signal FirstLiquidAmountInt, SecondLiquidAmountInt, ThirdLiquidAmountInt, FourthLiquidAmountInt;
+			//int signal FirstLiquidAmountInt, SecondLiquidAmountInt, ThirdLiquidAmountInt, FourthLiquidAmountInt;
 			
 			signal NewOrder;
-			signal CumulativeFlow;
-			
-			{
-
-		        
-				while(true) {
-					present(request){
-						
-				        receive FirstLiquid;
-				        receive FirstLiquidAmount;
-				        
-				      	
-				      	sustain FirstLiquidInt((Integer) #FirstLiquid);
-				      	sustain FirstLiquidAmountInt((Integer) #FirstLiquidAmount);
-				      	
-				      	sustain NewOrder;
-					}
-					
-					pause;
-				}
-			}
-			||
 			{
 				while(true) {
-					present(FirstLiquidInt) {		
-						System.out.println("AAA: Order " + #FirstLiquidInt);
+					present(request) {		
+						//System.out.println("Request");
+						emit RequestE;
 					}
-					
 					pause;
 				
 				}
 			}
 			||
-			{	// Liquid 1 Logic
-				while (true) {	
-					/*				
-					present (NewOrder){
-						if (#FirstLiquidInt == 1) {
-							abort (FirstLiquidDone){
-								sustain Liquid1On;
-							}
-						}
+			{
+
+		        
+				while(true) {
+					present(request){
+							receive FirstLiquid;
+					        receive FirstLiquidAmount;
+							receive SecondLiquid;
+					        receive SecondLiquidAmount;
+					        receive ThirdLiquid;
+					        receive ThirdLiquidAmount;
+					        receive FourthLiquid;
+					        receive FourthLiquidAmount;
+						{				      	   
+							System.out.println("L1 START");
+							{
+						      	abort(FirstLiquidDone){
+							      	emit NewOrder;
+							      	sustain FirstLiquidAmountInt((Integer) #FirstLiquidAmount); 
+						      	}
+					      	}
+					      	||
+					      	{
+						      	abort(FirstLiquidDone){
+							      	sustain FirstLiquidInt((Integer) #FirstLiquid);
+						      	}
+					      	}
+					      	System.out.println("L1 END");
+					    }
+				      	||
+				      	{
+					      	System.out.println("L2 START");
+							{
+						      	abort(SecondLiquidDone){
+							      	emit NewOrder;
+							      	sustain SecondLiquidAmountInt((Integer) #SecondLiquidAmount); 
+						      	}
+					      	}
+					      	||
+					      	{
+						      	abort(SecondLiquidDone){
+							      	sustain SecondLiquidInt((Integer) #SecondLiquid);
+						      	}
+					      	}
+					      	System.out.println("L2 END");
+				      	}
+				      	||
+				      	{
+							System.out.println("L3 START");
+							{
+						      	abort(ThirdLiquidDone){
+							      	emit NewOrder;
+							      	sustain ThirdLiquidAmountInt((Integer) #ThirdLiquidAmount); 
+						      	}
+					      	}
+					      	||
+					      	{
+						      	abort(ThirdLiquidDone){
+							      	sustain ThirdLiquidInt((Integer) #ThirdLiquid);
+						      	}
+					      	}
+					      	System.out.println("L3 END");
+					    }
+				      	||
+				      	{
+					      	System.out.println("L4 START");
+							{
+						      	abort(FourthLiquidDone){
+							      	emit NewOrder;
+							      	sustain FourthLiquidAmountInt((Integer) #FourthLiquidAmount); 
+						      	}
+					      	}
+					      	||
+					      	{
+						      	abort(FourthLiquidDone){
+							      	sustain FourthLiquidInt((Integer) #FourthLiquid);
+						      	}
+					      	}
+					      	System.out.println("L4 END");
+				      	}
+				      	
+				      	
 					}
-					present (FirstLiquidDone){
-						if (#SecondLiquidInt == 1) {
-							abort (SecondLiquidDone){
-								sustain Liquid1On;
-							}
-						}
-					}
-					present (SecondLiquidDone){
-						if (#ThirdLiquidInt == 1) {
-							abort (ThirdLiquidDone){
-								sustain Liquid1On;
-							}
-						}
-					}
-					present (ThirdLiquidDone){
-						if (#FourthLiquidInt == 1) {
-							abort (FourthLiquidDone){
-								sustain Liquid1On;
-							}
-						}
-					}
-					*/
 					pause;
 				}
 			}
+			||
+			{	// L1 LOGIC
+				while (true) {	
+					present (NewOrder){
+						System.out.println("NewOrder Received FIRST");
+						
+						{
+							abort (FirstLiquidDone) {
+								sustain Counter(1);
+							}
+						}
+						||
+						{
+							if (#FirstLiquidInt == 1) {
+								System.out.println("1L1 ON");
+								abort (FirstLiquidDone){
+									sustain Liquid1On;
+								}
+								System.out.println("1L1 OFF");
+							}
+							
+							if (#SecondLiquidInt == 1) {
+								System.out.println("1L2 ON");
+								abort (FirstLiquidDone){
+									sustain Liquid2On;
+								}
+								System.out.println("1L2 OFF");
+							}
+							
+							if (#ThirdLiquidInt == 1) {
+								System.out.println("1L3 ON");
+								abort (FirstLiquidDone){
+									sustain Liquid3On;
+								}
+								System.out.println("1L3 OFF");
+							}
+							
+							if (#FourthLiquidInt == 1) {
+								System.out.println("1L4 ON");
+								abort (FirstLiquidDone){
+									sustain Liquid4On;
+								}
+								System.out.println("1L4 OFF");
+							}
+						}
+						
+					}
+					
+					present (FirstLiquidDone){
+						{
+							abort (SecondLiquidDone) {
+								sustain Counter(2);
+							}
+						}
+						||
+						{
+							if (#FirstLiquidInt == 2) {
+								System.out.println("2L1 ON");
+								abort (SecondLiquidDone){
+									sustain Liquid1On;
+								}
+								System.out.println("2L1 OFF");
+							}
+							
+							if (#SecondLiquidInt == 2) {
+								System.out.println("2L2 ON");
+								abort (SecondLiquidDone){
+									sustain Liquid2On;
+								}
+								System.out.println("2L2 OFF");
+							}
+							
+							if (#ThirdLiquidInt == 2) {
+								System.out.println("2L3 ON");
+								abort (SecondLiquidDone){
+									sustain Liquid3On;
+								}
+								System.out.println("2L3 OFF");
+							}
+							
+							if (#FourthLiquidInt == 2) {
+								System.out.println("2L4 ON");
+								abort (SecondLiquidDone){
+									sustain Liquid4On;
+								}
+								System.out.println("2L4 OFF");
+							}
+						}
+					}
+					
+					present (SecondLiquidDone){
+						{
+							abort (ThirdLiquidDone) {
+								sustain Counter(3);
+							}
+						}
+						||
+						{
+							if (#FirstLiquidInt == 3) {
+								System.out.println("3L1 ON");
+								abort (ThirdLiquidDone){
+									sustain Liquid1On;
+								}
+								System.out.println("3L1 OFF");
+							}
+							
+							if (#SecondLiquidInt == 3) {
+								System.out.println("3L2 ON");
+								abort (ThirdLiquidDone){
+									sustain Liquid2On;
+								}
+								System.out.println("3L2 OFF");
+							}
+							
+							if (#ThirdLiquidInt == 3) {
+								System.out.println("3L3 ON");
+								abort (ThirdLiquidDone){
+									sustain Liquid3On;
+								}
+								System.out.println("3L3 OFF");
+							}
+							
+							if (#FourthLiquidInt == 3) {
+								System.out.println("3L4 ON");
+								abort (ThirdLiquidDone){
+									sustain Liquid4On;
+								}
+								System.out.println("3L4 OFF");
+							}
+						}
+					}
+					
+					present (ThirdLiquidDone){
+						{
+							abort (FourthLiquidDone) {
+								sustain Counter(4);
+							}
+						}
+						||
+						{
+							if (#FirstLiquidInt == 4) {
+								System.out.println("4L1 ON");
+								abort (FourthLiquidDone){
+									sustain Liquid1On;
+								}
+								System.out.println("4L1 OFF");
+								
+							}
+							
+							if (#SecondLiquidInt == 4) {
+								System.out.println("4L2 ON");
+								abort (FourthLiquidDone){
+									sustain Liquid2On;
+								}
+								System.out.println("4L2 OFF");
+							}
+							
+							if (#ThirdLiquidInt == 4) {
+								System.out.println("4L3 ON");
+								abort (FourthLiquidDone){
+									sustain Liquid3On;
+								}
+								System.out.println("4L3 OFF");
+							}
+							
+							if (#FourthLiquidInt == 4) {
+								System.out.println("4L4 ON");
+								abort (FourthLiquidDone){
+									sustain Liquid4On;
+								}
+								System.out.println("4L4 OFF");
+							}
+						}
+						emit LiquidFillerDone;
+					}
+					pause;
+				}
+			}
+			
 			
 }
 
 reaction PlantCD(:
 		input signal LiquidFillerDone, input signal recipe, input signal enable,
-		input signal Liquid1On, input signal Liquid2On, input signal Liquid3On, input signal Liquid4On,
+		input signal Liquid1On, input signal Liquid2On, input signal Liquid3On, input signal Liquid4On, input int signal Counter,
 		output int channel FirstLiquid, output int channel SecondLiquid, output int channel ThirdLiquid, output int channel FourthLiquid,
         output int channel FirstLiquidAmount, output int channel SecondLiquidAmount, output int channel ThirdLiquidAmount, output int channel FourthLiquidAmount,
         output int channel LiquidFlow,
@@ -95,33 +305,214 @@ reaction PlantCD(:
         output signal Liquid1OnE, output signal Liquid2OnE, output signal Liquid3OnE, output signal Liquid4OnE, output signal LiquidFillerDoneE
 
 		){
-			{				
-				while(true) {
-					present(recipe) {
-						
-						System.out.println("Plant Send Start");
-						send FirstLiquid(1);
-						send FirstLiquidAmount(10);
-						
-						System.out.println("Plant Send Finish");
+			{	
+				{
+					while(true) {
+						present(LiquidFillerDone) {
+								
+							System.out.println("Complete.");
+						}
+						present(enable) {
+							
+							//System.out.println("Enable");
+						}
+						present(recipe) {
+							
+							//System.out.println("recipe");
+						}
+						pause;
 					}
-					/*
-					present(Liquid1On && Liquid2On && Liquid3On && Liquid4On && LiquidFillerDone) {
-						System.out.println("Liquid Status Received");
-					}
-					*/
-					pause;
 				}
+				||			
+				{
+					while(true) {
+						present(recipe) {
+							
+							System.out.println("Plant Send Start");
+							
+							send FirstLiquid(1);
+							send FirstLiquidAmount(10);
+							send SecondLiquid(2);
+							send SecondLiquidAmount(20);
+							send ThirdLiquid(3);
+							send ThirdLiquidAmount(20);
+							send FourthLiquid(4);
+							send FourthLiquidAmount(20);
+							
+							System.out.println("Plant Send Finish");
+						}
+						pause;
+					}
+				}	
 				||
 				{
 					while(true) {
-						abort(Liquid1On && enable){
-							sustain FirstLiquidDone;
+						present(Counter) {
+							if (#Counter == 1) {
+								present(Liquid1On && !Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L1 FILLING START");
+									await(enable);
+									emit FirstLiquidDone;
+									await(!enable);
+									//System.out.println("L1 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L2 FILLING START");
+									await(enable);
+									emit FirstLiquidDone;
+									await(!enable);
+									//System.out.println("L2 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && Liquid3On && !Liquid4On) {
+									System.out.println("L3 FILLING START");
+									await(enable);
+									emit FirstLiquidDone;
+									await(!enable);
+									//System.out.println("L3 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && !Liquid3On && Liquid4On) {
+									System.out.println("L4 FILLING START");
+									await(enable);
+									emit FirstLiquidDone;
+									await(!enable);
+									//System.out.println("L4 FILLING FINISH");
+								}
+								
+							}
+							
+							if (#Counter == 2) {
+								present(Liquid1On && !Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L1 FILLING START");
+									await(enable);
+									emit SecondLiquidDone;
+									await(!enable);
+									//System.out.println("L1 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L2 FILLING START");
+									await(enable);
+									emit SecondLiquidDone;
+									await(!enable);
+									//System.out.println("L2 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && Liquid3On && !Liquid4On) {
+									System.out.println("L3 FILLING START");
+									await(enable);
+									emit SecondLiquidDone;
+									await(!enable);
+									//System.out.println("L3 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && !Liquid3On && Liquid4On) {
+									System.out.println("L4 FILLING START");
+									await(enable);
+									emit SecondLiquidDone;
+									await(!enable);
+									//System.out.println("L4 FILLING FINISH");
+								}
+								
+							}
+							
+							if (#Counter == 3) {
+								present(Liquid1On && !Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L1 FILLING START");
+									await(enable);
+									emit ThirdLiquidDone;
+									await(!enable);
+									//System.out.println("L1 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L2 FILLING START");
+									await(enable);
+									emit ThirdLiquidDone;
+									await(!enable);
+									//System.out.println("L2 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && Liquid3On && !Liquid4On) {
+									System.out.println("L3 FILLING START");
+									await(enable);
+									emit ThirdLiquidDone;
+									await(!enable);
+									//System.out.println("L3 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && !Liquid3On && Liquid4On) {
+									System.out.println("L4 FILLING START");
+									await(enable);
+									emit ThirdLiquidDone;
+									await(!enable);
+									//System.out.println("L4 FILLING FINISH");
+								}
+								
+							}
+							
+							if (#Counter == 4) {
+								present(Liquid1On && !Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L1 FILLING START");
+									await(enable);
+									emit FourthLiquidDone;
+									await(!enable);
+									//System.out.println("L1 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && Liquid2On && !Liquid3On && !Liquid4On) {
+									System.out.println("L2 FILLING START");
+									await(enable);
+									emit FourthLiquidDone;
+									await(!enable);
+									//System.out.println("L2 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && Liquid3On && !Liquid4On) {
+									System.out.println("L3 FILLING START");
+									await(enable);
+									emit FourthLiquidDone;
+									await(!enable);
+									//System.out.println("L3 FILLING FINISH");
+								}
+								
+								present(!Liquid1On && !Liquid2On && !Liquid3On && Liquid4On) {
+									System.out.println("L4 FILLING START");
+									await(enable);
+									emit FourthLiquidDone;
+									await(!enable);
+									//System.out.println("L4 FILLING FINISH");
+								}
+								
+							}
+						
+						
+						
 						}
-						//await(!enable);
+
+						
+						
+						
+						
 						pause;
+						
 					}
-				}		
+				}	
+			}
+			||
+			{// To viz
+				{while(true){present(Liquid1On){emit Liquid1OnE;} pause;}}
+				||
+				{while(true){present(Liquid2On){emit Liquid2OnE;} pause;}}
+				||
+				{while(true){present(Liquid3On){emit Liquid3OnE;} pause;}}
+				||
+				{while(true){present(Liquid4On){emit Liquid4OnE;} pause;}}
+				||
+				{while(true){present(LiquidFillerDone){emit LiquidFillerDoneE;} pause;}}
+				
 			}
 			
 }
