@@ -28,6 +28,7 @@ public class Plant extends ClockDomain{
   public Signal Liquid3OnE = new Signal("Liquid3OnE", Signal.OUTPUT);
   public Signal Liquid4OnE = new Signal("Liquid4OnE", Signal.OUTPUT);
   public Signal LiquidFillerDoneE = new Signal("LiquidFillerDoneE", Signal.OUTPUT);
+  public Signal RemoveE = new Signal("RemoveE", Signal.OUTPUT);
   public output_Channel FirstLiquid_o = new output_Channel();
   public output_Channel SecondLiquid_o = new output_Channel();
   public output_Channel ThirdLiquid_o = new output_Channel();
@@ -37,8 +38,8 @@ public class Plant extends ClockDomain{
   public output_Channel ThirdLiquidAmount_o = new output_Channel();
   public output_Channel FourthLiquidAmount_o = new output_Channel();
   public output_Channel LiquidFlow_o = new output_Channel();
-  private int S19732 = 1;
-  private int S19688 = 1;
+  private int S22610 = 1;
+  private int S22574 = 1;
   private int S32 = 1;
   private int S5 = 1;
   private int S4795 = 1;
@@ -60,8 +61,8 @@ public class Plant extends ClockDomain{
   private int S959 = 1;
   private int S1272 = 1;
   private int S1267 = 1;
-  private int S19686 = 1;
-  private int S9758 = 1;
+  private int S22572 = 1;
+  private int S10720 = 1;
   private int S5436 = 1;
   private int S4820 = 1;
   private int S4798 = 1;
@@ -83,44 +84,17 @@ public class Plant extends ClockDomain{
   private int S6805 = 1;
   private int S6824 = 1;
   private int S6848 = 1;
-  private int S19730 = 1;
-  private int S19696 = 1;
-  private int S19704 = 1;
-  private int S19712 = 1;
-  private int S19720 = 1;
-  private int S19728 = 1;
+  private int S22608 = 1;
+  private int S22582 = 1;
+  private int S22590 = 1;
+  private int S22598 = 1;
+  private int S22606 = 1;
   
-  private int[] ends = new int[36];
-  private int[] tdone = new int[36];
+  private int[] ends = new int[35];
+  private int[] tdone = new int[35];
   
-  public void thread37676(int [] tdone, int [] ends){
-        switch(S19728){
-      case 0 : 
-        active[11]=0;
-        ends[11]=0;
-        tdone[11]=1;
-        break;
-      
-      case 1 : 
-        if(LiquidFillerDone.getprestatus()){//sysj/controller.sysj line: 514, column: 26
-          LiquidFillerDoneE.setPresent();//sysj/controller.sysj line: 514, column: 44
-          currsigs.addElement(LiquidFillerDoneE);
-          active[11]=1;
-          ends[11]=1;
-          tdone[11]=1;
-        }
-        else {
-          active[11]=1;
-          ends[11]=1;
-          tdone[11]=1;
-        }
-        break;
-      
-    }
-  }
-
-  public void thread37675(int [] tdone, int [] ends){
-        switch(S19720){
+  public void thread40552(int [] tdone, int [] ends){
+        switch(S22606){
       case 0 : 
         active[10]=0;
         ends[10]=0;
@@ -128,8 +102,8 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        if(Liquid4On.getprestatus()){//sysj/controller.sysj line: 512, column: 26
-          Liquid4OnE.setPresent();//sysj/controller.sysj line: 512, column: 37
+        if(Liquid4On.getprestatus()){//sysj/controller.sysj line: 516, column: 26
+          Liquid4OnE.setPresent();//sysj/controller.sysj line: 516, column: 37
           currsigs.addElement(Liquid4OnE);
           active[10]=1;
           ends[10]=1;
@@ -145,8 +119,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37674(int [] tdone, int [] ends){
-        switch(S19712){
+  public void thread40551(int [] tdone, int [] ends){
+        switch(S22598){
       case 0 : 
         active[9]=0;
         ends[9]=0;
@@ -154,8 +128,8 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        if(Liquid3On.getprestatus()){//sysj/controller.sysj line: 510, column: 26
-          Liquid3OnE.setPresent();//sysj/controller.sysj line: 510, column: 37
+        if(Liquid3On.getprestatus()){//sysj/controller.sysj line: 514, column: 26
+          Liquid3OnE.setPresent();//sysj/controller.sysj line: 514, column: 37
           currsigs.addElement(Liquid3OnE);
           active[9]=1;
           ends[9]=1;
@@ -171,8 +145,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37673(int [] tdone, int [] ends){
-        switch(S19704){
+  public void thread40550(int [] tdone, int [] ends){
+        switch(S22590){
       case 0 : 
         active[8]=0;
         ends[8]=0;
@@ -180,8 +154,8 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        if(Liquid2On.getprestatus()){//sysj/controller.sysj line: 508, column: 26
-          Liquid2OnE.setPresent();//sysj/controller.sysj line: 508, column: 37
+        if(Liquid2On.getprestatus()){//sysj/controller.sysj line: 512, column: 26
+          Liquid2OnE.setPresent();//sysj/controller.sysj line: 512, column: 37
           currsigs.addElement(Liquid2OnE);
           active[8]=1;
           ends[8]=1;
@@ -197,8 +171,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37672(int [] tdone, int [] ends){
-        switch(S19696){
+  public void thread40549(int [] tdone, int [] ends){
+        switch(S22582){
       case 0 : 
         active[7]=0;
         ends[7]=0;
@@ -206,8 +180,8 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        if(Liquid1On.getprestatus()){//sysj/controller.sysj line: 506, column: 26
-          Liquid1OnE.setPresent();//sysj/controller.sysj line: 506, column: 37
+        if(Liquid1On.getprestatus()){//sysj/controller.sysj line: 510, column: 26
+          Liquid1OnE.setPresent();//sysj/controller.sysj line: 510, column: 37
           currsigs.addElement(Liquid1OnE);
           active[7]=1;
           ends[7]=1;
@@ -223,8 +197,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37671(int [] tdone, int [] ends){
-        switch(S19730){
+  public void thread40548(int [] tdone, int [] ends){
+        switch(S22608){
       case 0 : 
         active[6]=0;
         ends[6]=0;
@@ -232,35 +206,31 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        thread37672(tdone,ends);
-        thread37673(tdone,ends);
-        thread37674(tdone,ends);
-        thread37675(tdone,ends);
-        thread37676(tdone,ends);
-        int biggest37677 = 0;
-        if(ends[7]>=biggest37677){
-          biggest37677=ends[7];
+        thread40549(tdone,ends);
+        thread40550(tdone,ends);
+        thread40551(tdone,ends);
+        thread40552(tdone,ends);
+        int biggest40553 = 0;
+        if(ends[7]>=biggest40553){
+          biggest40553=ends[7];
         }
-        if(ends[8]>=biggest37677){
-          biggest37677=ends[8];
+        if(ends[8]>=biggest40553){
+          biggest40553=ends[8];
         }
-        if(ends[9]>=biggest37677){
-          biggest37677=ends[9];
+        if(ends[9]>=biggest40553){
+          biggest40553=ends[9];
         }
-        if(ends[10]>=biggest37677){
-          biggest37677=ends[10];
+        if(ends[10]>=biggest40553){
+          biggest40553=ends[10];
         }
-        if(ends[11]>=biggest37677){
-          biggest37677=ends[11];
-        }
-        if(biggest37677 == 1){
+        if(biggest40553 == 1){
           active[6]=1;
           ends[6]=1;
           tdone[6]=1;
         }
         //FINXME code
-        if(biggest37677 == 0){
-          S19730=0;
+        if(biggest40553 == 0){
+          S22608=0;
           active[6]=0;
           ends[6]=0;
           tdone[6]=1;
@@ -270,8 +240,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37669(int [] tdone, int [] ends){
-        switch(S19686){
+  public void thread40546(int [] tdone, int [] ends){
+        switch(S22572){
       case 0 : 
         active[5]=0;
         ends[5]=0;
@@ -279,7 +249,7 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S9758){
+        switch(S10720){
           case 0 : 
             switch(S5436){
               case 0 : 
@@ -445,7 +415,9 @@ public class Plant extends ClockDomain{
                                                               tdone[5]=1;
                                                             }
                                                             else {
-                                                              S9758=1;
+                                                              S6821=4;
+                                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                              currsigs.addElement(RemoveE);
                                                               active[5]=1;
                                                               ends[5]=1;
                                                               tdone[5]=1;
@@ -455,7 +427,7 @@ public class Plant extends ClockDomain{
                                                       }
                                                     }
                                                     else {
-                                                      S9758=1;
+                                                      S10720=1;
                                                       active[5]=1;
                                                       ends[5]=1;
                                                       tdone[5]=1;
@@ -504,7 +476,9 @@ public class Plant extends ClockDomain{
                                                       tdone[5]=1;
                                                     }
                                                     else {
-                                                      S9758=1;
+                                                      S6821=4;
+                                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                      currsigs.addElement(RemoveE);
                                                       active[5]=1;
                                                       ends[5]=1;
                                                       tdone[5]=1;
@@ -514,7 +488,7 @@ public class Plant extends ClockDomain{
                                               }
                                             }
                                             else {
-                                              S9758=1;
+                                              S10720=1;
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -602,7 +576,9 @@ public class Plant extends ClockDomain{
                                                       tdone[5]=1;
                                                     }
                                                     else {
-                                                      S9758=1;
+                                                      S6821=4;
+                                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                      currsigs.addElement(RemoveE);
                                                       active[5]=1;
                                                       ends[5]=1;
                                                       tdone[5]=1;
@@ -612,7 +588,7 @@ public class Plant extends ClockDomain{
                                               }
                                             }
                                             else {
-                                              S9758=1;
+                                              S10720=1;
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -661,7 +637,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -671,7 +649,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -844,7 +822,9 @@ public class Plant extends ClockDomain{
                                                             tdone[5]=1;
                                                           }
                                                           else {
-                                                            S9758=1;
+                                                            S6821=4;
+                                                            RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                            currsigs.addElement(RemoveE);
                                                             active[5]=1;
                                                             ends[5]=1;
                                                             tdone[5]=1;
@@ -854,7 +834,7 @@ public class Plant extends ClockDomain{
                                                     }
                                                   }
                                                   else {
-                                                    S9758=1;
+                                                    S10720=1;
                                                     active[5]=1;
                                                     ends[5]=1;
                                                     tdone[5]=1;
@@ -903,7 +883,9 @@ public class Plant extends ClockDomain{
                                                     tdone[5]=1;
                                                   }
                                                   else {
-                                                    S9758=1;
+                                                    S6821=4;
+                                                    RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                    currsigs.addElement(RemoveE);
                                                     active[5]=1;
                                                     ends[5]=1;
                                                     tdone[5]=1;
@@ -913,7 +895,7 @@ public class Plant extends ClockDomain{
                                             }
                                           }
                                           else {
-                                            S9758=1;
+                                            S10720=1;
                                             active[5]=1;
                                             ends[5]=1;
                                             tdone[5]=1;
@@ -1001,7 +983,9 @@ public class Plant extends ClockDomain{
                                                     tdone[5]=1;
                                                   }
                                                   else {
-                                                    S9758=1;
+                                                    S6821=4;
+                                                    RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                    currsigs.addElement(RemoveE);
                                                     active[5]=1;
                                                     ends[5]=1;
                                                     tdone[5]=1;
@@ -1011,7 +995,7 @@ public class Plant extends ClockDomain{
                                             }
                                           }
                                           else {
-                                            S9758=1;
+                                            S10720=1;
                                             active[5]=1;
                                             ends[5]=1;
                                             tdone[5]=1;
@@ -1060,7 +1044,9 @@ public class Plant extends ClockDomain{
                                             tdone[5]=1;
                                           }
                                           else {
-                                            S9758=1;
+                                            S6821=4;
+                                            RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                            currsigs.addElement(RemoveE);
                                             active[5]=1;
                                             ends[5]=1;
                                             tdone[5]=1;
@@ -1070,7 +1056,7 @@ public class Plant extends ClockDomain{
                                     }
                                   }
                                   else {
-                                    S9758=1;
+                                    S10720=1;
                                     active[5]=1;
                                     ends[5]=1;
                                     tdone[5]=1;
@@ -1233,7 +1219,9 @@ public class Plant extends ClockDomain{
                                                           tdone[5]=1;
                                                         }
                                                         else {
-                                                          S9758=1;
+                                                          S6821=4;
+                                                          RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                          currsigs.addElement(RemoveE);
                                                           active[5]=1;
                                                           ends[5]=1;
                                                           tdone[5]=1;
@@ -1243,7 +1231,7 @@ public class Plant extends ClockDomain{
                                                   }
                                                 }
                                                 else {
-                                                  S9758=1;
+                                                  S10720=1;
                                                   active[5]=1;
                                                   ends[5]=1;
                                                   tdone[5]=1;
@@ -1292,7 +1280,9 @@ public class Plant extends ClockDomain{
                                                   tdone[5]=1;
                                                 }
                                                 else {
-                                                  S9758=1;
+                                                  S6821=4;
+                                                  RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                  currsigs.addElement(RemoveE);
                                                   active[5]=1;
                                                   ends[5]=1;
                                                   tdone[5]=1;
@@ -1302,7 +1292,7 @@ public class Plant extends ClockDomain{
                                           }
                                         }
                                         else {
-                                          S9758=1;
+                                          S10720=1;
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -1390,7 +1380,9 @@ public class Plant extends ClockDomain{
                                                   tdone[5]=1;
                                                 }
                                                 else {
-                                                  S9758=1;
+                                                  S6821=4;
+                                                  RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                  currsigs.addElement(RemoveE);
                                                   active[5]=1;
                                                   ends[5]=1;
                                                   tdone[5]=1;
@@ -1400,7 +1392,7 @@ public class Plant extends ClockDomain{
                                           }
                                         }
                                         else {
-                                          S9758=1;
+                                          S10720=1;
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -1449,7 +1441,9 @@ public class Plant extends ClockDomain{
                                           tdone[5]=1;
                                         }
                                         else {
-                                          S9758=1;
+                                          S6821=4;
+                                          RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                          currsigs.addElement(RemoveE);
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -1459,7 +1453,7 @@ public class Plant extends ClockDomain{
                                   }
                                 }
                                 else {
-                                  S9758=1;
+                                  S10720=1;
                                   active[5]=1;
                                   ends[5]=1;
                                   tdone[5]=1;
@@ -1612,7 +1606,9 @@ public class Plant extends ClockDomain{
                                                         tdone[5]=1;
                                                       }
                                                       else {
-                                                        S9758=1;
+                                                        S6821=4;
+                                                        RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                        currsigs.addElement(RemoveE);
                                                         active[5]=1;
                                                         ends[5]=1;
                                                         tdone[5]=1;
@@ -1622,7 +1618,7 @@ public class Plant extends ClockDomain{
                                                 }
                                               }
                                               else {
-                                                S9758=1;
+                                                S10720=1;
                                                 active[5]=1;
                                                 ends[5]=1;
                                                 tdone[5]=1;
@@ -1671,7 +1667,9 @@ public class Plant extends ClockDomain{
                                                 tdone[5]=1;
                                               }
                                               else {
-                                                S9758=1;
+                                                S6821=4;
+                                                RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                currsigs.addElement(RemoveE);
                                                 active[5]=1;
                                                 ends[5]=1;
                                                 tdone[5]=1;
@@ -1681,7 +1679,7 @@ public class Plant extends ClockDomain{
                                         }
                                       }
                                       else {
-                                        S9758=1;
+                                        S10720=1;
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -1769,7 +1767,9 @@ public class Plant extends ClockDomain{
                                                 tdone[5]=1;
                                               }
                                               else {
-                                                S9758=1;
+                                                S6821=4;
+                                                RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                currsigs.addElement(RemoveE);
                                                 active[5]=1;
                                                 ends[5]=1;
                                                 tdone[5]=1;
@@ -1779,7 +1779,7 @@ public class Plant extends ClockDomain{
                                         }
                                       }
                                       else {
-                                        S9758=1;
+                                        S10720=1;
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -1828,7 +1828,9 @@ public class Plant extends ClockDomain{
                                         tdone[5]=1;
                                       }
                                       else {
-                                        S9758=1;
+                                        S6821=4;
+                                        RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                        currsigs.addElement(RemoveE);
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -1838,7 +1840,7 @@ public class Plant extends ClockDomain{
                                 }
                               }
                               else {
-                                S9758=1;
+                                S10720=1;
                                 active[5]=1;
                                 ends[5]=1;
                                 tdone[5]=1;
@@ -1984,7 +1986,9 @@ public class Plant extends ClockDomain{
                                                     tdone[5]=1;
                                                   }
                                                   else {
-                                                    S9758=1;
+                                                    S6821=4;
+                                                    RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                    currsigs.addElement(RemoveE);
                                                     active[5]=1;
                                                     ends[5]=1;
                                                     tdone[5]=1;
@@ -1994,7 +1998,7 @@ public class Plant extends ClockDomain{
                                             }
                                           }
                                           else {
-                                            S9758=1;
+                                            S10720=1;
                                             active[5]=1;
                                             ends[5]=1;
                                             tdone[5]=1;
@@ -2043,7 +2047,9 @@ public class Plant extends ClockDomain{
                                             tdone[5]=1;
                                           }
                                           else {
-                                            S9758=1;
+                                            S6821=4;
+                                            RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                            currsigs.addElement(RemoveE);
                                             active[5]=1;
                                             ends[5]=1;
                                             tdone[5]=1;
@@ -2053,7 +2059,7 @@ public class Plant extends ClockDomain{
                                     }
                                   }
                                   else {
-                                    S9758=1;
+                                    S10720=1;
                                     active[5]=1;
                                     ends[5]=1;
                                     tdone[5]=1;
@@ -2187,7 +2193,9 @@ public class Plant extends ClockDomain{
                                                   tdone[5]=1;
                                                 }
                                                 else {
-                                                  S9758=1;
+                                                  S6821=4;
+                                                  RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                  currsigs.addElement(RemoveE);
                                                   active[5]=1;
                                                   ends[5]=1;
                                                   tdone[5]=1;
@@ -2197,7 +2205,7 @@ public class Plant extends ClockDomain{
                                           }
                                         }
                                         else {
-                                          S9758=1;
+                                          S10720=1;
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -2246,7 +2254,9 @@ public class Plant extends ClockDomain{
                                           tdone[5]=1;
                                         }
                                         else {
-                                          S9758=1;
+                                          S6821=4;
+                                          RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                          currsigs.addElement(RemoveE);
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -2256,7 +2266,7 @@ public class Plant extends ClockDomain{
                                   }
                                 }
                                 else {
-                                  S9758=1;
+                                  S10720=1;
                                   active[5]=1;
                                   ends[5]=1;
                                   tdone[5]=1;
@@ -2380,7 +2390,9 @@ public class Plant extends ClockDomain{
                                                 tdone[5]=1;
                                               }
                                               else {
-                                                S9758=1;
+                                                S6821=4;
+                                                RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                currsigs.addElement(RemoveE);
                                                 active[5]=1;
                                                 ends[5]=1;
                                                 tdone[5]=1;
@@ -2390,7 +2402,7 @@ public class Plant extends ClockDomain{
                                         }
                                       }
                                       else {
-                                        S9758=1;
+                                        S10720=1;
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -2439,7 +2451,9 @@ public class Plant extends ClockDomain{
                                         tdone[5]=1;
                                       }
                                       else {
-                                        S9758=1;
+                                        S6821=4;
+                                        RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                        currsigs.addElement(RemoveE);
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -2449,7 +2463,7 @@ public class Plant extends ClockDomain{
                                 }
                               }
                               else {
-                                S9758=1;
+                                S10720=1;
                                 active[5]=1;
                                 ends[5]=1;
                                 tdone[5]=1;
@@ -2563,7 +2577,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -2573,7 +2589,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -2622,7 +2638,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -2632,7 +2650,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -2739,7 +2757,9 @@ public class Plant extends ClockDomain{
                                           tdone[5]=1;
                                         }
                                         else {
-                                          S9758=1;
+                                          S6821=4;
+                                          RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                          currsigs.addElement(RemoveE);
                                           active[5]=1;
                                           ends[5]=1;
                                           tdone[5]=1;
@@ -2749,7 +2769,7 @@ public class Plant extends ClockDomain{
                                   }
                                 }
                                 else {
-                                  S9758=1;
+                                  S10720=1;
                                   active[5]=1;
                                   ends[5]=1;
                                   tdone[5]=1;
@@ -2844,7 +2864,9 @@ public class Plant extends ClockDomain{
                                         tdone[5]=1;
                                       }
                                       else {
-                                        S9758=1;
+                                        S6821=4;
+                                        RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                        currsigs.addElement(RemoveE);
                                         active[5]=1;
                                         ends[5]=1;
                                         tdone[5]=1;
@@ -2854,7 +2876,7 @@ public class Plant extends ClockDomain{
                                 }
                               }
                               else {
-                                S9758=1;
+                                S10720=1;
                                 active[5]=1;
                                 ends[5]=1;
                                 tdone[5]=1;
@@ -2939,7 +2961,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -2949,7 +2973,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3024,7 +3048,9 @@ public class Plant extends ClockDomain{
                                     tdone[5]=1;
                                   }
                                   else {
-                                    S9758=1;
+                                    S6821=4;
+                                    RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                    currsigs.addElement(RemoveE);
                                     active[5]=1;
                                     ends[5]=1;
                                     tdone[5]=1;
@@ -3034,7 +3060,7 @@ public class Plant extends ClockDomain{
                             }
                           }
                           else {
-                            S9758=1;
+                            S10720=1;
                             active[5]=1;
                             ends[5]=1;
                             tdone[5]=1;
@@ -3102,7 +3128,9 @@ public class Plant extends ClockDomain{
                                 tdone[5]=1;
                               }
                               else {
-                                S9758=1;
+                                S6821=4;
+                                RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                currsigs.addElement(RemoveE);
                                 active[5]=1;
                                 ends[5]=1;
                                 tdone[5]=1;
@@ -3158,7 +3186,9 @@ public class Plant extends ClockDomain{
                               tdone[5]=1;
                             }
                             else {
-                              S9758=1;
+                              S6821=4;
+                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                              currsigs.addElement(RemoveE);
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3204,7 +3234,9 @@ public class Plant extends ClockDomain{
                             tdone[5]=1;
                           }
                           else {
-                            S9758=1;
+                            S6821=4;
+                            RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                            currsigs.addElement(RemoveE);
                             active[5]=1;
                             ends[5]=1;
                             tdone[5]=1;
@@ -3240,7 +3272,9 @@ public class Plant extends ClockDomain{
                       
                       case 1 : 
                         if(!enable.getprestatus()){//sysj/controller.sysj line: 485, column: 16
-                          S9758=1;
+                          S6821=4;
+                          RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                          currsigs.addElement(RemoveE);
                           active[5]=1;
                           ends[5]=1;
                           tdone[5]=1;
@@ -3255,6 +3289,36 @@ public class Plant extends ClockDomain{
                     }
                     break;
                   
+                  case 4 : 
+                    if(enable.getprestatus()){//sysj/controller.sysj line: 488, column: 15
+                      S6821=5;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                      currsigs.addElement(RemoveE);
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    break;
+                  
+                  case 5 : 
+                    if(!enable.getprestatus()){//sysj/controller.sysj line: 491, column: 15
+                      S10720=1;
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    else {
+                      active[5]=1;
+                      ends[5]=1;
+                      tdone[5]=1;
+                    }
+                    break;
+                  
                 }
                 break;
               
@@ -3262,8 +3326,8 @@ public class Plant extends ClockDomain{
             break;
           
           case 1 : 
-            S9758=1;
-            S9758=0;
+            S10720=1;
+            S10720=0;
             if(Counter.getprestatus()){//sysj/controller.sysj line: 350, column: 15
               S5436=0;
               if((Counter.getpreval() == null ? 0 : ((Integer)Counter.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 351, column: 12
@@ -3417,7 +3481,9 @@ public class Plant extends ClockDomain{
                                                       tdone[5]=1;
                                                     }
                                                     else {
-                                                      S9758=1;
+                                                      S6821=4;
+                                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                                      currsigs.addElement(RemoveE);
                                                       active[5]=1;
                                                       ends[5]=1;
                                                       tdone[5]=1;
@@ -3427,7 +3493,7 @@ public class Plant extends ClockDomain{
                                               }
                                             }
                                             else {
-                                              S9758=1;
+                                              S10720=1;
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -3476,7 +3542,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -3486,7 +3554,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3574,7 +3642,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -3584,7 +3654,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3633,7 +3703,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3643,7 +3715,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3770,7 +3842,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -3780,7 +3854,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3829,7 +3903,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3839,7 +3915,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3927,7 +4003,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -3937,7 +4015,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3986,7 +4064,9 @@ public class Plant extends ClockDomain{
                               tdone[5]=1;
                             }
                             else {
-                              S9758=1;
+                              S6821=4;
+                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                              currsigs.addElement(RemoveE);
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -3996,7 +4076,7 @@ public class Plant extends ClockDomain{
                       }
                     }
                     else {
-                      S9758=1;
+                      S10720=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -4006,7 +4086,7 @@ public class Plant extends ClockDomain{
               }
             }
             else {
-              S9758=1;
+              S10720=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -4019,7 +4099,7 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37668(int [] tdone, int [] ends){
+  public void thread40545(int [] tdone, int [] ends){
         switch(S4795){
       case 0 : 
         active[4]=0;
@@ -7735,7 +7815,7 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37667(int [] tdone, int [] ends){
+  public void thread40544(int [] tdone, int [] ends){
         switch(S32){
       case 0 : 
         active[3]=0;
@@ -7882,8 +7962,8 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37666(int [] tdone, int [] ends){
-        switch(S19688){
+  public void thread40543(int [] tdone, int [] ends){
+        switch(S22574){
       case 0 : 
         active[2]=0;
         ends[2]=0;
@@ -7891,27 +7971,27 @@ public class Plant extends ClockDomain{
         break;
       
       case 1 : 
-        thread37667(tdone,ends);
-        thread37668(tdone,ends);
-        thread37669(tdone,ends);
-        int biggest37670 = 0;
-        if(ends[3]>=biggest37670){
-          biggest37670=ends[3];
+        thread40544(tdone,ends);
+        thread40545(tdone,ends);
+        thread40546(tdone,ends);
+        int biggest40547 = 0;
+        if(ends[3]>=biggest40547){
+          biggest40547=ends[3];
         }
-        if(ends[4]>=biggest37670){
-          biggest37670=ends[4];
+        if(ends[4]>=biggest40547){
+          biggest40547=ends[4];
         }
-        if(ends[5]>=biggest37670){
-          biggest37670=ends[5];
+        if(ends[5]>=biggest40547){
+          biggest40547=ends[5];
         }
-        if(biggest37670 == 1){
+        if(biggest40547 == 1){
           active[2]=1;
           ends[2]=1;
           tdone[2]=1;
         }
         //FINXME code
-        if(biggest37670 == 0){
-          S19688=0;
+        if(biggest40547 == 0){
+          S22574=0;
           active[2]=0;
           ends[2]=0;
           tdone[2]=1;
@@ -7921,26 +8001,10 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37663(int [] tdone, int [] ends){
-        S19728=1;
-    if(LiquidFillerDone.getprestatus()){//sysj/controller.sysj line: 514, column: 26
-      LiquidFillerDoneE.setPresent();//sysj/controller.sysj line: 514, column: 44
-      currsigs.addElement(LiquidFillerDoneE);
-      active[11]=1;
-      ends[11]=1;
-      tdone[11]=1;
-    }
-    else {
-      active[11]=1;
-      ends[11]=1;
-      tdone[11]=1;
-    }
-  }
-
-  public void thread37662(int [] tdone, int [] ends){
-        S19720=1;
-    if(Liquid4On.getprestatus()){//sysj/controller.sysj line: 512, column: 26
-      Liquid4OnE.setPresent();//sysj/controller.sysj line: 512, column: 37
+  public void thread40540(int [] tdone, int [] ends){
+        S22606=1;
+    if(Liquid4On.getprestatus()){//sysj/controller.sysj line: 516, column: 26
+      Liquid4OnE.setPresent();//sysj/controller.sysj line: 516, column: 37
       currsigs.addElement(Liquid4OnE);
       active[10]=1;
       ends[10]=1;
@@ -7953,10 +8017,10 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37661(int [] tdone, int [] ends){
-        S19712=1;
-    if(Liquid3On.getprestatus()){//sysj/controller.sysj line: 510, column: 26
-      Liquid3OnE.setPresent();//sysj/controller.sysj line: 510, column: 37
+  public void thread40539(int [] tdone, int [] ends){
+        S22598=1;
+    if(Liquid3On.getprestatus()){//sysj/controller.sysj line: 514, column: 26
+      Liquid3OnE.setPresent();//sysj/controller.sysj line: 514, column: 37
       currsigs.addElement(Liquid3OnE);
       active[9]=1;
       ends[9]=1;
@@ -7969,10 +8033,10 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37660(int [] tdone, int [] ends){
-        S19704=1;
-    if(Liquid2On.getprestatus()){//sysj/controller.sysj line: 508, column: 26
-      Liquid2OnE.setPresent();//sysj/controller.sysj line: 508, column: 37
+  public void thread40538(int [] tdone, int [] ends){
+        S22590=1;
+    if(Liquid2On.getprestatus()){//sysj/controller.sysj line: 512, column: 26
+      Liquid2OnE.setPresent();//sysj/controller.sysj line: 512, column: 37
       currsigs.addElement(Liquid2OnE);
       active[8]=1;
       ends[8]=1;
@@ -7985,10 +8049,10 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37659(int [] tdone, int [] ends){
-        S19696=1;
-    if(Liquid1On.getprestatus()){//sysj/controller.sysj line: 506, column: 26
-      Liquid1OnE.setPresent();//sysj/controller.sysj line: 506, column: 37
+  public void thread40537(int [] tdone, int [] ends){
+        S22582=1;
+    if(Liquid1On.getprestatus()){//sysj/controller.sysj line: 510, column: 26
+      Liquid1OnE.setPresent();//sysj/controller.sysj line: 510, column: 37
       currsigs.addElement(Liquid1OnE);
       active[7]=1;
       ends[7]=1;
@@ -8001,39 +8065,35 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37658(int [] tdone, int [] ends){
-        S19730=1;
-    thread37659(tdone,ends);
-    thread37660(tdone,ends);
-    thread37661(tdone,ends);
-    thread37662(tdone,ends);
-    thread37663(tdone,ends);
-    int biggest37664 = 0;
-    if(ends[7]>=biggest37664){
-      biggest37664=ends[7];
+  public void thread40536(int [] tdone, int [] ends){
+        S22608=1;
+    thread40537(tdone,ends);
+    thread40538(tdone,ends);
+    thread40539(tdone,ends);
+    thread40540(tdone,ends);
+    int biggest40541 = 0;
+    if(ends[7]>=biggest40541){
+      biggest40541=ends[7];
     }
-    if(ends[8]>=biggest37664){
-      biggest37664=ends[8];
+    if(ends[8]>=biggest40541){
+      biggest40541=ends[8];
     }
-    if(ends[9]>=biggest37664){
-      biggest37664=ends[9];
+    if(ends[9]>=biggest40541){
+      biggest40541=ends[9];
     }
-    if(ends[10]>=biggest37664){
-      biggest37664=ends[10];
+    if(ends[10]>=biggest40541){
+      biggest40541=ends[10];
     }
-    if(ends[11]>=biggest37664){
-      biggest37664=ends[11];
-    }
-    if(biggest37664 == 1){
+    if(biggest40541 == 1){
       active[6]=1;
       ends[6]=1;
       tdone[6]=1;
     }
   }
 
-  public void thread37656(int [] tdone, int [] ends){
-        S19686=1;
-    S9758=0;
+  public void thread40534(int [] tdone, int [] ends){
+        S22572=1;
+    S10720=0;
     if(Counter.getprestatus()){//sysj/controller.sysj line: 350, column: 15
       S5436=0;
       if((Counter.getpreval() == null ? 0 : ((Integer)Counter.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 351, column: 12
@@ -8187,7 +8247,9 @@ public class Plant extends ClockDomain{
                                               tdone[5]=1;
                                             }
                                             else {
-                                              S9758=1;
+                                              S6821=4;
+                                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                              currsigs.addElement(RemoveE);
                                               active[5]=1;
                                               ends[5]=1;
                                               tdone[5]=1;
@@ -8197,7 +8259,7 @@ public class Plant extends ClockDomain{
                                       }
                                     }
                                     else {
-                                      S9758=1;
+                                      S10720=1;
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -8246,7 +8308,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -8256,7 +8320,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8344,7 +8408,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -8354,7 +8420,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8403,7 +8469,9 @@ public class Plant extends ClockDomain{
                               tdone[5]=1;
                             }
                             else {
-                              S9758=1;
+                              S6821=4;
+                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                              currsigs.addElement(RemoveE);
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8413,7 +8481,7 @@ public class Plant extends ClockDomain{
                       }
                     }
                     else {
-                      S9758=1;
+                      S10720=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -8540,7 +8608,9 @@ public class Plant extends ClockDomain{
                                       tdone[5]=1;
                                     }
                                     else {
-                                      S9758=1;
+                                      S6821=4;
+                                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                                      currsigs.addElement(RemoveE);
                                       active[5]=1;
                                       ends[5]=1;
                                       tdone[5]=1;
@@ -8550,7 +8620,7 @@ public class Plant extends ClockDomain{
                               }
                             }
                             else {
-                              S9758=1;
+                              S10720=1;
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8599,7 +8669,9 @@ public class Plant extends ClockDomain{
                               tdone[5]=1;
                             }
                             else {
-                              S9758=1;
+                              S6821=4;
+                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                              currsigs.addElement(RemoveE);
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8609,7 +8681,7 @@ public class Plant extends ClockDomain{
                       }
                     }
                     else {
-                      S9758=1;
+                      S10720=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -8697,7 +8769,9 @@ public class Plant extends ClockDomain{
                               tdone[5]=1;
                             }
                             else {
-                              S9758=1;
+                              S6821=4;
+                              RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                              currsigs.addElement(RemoveE);
                               active[5]=1;
                               ends[5]=1;
                               tdone[5]=1;
@@ -8707,7 +8781,7 @@ public class Plant extends ClockDomain{
                       }
                     }
                     else {
-                      S9758=1;
+                      S10720=1;
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -8756,7 +8830,9 @@ public class Plant extends ClockDomain{
                       tdone[5]=1;
                     }
                     else {
-                      S9758=1;
+                      S6821=4;
+                      RemoveE.setPresent();//sysj/controller.sysj line: 489, column: 10
+                      currsigs.addElement(RemoveE);
                       active[5]=1;
                       ends[5]=1;
                       tdone[5]=1;
@@ -8766,7 +8842,7 @@ public class Plant extends ClockDomain{
               }
             }
             else {
-              S9758=1;
+              S10720=1;
               active[5]=1;
               ends[5]=1;
               tdone[5]=1;
@@ -8776,14 +8852,14 @@ public class Plant extends ClockDomain{
       }
     }
     else {
-      S9758=1;
+      S10720=1;
       active[5]=1;
       ends[5]=1;
       tdone[5]=1;
     }
   }
 
-  public void thread37655(int [] tdone, int [] ends){
+  public void thread40533(int [] tdone, int [] ends){
         S4795=1;
     S1619=0;
     if(recipe.getprestatus()){//sysj/controller.sysj line: 329, column: 15
@@ -9050,7 +9126,7 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37654(int [] tdone, int [] ends){
+  public void thread40532(int [] tdone, int [] ends){
         S32=1;
     S5=0;
     if(LiquidFillerDone.getprestatus()){//sysj/controller.sysj line: 311, column: 15
@@ -9116,22 +9192,22 @@ public class Plant extends ClockDomain{
     }
   }
 
-  public void thread37653(int [] tdone, int [] ends){
-        S19688=1;
-    thread37654(tdone,ends);
-    thread37655(tdone,ends);
-    thread37656(tdone,ends);
-    int biggest37657 = 0;
-    if(ends[3]>=biggest37657){
-      biggest37657=ends[3];
+  public void thread40531(int [] tdone, int [] ends){
+        S22574=1;
+    thread40532(tdone,ends);
+    thread40533(tdone,ends);
+    thread40534(tdone,ends);
+    int biggest40535 = 0;
+    if(ends[3]>=biggest40535){
+      biggest40535=ends[3];
     }
-    if(ends[4]>=biggest37657){
-      biggest37657=ends[4];
+    if(ends[4]>=biggest40535){
+      biggest40535=ends[4];
     }
-    if(ends[5]>=biggest37657){
-      biggest37657=ends[5];
+    if(ends[5]>=biggest40535){
+      biggest40535=ends[5];
     }
-    if(biggest37657 == 1){
+    if(biggest40535 == 1){
       active[2]=1;
       ends[2]=1;
       tdone[2]=1;
@@ -9145,50 +9221,50 @@ public class Plant extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S19732){
+      switch(S22610){
         case 0 : 
-          S19732=0;
+          S22610=0;
           break RUN;
         
         case 1 : 
-          S19732=2;
-          S19732=2;
-          thread37653(tdone,ends);
-          thread37658(tdone,ends);
-          int biggest37665 = 0;
-          if(ends[2]>=biggest37665){
-            biggest37665=ends[2];
+          S22610=2;
+          S22610=2;
+          thread40531(tdone,ends);
+          thread40536(tdone,ends);
+          int biggest40542 = 0;
+          if(ends[2]>=biggest40542){
+            biggest40542=ends[2];
           }
-          if(ends[6]>=biggest37665){
-            biggest37665=ends[6];
+          if(ends[6]>=biggest40542){
+            biggest40542=ends[6];
           }
-          if(biggest37665 == 1){
+          if(biggest40542 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
         
         case 2 : 
-          thread37666(tdone,ends);
-          thread37671(tdone,ends);
-          int biggest37678 = 0;
-          if(ends[2]>=biggest37678){
-            biggest37678=ends[2];
+          thread40543(tdone,ends);
+          thread40548(tdone,ends);
+          int biggest40554 = 0;
+          if(ends[2]>=biggest40554){
+            biggest40554=ends[2];
           }
-          if(ends[6]>=biggest37678){
-            biggest37678=ends[6];
+          if(ends[6]>=biggest40554){
+            biggest40554=ends[6];
           }
-          if(biggest37678 == 1){
+          if(biggest40554 == 1){
             active[1]=1;
             ends[1]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest37678 == 0){
-            S19732=0;
+          if(biggest40554 == 0){
+            S22610=0;
             active[1]=0;
             ends[1]=0;
-            S19732=0;
+            S22610=0;
             break RUN;
           }
         
@@ -9197,9 +9273,9 @@ public class Plant extends ClockDomain{
   }
 
   public void init(){
-    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] active1 = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+    char [] paused1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    char [] suspended1 = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     paused = paused1;
     active = active1;
     suspended = suspended1;
@@ -9256,6 +9332,7 @@ public class Plant extends ClockDomain{
       Liquid3OnE.setpreclear();
       Liquid4OnE.setpreclear();
       LiquidFillerDoneE.setpreclear();
+      RemoveE.setpreclear();
       int dummyint = 0;
       for(int qw=0;qw<currsigs.size();++qw){
         dummyint = ((Signal)currsigs.elementAt(qw)).getStatus() ? ((Signal)currsigs.elementAt(qw)).setprepresent() : ((Signal)currsigs.elementAt(qw)).setpreclear();
@@ -9304,6 +9381,8 @@ public class Plant extends ClockDomain{
       Liquid4OnE.setClear();
       LiquidFillerDoneE.sethook();
       LiquidFillerDoneE.setClear();
+      RemoveE.sethook();
+      RemoveE.setClear();
       FirstLiquid_o.sethook();
       SecondLiquid_o.sethook();
       ThirdLiquid_o.sethook();

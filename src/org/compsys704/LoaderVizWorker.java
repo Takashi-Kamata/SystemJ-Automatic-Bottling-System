@@ -27,6 +27,9 @@ public class LoaderVizWorker extends Worker{
 		case "LiquidFillerDoneE":
 			States.LIQUIDFILLERDONE = status;
 			break;
+		case "RemoveE":
+			States.REMOVEE = status;
+			break;
 		default: 
 			System.err.println("Wrong sig name : "+signame);
 			System.exit(1);
@@ -34,7 +37,7 @@ public class LoaderVizWorker extends Worker{
 	}
 	
 	
-	static final List<String> signames = Arrays.asList("Liquid1OnE", "Liquid2OnE", "Liquid3OnE", "Liquid4OnE", "LiquidFillerDoneE", "RequestE");
+	static final List<String> signames = Arrays.asList("Liquid1OnE", "Liquid2OnE", "Liquid3OnE", "Liquid4OnE", "LiquidFillerDoneE", "RequestE", "RemoveE");
 	
 	@Override
 	public boolean hasSignal(String sn) {

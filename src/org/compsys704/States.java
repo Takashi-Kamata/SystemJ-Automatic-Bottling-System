@@ -10,6 +10,7 @@ public class States {
 	public static volatile boolean LIQUID3ON = false;
 	public static volatile boolean LIQUID4ON = false;
 	public static volatile boolean LIQUIDFILLERDONE = false;
+	public static volatile boolean REMOVEE = false;
 	public static volatile boolean REQUESTE = false;
 	
 	

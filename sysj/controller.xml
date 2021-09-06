@@ -77,9 +77,8 @@
 			<oSignal Name="Liquid2OnE" To="UI.Liquid2OnE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			<oSignal Name="Liquid3OnE" To="UI.Liquid3OnE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			<oSignal Name="Liquid4OnE" To="UI.Liquid4OnE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-			
 			<oSignal Name="LiquidFillerDoneE" To="UI.LiquidFillerDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
-			
+			<oSignal Name="RemoveE" To="UI.RemoveE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 		</ClockDomain>
 		
 		

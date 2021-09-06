@@ -302,7 +302,7 @@ reaction PlantCD(:
         output int channel LiquidFlow,
         output signal FirstLiquidDone, output signal SecondLiquidDone, output signal ThirdLiquidDone, output signal FourthLiquidDone,
         
-        output signal Liquid1OnE, output signal Liquid2OnE, output signal Liquid3OnE, output signal Liquid4OnE, output signal LiquidFillerDoneE
+        output signal Liquid1OnE, output signal Liquid2OnE, output signal Liquid3OnE, output signal Liquid4OnE, output signal LiquidFillerDoneE, output signal RemoveE
 
 		){
 			{	
@@ -331,13 +331,13 @@ reaction PlantCD(:
 							System.out.println("Plant Send Start");
 							
 							send FirstLiquid(1);
-							send FirstLiquidAmount(10);
+							send FirstLiquidAmount(25);
 							send SecondLiquid(2);
-							send SecondLiquidAmount(20);
+							send SecondLiquidAmount(25);
 							send ThirdLiquid(3);
-							send ThirdLiquidAmount(20);
+							send ThirdLiquidAmount(25);
 							send FourthLiquid(4);
-							send FourthLiquidAmount(20);
+							send FourthLiquidAmount(25);
 							
 							System.out.println("Plant Send Finish");
 						}
@@ -485,6 +485,11 @@ reaction PlantCD(:
 									await(!enable);
 									//System.out.println("L4 FILLING FINISH");
 								}
+								await(!enable);
+								abort(enable) {
+								 sustain RemoveE;
+								}
+								await(!enable);
 								
 							}
 						
@@ -510,8 +515,7 @@ reaction PlantCD(:
 				{while(true){present(Liquid3On){emit Liquid3OnE;} pause;}}
 				||
 				{while(true){present(Liquid4On){emit Liquid4OnE;} pause;}}
-				||
-				{while(true){present(LiquidFillerDone){emit LiquidFillerDoneE;} pause;}}
+				
 				
 			}
 			
