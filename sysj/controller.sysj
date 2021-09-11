@@ -322,7 +322,11 @@ reaction PlantCD(:
 				{
 					while(true) {
 						present(LiquidFillerDone) {
-
+							abort(enable) {
+								System.out.println("LiquidFillerDone");
+								sustain LiquidFillerDoneE;
+								
+							}
 							System.out.println("Complete.");
 						}
 						present(enable) {
@@ -375,7 +379,6 @@ reaction PlantCD(:
 							}
 							
 							if (#Counter == 2) {
-								
 								
 								present(Liquid1On && !Liquid2On && !Liquid3On && !Liquid4On) {
 									System.out.println("L1 FILLING START");
@@ -485,7 +488,7 @@ reaction PlantCD(:
 									System.out.println("L1 FILLING START");
 									await(enable);
 									emit FourthLiquidDone;
-									await(!enable);
+									//await(!enable);
 									//System.out.println("L1 FILLING FINISH");
 								}
 								
@@ -493,7 +496,7 @@ reaction PlantCD(:
 									System.out.println("L2 FILLING START");
 									await(enable);
 									emit FourthLiquidDone;
-									await(!enable);
+									//await(!enable);
 									//System.out.println("L2 FILLING FINISH");
 								}
 								
@@ -501,7 +504,7 @@ reaction PlantCD(:
 									System.out.println("L3 FILLING START");
 									await(enable);
 									emit FourthLiquidDone;
-									await(!enable);
+									//await(!enable);
 									//System.out.println("L3 FILLING FINISH");
 								}
 								
@@ -509,13 +512,20 @@ reaction PlantCD(:
 									System.out.println("L4 FILLING START");
 									await(enable);
 									emit FourthLiquidDone;
-									await(!enable);
+									//await(!enable);
 									//System.out.println("L4 FILLING FINISH");
 								}
-								abort(enable) {
-								 sustain RemoveE;
+								await(!enable);
+								await(enable);
+								await(!enable);
+								abort (enable) {
+									sustain RemoveE;
+									System.out.println("Remove");
 								}
 								//await(!enable);
+								
+								
+								//
 								
 							}
 						

@@ -17,12 +17,6 @@ public class Canvas extends JPanel {
 	TCPReceiver f = new TCPReceiver("127.0.0.1", 20002);
 	TCPReceiver v = new TCPReceiver("127.0.0.1", 20003);
 	TCPReceiver b = new TCPReceiver("127.0.0.1", 20004);
-	
-//	r.setConsumer((status,value) ->  {System.out.println(""+status+" "+value); States.FirstLiquidAmount = (int) value;} );
-//	f.setConsumer((status,value) -> {System.out.println(""+status+" "+value); States.SecondLiquidAmount = (int) value;} );
-//	v.setConsumer((status,value) -> {System.out.println(""+status+" "+value); States.ThirdLiquidAmount = (int) value;} );
-//	b.setConsumer((status,value) -> {System.out.println(""+status+" "+value); States.FourthLiquidAmount = (int) value;} );
-	
 
 	BufferedImage arm1;
 	BufferedImage arm2;
@@ -64,14 +58,9 @@ public class Canvas extends JPanel {
 	int flag1 =0, flag2 =0, flag3 =0, flag4 = 0;
 	int[] intArray = new int[]{ 0,0,0,0 }; 
 	
-	int temp = 0;
 	
 	public Canvas(){
-//		r.setConsumer((status,value) -> System.out.println(""+status+" "+value));
-//		f.setConsumer((status,value) -> System.out.println(""+status+" "+ value));
-		v.setConsumer((status,value) -> System.out.println(""+status+" "+value));
-		b.setConsumer((status,value) -> System.out.println(""+status+" "+value));
-//		r.setConsumer((status,value) -> {System.out.println(""+status+" "+value) ; States.FirstLiquidAmount = (int) value;});
+
 		r.setConsumer((status,value) -> {if (status == true) { States.FirstLiquidAmount = (int) value;}});
 		f.setConsumer((status,value) -> {if (status == true) { States.SecondLiquidAmount = (int) value;}});
 		v.setConsumer((status,value) -> {if (status == true) { States.ThirdLiquidAmount = (int) value;}});
@@ -124,66 +113,70 @@ public class Canvas extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-		//g.drawImage(loader, 0, 100, null);
-//		System.out.println(States.FirstLiquidAmount);
 		g.drawImage(background, 0, 0, null);
 	
 		if (States.REMOVEE) {
-//			System.out.println("REMOVING");
 			flag1 = 0;
 			flag2 = 0;
 			flag3 = 0;
 			flag4 = 0;
 			bottle_on = 0;
-			counter =0;
+			counter = 0;
 		} else {
-			
+			;
 		}
 		
 		if (States.LIQUID1ON && bottle_on == 1) {
-			g.drawImage(l1on, 0, 0, null);
+			if (!States.LIQUIDFILLERDONE) {
+				g.drawImage(l1on, 0, 0, null);
+			}
 			flag1 = 1;
 			counter = flag1+flag2+flag3+flag4;
 			intArray[counter-1] = 1;//red
 		} else {
-			
+			;
 		}
 		
 		if (States.LIQUID2ON && bottle_on == 1) {
-			g.drawImage(l2on, 0, 0, null);
+			if (!States.LIQUIDFILLERDONE) {
+				g.drawImage(l2on, 0, 0, null);
+			}
 			flag2 = 1;
 			counter = flag1+flag2+flag3+flag4;
 			intArray[counter-1] = 2;//green
 		} else {
-			
+			;
 		}
 		if (States.LIQUID3ON && bottle_on == 1) {
-			g.drawImage(l3on, 0, 0, null);
+			if (!States.LIQUIDFILLERDONE) {
+				g.drawImage(l3on, 0, 0, null);
+			}
 			flag3 = 1;
 			counter = flag1+flag2+flag3+flag4;
 			intArray[counter-1] = 3;//yellow
 		} else {
-			
+			;
 		}
 		if (States.LIQUID4ON && bottle_on == 1) {
-			g.drawImage(l4on, 0, 0, null);
+			if (!States.LIQUIDFILLERDONE) {
+				g.drawImage(l3on, 0, 0, null);
+			}
 			flag4 = 1;
 			counter = flag1+flag2+flag3+flag4;
 			intArray[counter-1] = 4;//blue
 		} else {
-			
+			;
 		}
 		
 		if (States.REQUESTE) {
-			
 			bottle_on = 1;
-			
 		}
 		
 		
 		int max = 65;
 		int min = 165;
 		double dif = min - max; //100
+		
 		int firstRectHeight = (int) (dif * (States.FirstLiquidAmount / 100.0));
 		int secondRectHeight = (int) (dif * (States.FirstLiquidAmount / 100.0));
 		int thirdRectHeight = (int) (dif * (States.FirstLiquidAmount / 100.0));
@@ -192,12 +185,9 @@ public class Canvas extends JPanel {
 		counter = flag1+flag2+flag3+flag4;
 		if (counter >= 1) {
 			
-			if (intArray[0] == 1) {
-//				System.out.println("Values" + States.FirstLiquidAmount + " " + States.SecondLiquidAmount + States.ThirdLiquidAmount + " " + States.FourthLiquidAmount);
-//				System.out.println("Values " + 100 * ((double) (States.FirstLiquidAmount / 100.0)));			
+			if (intArray[0] == 1) {		
 				g.setColor(Color.red);
 				g.fillRect(126, min, 49, firstRectHeight);
-				
 			} else if (intArray[0] == 2) {
 				g.setColor(Color.green);
 				g.fillRect(126, min, 49, firstRectHeight);
@@ -261,58 +251,7 @@ public class Canvas extends JPanel {
 		if (bottle_on == 1) {
 			g.drawImage(bottle, 0, 0, null);
 		} else {
-			
+			;
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-//		if(States.ARM_AT_DEST)
-//			g.drawImage(arm1, 0, 0, null);
-//		else
-//			g.drawImage(arm2, 30, 0, null);
-//		
-//		if(States.GRIPPED){
-//			if(States.ARM_AT_DEST){
-//				g.setColor(Color.black);
-//				g.fillOval(10, 11, 30, 30);
-//				g.setColor(Color.red);
-//				g.fillOval(10, 11, 15, 15);
-//
-//			}
-//			else{
-//				g.setColor(Color.black);
-//				g.fillOval(40, 243, 30, 30);
-//				g.setColor(Color.red);
-//				g.fillOval(35, 232, 15, 15);
-//			}
-//			g.setColor(Color.black);
-//		}
-////		else{
-//			if(States.CAP_READY){ // A cap is pushed to the source pos
-//				g.setColor(Color.black);
-//				g.fillOval(40, 243, 30, 30);
-//			}
-////		}
-//		
-//		if(States.PUSHER_RETRACTED){
-//			g.drawImage(p1, 90, 225, null);
-//			if(!States.MAG_EMPTY){
-//				g.setColor(Color.black);
-//				g.fillOval(154, 243, 30, 30);
-//			}
-//		}
-//		else{
-//			g.drawImage(p2, 90, 225, null);
-//		}
-//		
-//		if(!States.MAG_EMPTY){
-//			g.drawImage(cap, 152, 155, null);
-//		}
 	}
 }

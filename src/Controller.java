@@ -42,60 +42,60 @@ public class Controller extends ClockDomain{
   private Signal ThirdLiquidAmountInt_11;
   private Signal FourthLiquidAmountInt_11;
   private Signal NewOrder_11;
-  private int S47693 = 1;
-  private int S26840 = 1;
-  private int S38881 = 1;
-  private int S30853 = 1;
-  private int S26951 = 1;
-  private int S26847 = 1;
-  private int S26842 = 1;
-  private int S26869 = 1;
-  private int S26864 = 1;
-  private int S26958 = 1;
-  private int S26953 = 1;
-  private int S27090 = 1;
-  private int S27085 = 1;
-  private int S27266 = 1;
-  private int S27261 = 1;
-  private int S27486 = 1;
-  private int S27481 = 1;
-  private int S27750 = 1;
-  private int S27745 = 1;
-  private int S28058 = 1;
-  private int S28053 = 1;
-  private int S28437 = 1;
-  private int S28413 = 1;
-  private int S28419 = 1;
-  private int S28471 = 1;
-  private int S28447 = 1;
-  private int S28453 = 1;
-  private int S28505 = 1;
-  private int S28481 = 1;
-  private int S28487 = 1;
-  private int S28539 = 1;
-  private int S28515 = 1;
-  private int S28521 = 1;
-  private int S47691 = 1;
-  private int S39726 = 1;
-  private int S38897 = 1;
-  private int S39029 = 1;
-  private int S38938 = 1;
-  private int S39732 = 1;
-  private int S39864 = 1;
-  private int S39773 = 1;
-  private int S40288 = 1;
-  private int S40420 = 1;
-  private int S40329 = 1;
-  private int S40983 = 1;
-  private int S41115 = 1;
-  private int S41024 = 1;
+  private int S43670 = 1;
+  private int S22817 = 1;
+  private int S34858 = 1;
+  private int S26830 = 1;
+  private int S22928 = 1;
+  private int S22824 = 1;
+  private int S22819 = 1;
+  private int S22846 = 1;
+  private int S22841 = 1;
+  private int S22935 = 1;
+  private int S22930 = 1;
+  private int S23067 = 1;
+  private int S23062 = 1;
+  private int S23243 = 1;
+  private int S23238 = 1;
+  private int S23463 = 1;
+  private int S23458 = 1;
+  private int S23727 = 1;
+  private int S23722 = 1;
+  private int S24035 = 1;
+  private int S24030 = 1;
+  private int S24414 = 1;
+  private int S24390 = 1;
+  private int S24396 = 1;
+  private int S24448 = 1;
+  private int S24424 = 1;
+  private int S24430 = 1;
+  private int S24482 = 1;
+  private int S24458 = 1;
+  private int S24464 = 1;
+  private int S24516 = 1;
+  private int S24492 = 1;
+  private int S24498 = 1;
+  private int S43668 = 1;
+  private int S35703 = 1;
+  private int S34874 = 1;
+  private int S35006 = 1;
+  private int S34915 = 1;
+  private int S35709 = 1;
+  private int S35841 = 1;
+  private int S35750 = 1;
+  private int S36265 = 1;
+  private int S36397 = 1;
+  private int S36306 = 1;
+  private int S36960 = 1;
+  private int S37092 = 1;
+  private int S37001 = 1;
   
   private int[] ends = new int[35];
   private int[] tdone = new int[35];
   
-  public void thread48249(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread44226(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -105,7 +105,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -115,7 +115,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -125,7 +125,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -135,7 +135,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -145,8 +145,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48248(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread44225(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -155,9 +155,9 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread48246(int [] tdone, int [] ends){
-        S40420=1;
-    S40329=0;
+  public void thread44223(int [] tdone, int [] ends){
+        S36397=1;
+    S36306=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 223, column: 12
       System.out.println("3L1 ON");//sysj/controller.sysj line: 224, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 226, column: 10
@@ -167,7 +167,7 @@ public class Controller extends ClockDomain{
       tdone[32]=1;
     }
     else {
-      S40329=1;
+      S36306=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
         System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -177,7 +177,7 @@ public class Controller extends ClockDomain{
         tdone[32]=1;
       }
       else {
-        S40329=2;
+        S36306=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
           System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -187,7 +187,7 @@ public class Controller extends ClockDomain{
           tdone[32]=1;
         }
         else {
-          S40329=3;
+          S36306=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
             System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -197,7 +197,7 @@ public class Controller extends ClockDomain{
             tdone[32]=1;
           }
           else {
-            S40420=0;
+            S36397=0;
             active[32]=0;
             ends[32]=0;
             tdone[32]=1;
@@ -207,8 +207,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48245(int [] tdone, int [] ends){
-        S40288=1;
+  public void thread44222(int [] tdone, int [] ends){
+        S36265=1;
     Counter.setPresent();//sysj/controller.sysj line: 218, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(4);//sysj/controller.sysj line: 218, column: 9
@@ -217,9 +217,9 @@ public class Controller extends ClockDomain{
     tdone[31]=1;
   }
 
-  public void thread48243(int [] tdone, int [] ends){
-        S39864=1;
-    S39773=0;
+  public void thread44220(int [] tdone, int [] ends){
+        S35841=1;
+    S35750=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 181, column: 12
       System.out.println("2L1 ON");//sysj/controller.sysj line: 182, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 184, column: 10
@@ -229,7 +229,7 @@ public class Controller extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S39773=1;
+      S35750=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 189, column: 12
         System.out.println("2L2 ON");//sysj/controller.sysj line: 190, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 192, column: 10
@@ -239,7 +239,7 @@ public class Controller extends ClockDomain{
         tdone[30]=1;
       }
       else {
-        S39773=2;
+        S35750=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
           System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -249,7 +249,7 @@ public class Controller extends ClockDomain{
           tdone[30]=1;
         }
         else {
-          S39773=3;
+          S35750=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
             System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -259,7 +259,7 @@ public class Controller extends ClockDomain{
             tdone[30]=1;
           }
           else {
-            S39864=0;
+            S35841=0;
             active[30]=0;
             ends[30]=0;
             tdone[30]=1;
@@ -269,8 +269,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48242(int [] tdone, int [] ends){
-        S39732=1;
+  public void thread44219(int [] tdone, int [] ends){
+        S35709=1;
     Counter.setPresent();//sysj/controller.sysj line: 176, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(3);//sysj/controller.sysj line: 176, column: 9
@@ -279,9 +279,9 @@ public class Controller extends ClockDomain{
     tdone[29]=1;
   }
 
-  public void thread48240(int [] tdone, int [] ends){
-        S39029=1;
-    S38938=0;
+  public void thread44217(int [] tdone, int [] ends){
+        S35006=1;
+    S34915=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 138, column: 12
       System.out.println("1L1 ON");//sysj/controller.sysj line: 139, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 141, column: 10
@@ -291,7 +291,7 @@ public class Controller extends ClockDomain{
       tdone[28]=1;
     }
     else {
-      S38938=1;
+      S34915=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 146, column: 12
         System.out.println("1L2 ON");//sysj/controller.sysj line: 147, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 149, column: 10
@@ -301,7 +301,7 @@ public class Controller extends ClockDomain{
         tdone[28]=1;
       }
       else {
-        S38938=2;
+        S34915=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 154, column: 12
           System.out.println("1L3 ON");//sysj/controller.sysj line: 155, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 157, column: 10
@@ -311,7 +311,7 @@ public class Controller extends ClockDomain{
           tdone[28]=1;
         }
         else {
-          S38938=3;
+          S34915=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
             System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -321,7 +321,7 @@ public class Controller extends ClockDomain{
             tdone[28]=1;
           }
           else {
-            S39029=0;
+            S35006=0;
             active[28]=0;
             ends[28]=0;
             tdone[28]=1;
@@ -331,8 +331,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48239(int [] tdone, int [] ends){
-        S38897=1;
+  public void thread44216(int [] tdone, int [] ends){
+        S34874=1;
     Counter.setPresent();//sysj/controller.sysj line: 133, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(2);//sysj/controller.sysj line: 133, column: 9
@@ -341,8 +341,8 @@ public class Controller extends ClockDomain{
     tdone[27]=1;
   }
 
-  public void thread48237(int [] tdone, int [] ends){
-        switch(S41115){
+  public void thread44214(int [] tdone, int [] ends){
+        switch(S37092){
       case 0 : 
         active[34]=0;
         ends[34]=0;
@@ -350,11 +350,11 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S41024){
+        switch(S37001){
           case 0 : 
             if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 267, column: 16
               System.out.println("4L1 OFF");//sysj/controller.sysj line: 270, column: 9
-              S41024=1;
+              S37001=1;
               if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
                 System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
                 Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -364,7 +364,7 @@ public class Controller extends ClockDomain{
                 tdone[34]=1;
               }
               else {
-                S41024=2;
+                S37001=2;
                 if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
                   System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
                   Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -374,7 +374,7 @@ public class Controller extends ClockDomain{
                   tdone[34]=1;
                 }
                 else {
-                  S41024=3;
+                  S37001=3;
                   if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
                     System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
                     Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -384,7 +384,7 @@ public class Controller extends ClockDomain{
                     tdone[34]=1;
                   }
                   else {
-                    S41115=0;
+                    S37092=0;
                     active[34]=0;
                     ends[34]=0;
                     tdone[34]=1;
@@ -404,7 +404,7 @@ public class Controller extends ClockDomain{
           case 1 : 
             if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 276, column: 16
               System.out.println("4L2 OFF");//sysj/controller.sysj line: 279, column: 9
-              S41024=2;
+              S37001=2;
               if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
                 System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
                 Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -414,7 +414,7 @@ public class Controller extends ClockDomain{
                 tdone[34]=1;
               }
               else {
-                S41024=3;
+                S37001=3;
                 if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
                   System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
                   Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -424,7 +424,7 @@ public class Controller extends ClockDomain{
                   tdone[34]=1;
                 }
                 else {
-                  S41115=0;
+                  S37092=0;
                   active[34]=0;
                   ends[34]=0;
                   tdone[34]=1;
@@ -443,7 +443,7 @@ public class Controller extends ClockDomain{
           case 2 : 
             if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 284, column: 16
               System.out.println("4L3 OFF");//sysj/controller.sysj line: 287, column: 9
-              S41024=3;
+              S37001=3;
               if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
                 System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
                 Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -453,7 +453,7 @@ public class Controller extends ClockDomain{
                 tdone[34]=1;
               }
               else {
-                S41115=0;
+                S37092=0;
                 active[34]=0;
                 ends[34]=0;
                 tdone[34]=1;
@@ -471,7 +471,7 @@ public class Controller extends ClockDomain{
           case 3 : 
             if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 292, column: 16
               System.out.println("4L4 OFF");//sysj/controller.sysj line: 295, column: 9
-              S41115=0;
+              S37092=0;
               active[34]=0;
               ends[34]=0;
               tdone[34]=1;
@@ -491,8 +491,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48236(int [] tdone, int [] ends){
-        switch(S40983){
+  public void thread44213(int [] tdone, int [] ends){
+        switch(S36960){
       case 0 : 
         active[33]=0;
         ends[33]=0;
@@ -501,7 +501,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 259, column: 15
-          S40983=0;
+          S36960=0;
           active[33]=0;
           ends[33]=0;
           tdone[33]=1;
@@ -519,9 +519,9 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48234(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread44211(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -531,7 +531,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -541,7 +541,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -551,7 +551,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -561,7 +561,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -571,8 +571,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48233(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread44210(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -581,8 +581,8 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread48231(int [] tdone, int [] ends){
-        switch(S40420){
+  public void thread44208(int [] tdone, int [] ends){
+        switch(S36397){
       case 0 : 
         active[32]=0;
         ends[32]=0;
@@ -590,11 +590,11 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S40329){
+        switch(S36306){
           case 0 : 
             if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 225, column: 16
               System.out.println("3L1 OFF");//sysj/controller.sysj line: 228, column: 9
-              S40329=1;
+              S36306=1;
               if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
                 System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
                 Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -604,7 +604,7 @@ public class Controller extends ClockDomain{
                 tdone[32]=1;
               }
               else {
-                S40329=2;
+                S36306=2;
                 if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
                   System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
                   Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -614,7 +614,7 @@ public class Controller extends ClockDomain{
                   tdone[32]=1;
                 }
                 else {
-                  S40329=3;
+                  S36306=3;
                   if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
                     System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
                     Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -624,7 +624,7 @@ public class Controller extends ClockDomain{
                     tdone[32]=1;
                   }
                   else {
-                    S40420=0;
+                    S36397=0;
                     active[32]=0;
                     ends[32]=0;
                     tdone[32]=1;
@@ -644,7 +644,7 @@ public class Controller extends ClockDomain{
           case 1 : 
             if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 233, column: 16
               System.out.println("3L2 OFF");//sysj/controller.sysj line: 236, column: 9
-              S40329=2;
+              S36306=2;
               if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
                 System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
                 Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -654,7 +654,7 @@ public class Controller extends ClockDomain{
                 tdone[32]=1;
               }
               else {
-                S40329=3;
+                S36306=3;
                 if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
                   System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
                   Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -664,7 +664,7 @@ public class Controller extends ClockDomain{
                   tdone[32]=1;
                 }
                 else {
-                  S40420=0;
+                  S36397=0;
                   active[32]=0;
                   ends[32]=0;
                   tdone[32]=1;
@@ -683,7 +683,7 @@ public class Controller extends ClockDomain{
           case 2 : 
             if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 241, column: 16
               System.out.println("3L3 OFF");//sysj/controller.sysj line: 244, column: 9
-              S40329=3;
+              S36306=3;
               if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
                 System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
                 Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -693,7 +693,7 @@ public class Controller extends ClockDomain{
                 tdone[32]=1;
               }
               else {
-                S40420=0;
+                S36397=0;
                 active[32]=0;
                 ends[32]=0;
                 tdone[32]=1;
@@ -711,7 +711,7 @@ public class Controller extends ClockDomain{
           case 3 : 
             if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 249, column: 16
               System.out.println("3L4 OFF");//sysj/controller.sysj line: 252, column: 9
-              S40420=0;
+              S36397=0;
               active[32]=0;
               ends[32]=0;
               tdone[32]=1;
@@ -731,8 +731,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48230(int [] tdone, int [] ends){
-        switch(S40288){
+  public void thread44207(int [] tdone, int [] ends){
+        switch(S36265){
       case 0 : 
         active[31]=0;
         ends[31]=0;
@@ -741,7 +741,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 217, column: 15
-          S40288=0;
+          S36265=0;
           active[31]=0;
           ends[31]=0;
           tdone[31]=1;
@@ -759,9 +759,9 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48228(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread44205(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -771,7 +771,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -781,7 +781,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -791,7 +791,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -801,7 +801,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -811,8 +811,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48227(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread44204(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -821,9 +821,9 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread48225(int [] tdone, int [] ends){
-        S40420=1;
-    S40329=0;
+  public void thread44202(int [] tdone, int [] ends){
+        S36397=1;
+    S36306=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 223, column: 12
       System.out.println("3L1 ON");//sysj/controller.sysj line: 224, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 226, column: 10
@@ -833,7 +833,7 @@ public class Controller extends ClockDomain{
       tdone[32]=1;
     }
     else {
-      S40329=1;
+      S36306=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
         System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -843,7 +843,7 @@ public class Controller extends ClockDomain{
         tdone[32]=1;
       }
       else {
-        S40329=2;
+        S36306=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
           System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -853,7 +853,7 @@ public class Controller extends ClockDomain{
           tdone[32]=1;
         }
         else {
-          S40329=3;
+          S36306=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
             System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -863,7 +863,7 @@ public class Controller extends ClockDomain{
             tdone[32]=1;
           }
           else {
-            S40420=0;
+            S36397=0;
             active[32]=0;
             ends[32]=0;
             tdone[32]=1;
@@ -873,8 +873,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48224(int [] tdone, int [] ends){
-        S40288=1;
+  public void thread44201(int [] tdone, int [] ends){
+        S36265=1;
     Counter.setPresent();//sysj/controller.sysj line: 218, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(4);//sysj/controller.sysj line: 218, column: 9
@@ -883,8 +883,8 @@ public class Controller extends ClockDomain{
     tdone[31]=1;
   }
 
-  public void thread48222(int [] tdone, int [] ends){
-        switch(S39864){
+  public void thread44199(int [] tdone, int [] ends){
+        switch(S35841){
       case 0 : 
         active[30]=0;
         ends[30]=0;
@@ -892,11 +892,11 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S39773){
+        switch(S35750){
           case 0 : 
             if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 183, column: 16
               System.out.println("2L1 OFF");//sysj/controller.sysj line: 186, column: 9
-              S39773=1;
+              S35750=1;
               if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 189, column: 12
                 System.out.println("2L2 ON");//sysj/controller.sysj line: 190, column: 9
                 Liquid2On.setPresent();//sysj/controller.sysj line: 192, column: 10
@@ -906,7 +906,7 @@ public class Controller extends ClockDomain{
                 tdone[30]=1;
               }
               else {
-                S39773=2;
+                S35750=2;
                 if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
                   System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
                   Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -916,7 +916,7 @@ public class Controller extends ClockDomain{
                   tdone[30]=1;
                 }
                 else {
-                  S39773=3;
+                  S35750=3;
                   if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
                     System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
                     Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -926,7 +926,7 @@ public class Controller extends ClockDomain{
                     tdone[30]=1;
                   }
                   else {
-                    S39864=0;
+                    S35841=0;
                     active[30]=0;
                     ends[30]=0;
                     tdone[30]=1;
@@ -946,7 +946,7 @@ public class Controller extends ClockDomain{
           case 1 : 
             if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 191, column: 16
               System.out.println("2L2 OFF");//sysj/controller.sysj line: 194, column: 9
-              S39773=2;
+              S35750=2;
               if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
                 System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
                 Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -956,7 +956,7 @@ public class Controller extends ClockDomain{
                 tdone[30]=1;
               }
               else {
-                S39773=3;
+                S35750=3;
                 if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
                   System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
                   Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -966,7 +966,7 @@ public class Controller extends ClockDomain{
                   tdone[30]=1;
                 }
                 else {
-                  S39864=0;
+                  S35841=0;
                   active[30]=0;
                   ends[30]=0;
                   tdone[30]=1;
@@ -985,7 +985,7 @@ public class Controller extends ClockDomain{
           case 2 : 
             if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 199, column: 16
               System.out.println("2L3 OFF");//sysj/controller.sysj line: 202, column: 9
-              S39773=3;
+              S35750=3;
               if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
                 System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
                 Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -995,7 +995,7 @@ public class Controller extends ClockDomain{
                 tdone[30]=1;
               }
               else {
-                S39864=0;
+                S35841=0;
                 active[30]=0;
                 ends[30]=0;
                 tdone[30]=1;
@@ -1013,7 +1013,7 @@ public class Controller extends ClockDomain{
           case 3 : 
             if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 207, column: 16
               System.out.println("2L4 OFF");//sysj/controller.sysj line: 210, column: 9
-              S39864=0;
+              S35841=0;
               active[30]=0;
               ends[30]=0;
               tdone[30]=1;
@@ -1033,8 +1033,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48221(int [] tdone, int [] ends){
-        switch(S39732){
+  public void thread44198(int [] tdone, int [] ends){
+        switch(S35709){
       case 0 : 
         active[29]=0;
         ends[29]=0;
@@ -1043,7 +1043,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 175, column: 15
-          S39732=0;
+          S35709=0;
           active[29]=0;
           ends[29]=0;
           tdone[29]=1;
@@ -1061,9 +1061,9 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48219(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread44196(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -1073,7 +1073,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -1083,7 +1083,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -1093,7 +1093,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -1103,7 +1103,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -1113,8 +1113,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48218(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread44195(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -1123,9 +1123,9 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread48216(int [] tdone, int [] ends){
-        S40420=1;
-    S40329=0;
+  public void thread44193(int [] tdone, int [] ends){
+        S36397=1;
+    S36306=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 223, column: 12
       System.out.println("3L1 ON");//sysj/controller.sysj line: 224, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 226, column: 10
@@ -1135,7 +1135,7 @@ public class Controller extends ClockDomain{
       tdone[32]=1;
     }
     else {
-      S40329=1;
+      S36306=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
         System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -1145,7 +1145,7 @@ public class Controller extends ClockDomain{
         tdone[32]=1;
       }
       else {
-        S40329=2;
+        S36306=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
           System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -1155,7 +1155,7 @@ public class Controller extends ClockDomain{
           tdone[32]=1;
         }
         else {
-          S40329=3;
+          S36306=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
             System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -1165,7 +1165,7 @@ public class Controller extends ClockDomain{
             tdone[32]=1;
           }
           else {
-            S40420=0;
+            S36397=0;
             active[32]=0;
             ends[32]=0;
             tdone[32]=1;
@@ -1175,8 +1175,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48215(int [] tdone, int [] ends){
-        S40288=1;
+  public void thread44192(int [] tdone, int [] ends){
+        S36265=1;
     Counter.setPresent();//sysj/controller.sysj line: 218, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(4);//sysj/controller.sysj line: 218, column: 9
@@ -1185,9 +1185,9 @@ public class Controller extends ClockDomain{
     tdone[31]=1;
   }
 
-  public void thread48213(int [] tdone, int [] ends){
-        S39864=1;
-    S39773=0;
+  public void thread44190(int [] tdone, int [] ends){
+        S35841=1;
+    S35750=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 181, column: 12
       System.out.println("2L1 ON");//sysj/controller.sysj line: 182, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 184, column: 10
@@ -1197,7 +1197,7 @@ public class Controller extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S39773=1;
+      S35750=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 189, column: 12
         System.out.println("2L2 ON");//sysj/controller.sysj line: 190, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 192, column: 10
@@ -1207,7 +1207,7 @@ public class Controller extends ClockDomain{
         tdone[30]=1;
       }
       else {
-        S39773=2;
+        S35750=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
           System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -1217,7 +1217,7 @@ public class Controller extends ClockDomain{
           tdone[30]=1;
         }
         else {
-          S39773=3;
+          S35750=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
             System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -1227,7 +1227,7 @@ public class Controller extends ClockDomain{
             tdone[30]=1;
           }
           else {
-            S39864=0;
+            S35841=0;
             active[30]=0;
             ends[30]=0;
             tdone[30]=1;
@@ -1237,8 +1237,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48212(int [] tdone, int [] ends){
-        S39732=1;
+  public void thread44189(int [] tdone, int [] ends){
+        S35709=1;
     Counter.setPresent();//sysj/controller.sysj line: 176, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(3);//sysj/controller.sysj line: 176, column: 9
@@ -1247,8 +1247,8 @@ public class Controller extends ClockDomain{
     tdone[29]=1;
   }
 
-  public void thread48210(int [] tdone, int [] ends){
-        switch(S39029){
+  public void thread44187(int [] tdone, int [] ends){
+        switch(S35006){
       case 0 : 
         active[28]=0;
         ends[28]=0;
@@ -1256,11 +1256,11 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S38938){
+        switch(S34915){
           case 0 : 
             if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 140, column: 16
               System.out.println("1L1 OFF");//sysj/controller.sysj line: 143, column: 9
-              S38938=1;
+              S34915=1;
               if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 146, column: 12
                 System.out.println("1L2 ON");//sysj/controller.sysj line: 147, column: 9
                 Liquid2On.setPresent();//sysj/controller.sysj line: 149, column: 10
@@ -1270,7 +1270,7 @@ public class Controller extends ClockDomain{
                 tdone[28]=1;
               }
               else {
-                S38938=2;
+                S34915=2;
                 if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 154, column: 12
                   System.out.println("1L3 ON");//sysj/controller.sysj line: 155, column: 9
                   Liquid3On.setPresent();//sysj/controller.sysj line: 157, column: 10
@@ -1280,7 +1280,7 @@ public class Controller extends ClockDomain{
                   tdone[28]=1;
                 }
                 else {
-                  S38938=3;
+                  S34915=3;
                   if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
                     System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
                     Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -1290,7 +1290,7 @@ public class Controller extends ClockDomain{
                     tdone[28]=1;
                   }
                   else {
-                    S39029=0;
+                    S35006=0;
                     active[28]=0;
                     ends[28]=0;
                     tdone[28]=1;
@@ -1310,7 +1310,7 @@ public class Controller extends ClockDomain{
           case 1 : 
             if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 148, column: 16
               System.out.println("1L2 OFF");//sysj/controller.sysj line: 151, column: 9
-              S38938=2;
+              S34915=2;
               if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 154, column: 12
                 System.out.println("1L3 ON");//sysj/controller.sysj line: 155, column: 9
                 Liquid3On.setPresent();//sysj/controller.sysj line: 157, column: 10
@@ -1320,7 +1320,7 @@ public class Controller extends ClockDomain{
                 tdone[28]=1;
               }
               else {
-                S38938=3;
+                S34915=3;
                 if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
                   System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
                   Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -1330,7 +1330,7 @@ public class Controller extends ClockDomain{
                   tdone[28]=1;
                 }
                 else {
-                  S39029=0;
+                  S35006=0;
                   active[28]=0;
                   ends[28]=0;
                   tdone[28]=1;
@@ -1349,7 +1349,7 @@ public class Controller extends ClockDomain{
           case 2 : 
             if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 156, column: 16
               System.out.println("1L3 OFF");//sysj/controller.sysj line: 159, column: 9
-              S38938=3;
+              S34915=3;
               if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
                 System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
                 Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -1359,7 +1359,7 @@ public class Controller extends ClockDomain{
                 tdone[28]=1;
               }
               else {
-                S39029=0;
+                S35006=0;
                 active[28]=0;
                 ends[28]=0;
                 tdone[28]=1;
@@ -1377,7 +1377,7 @@ public class Controller extends ClockDomain{
           case 3 : 
             if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 164, column: 16
               System.out.println("1L4 OFF");//sysj/controller.sysj line: 167, column: 9
-              S39029=0;
+              S35006=0;
               active[28]=0;
               ends[28]=0;
               tdone[28]=1;
@@ -1397,8 +1397,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48209(int [] tdone, int [] ends){
-        switch(S38897){
+  public void thread44186(int [] tdone, int [] ends){
+        switch(S34874){
       case 0 : 
         active[27]=0;
         ends[27]=0;
@@ -1407,7 +1407,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 132, column: 15
-          S38897=0;
+          S34874=0;
           active[27]=0;
           ends[27]=0;
           tdone[27]=1;
@@ -1425,9 +1425,9 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48207(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread44184(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -1437,7 +1437,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -1447,7 +1447,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -1457,7 +1457,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -1467,7 +1467,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -1477,8 +1477,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48206(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread44183(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -1487,9 +1487,9 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread48204(int [] tdone, int [] ends){
-        S40420=1;
-    S40329=0;
+  public void thread44181(int [] tdone, int [] ends){
+        S36397=1;
+    S36306=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 223, column: 12
       System.out.println("3L1 ON");//sysj/controller.sysj line: 224, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 226, column: 10
@@ -1499,7 +1499,7 @@ public class Controller extends ClockDomain{
       tdone[32]=1;
     }
     else {
-      S40329=1;
+      S36306=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
         System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -1509,7 +1509,7 @@ public class Controller extends ClockDomain{
         tdone[32]=1;
       }
       else {
-        S40329=2;
+        S36306=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
           System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -1519,7 +1519,7 @@ public class Controller extends ClockDomain{
           tdone[32]=1;
         }
         else {
-          S40329=3;
+          S36306=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
             System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -1529,7 +1529,7 @@ public class Controller extends ClockDomain{
             tdone[32]=1;
           }
           else {
-            S40420=0;
+            S36397=0;
             active[32]=0;
             ends[32]=0;
             tdone[32]=1;
@@ -1539,8 +1539,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48203(int [] tdone, int [] ends){
-        S40288=1;
+  public void thread44180(int [] tdone, int [] ends){
+        S36265=1;
     Counter.setPresent();//sysj/controller.sysj line: 218, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(4);//sysj/controller.sysj line: 218, column: 9
@@ -1549,9 +1549,9 @@ public class Controller extends ClockDomain{
     tdone[31]=1;
   }
 
-  public void thread48201(int [] tdone, int [] ends){
-        S39864=1;
-    S39773=0;
+  public void thread44178(int [] tdone, int [] ends){
+        S35841=1;
+    S35750=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 181, column: 12
       System.out.println("2L1 ON");//sysj/controller.sysj line: 182, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 184, column: 10
@@ -1561,7 +1561,7 @@ public class Controller extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S39773=1;
+      S35750=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 189, column: 12
         System.out.println("2L2 ON");//sysj/controller.sysj line: 190, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 192, column: 10
@@ -1571,7 +1571,7 @@ public class Controller extends ClockDomain{
         tdone[30]=1;
       }
       else {
-        S39773=2;
+        S35750=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
           System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -1581,7 +1581,7 @@ public class Controller extends ClockDomain{
           tdone[30]=1;
         }
         else {
-          S39773=3;
+          S35750=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
             System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -1591,7 +1591,7 @@ public class Controller extends ClockDomain{
             tdone[30]=1;
           }
           else {
-            S39864=0;
+            S35841=0;
             active[30]=0;
             ends[30]=0;
             tdone[30]=1;
@@ -1601,8 +1601,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48200(int [] tdone, int [] ends){
-        S39732=1;
+  public void thread44177(int [] tdone, int [] ends){
+        S35709=1;
     Counter.setPresent();//sysj/controller.sysj line: 176, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(3);//sysj/controller.sysj line: 176, column: 9
@@ -1611,9 +1611,9 @@ public class Controller extends ClockDomain{
     tdone[29]=1;
   }
 
-  public void thread48198(int [] tdone, int [] ends){
-        S39029=1;
-    S38938=0;
+  public void thread44175(int [] tdone, int [] ends){
+        S35006=1;
+    S34915=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 138, column: 12
       System.out.println("1L1 ON");//sysj/controller.sysj line: 139, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 141, column: 10
@@ -1623,7 +1623,7 @@ public class Controller extends ClockDomain{
       tdone[28]=1;
     }
     else {
-      S38938=1;
+      S34915=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 146, column: 12
         System.out.println("1L2 ON");//sysj/controller.sysj line: 147, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 149, column: 10
@@ -1633,7 +1633,7 @@ public class Controller extends ClockDomain{
         tdone[28]=1;
       }
       else {
-        S38938=2;
+        S34915=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 154, column: 12
           System.out.println("1L3 ON");//sysj/controller.sysj line: 155, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 157, column: 10
@@ -1643,7 +1643,7 @@ public class Controller extends ClockDomain{
           tdone[28]=1;
         }
         else {
-          S38938=3;
+          S34915=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
             System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -1653,7 +1653,7 @@ public class Controller extends ClockDomain{
             tdone[28]=1;
           }
           else {
-            S39029=0;
+            S35006=0;
             active[28]=0;
             ends[28]=0;
             tdone[28]=1;
@@ -1663,8 +1663,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48197(int [] tdone, int [] ends){
-        S38897=1;
+  public void thread44174(int [] tdone, int [] ends){
+        S34874=1;
     Counter.setPresent();//sysj/controller.sysj line: 133, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(2);//sysj/controller.sysj line: 133, column: 9
@@ -1673,8 +1673,8 @@ public class Controller extends ClockDomain{
     tdone[27]=1;
   }
 
-  public void thread48196(int [] tdone, int [] ends){
-        switch(S47691){
+  public void thread44173(int [] tdone, int [] ends){
+        switch(S43668){
       case 0 : 
         active[26]=0;
         ends[26]=0;
@@ -1682,84 +1682,84 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S39726){
+        switch(S35703){
           case 0 : 
             if(Ready.getprestatus()){//sysj/controller.sysj line: 121, column: 14
               System.out.println("Ready Exit");//sysj/controller.sysj line: 124, column: 7
-              S39726=1;
+              S35703=1;
               if(Ready.getprestatus()){//sysj/controller.sysj line: 128, column: 15
                 System.out.println("Ready Received FIRST");//sysj/controller.sysj line: 129, column: 7
-                thread48197(tdone,ends);
-                thread48198(tdone,ends);
-                int biggest48199 = 0;
-                if(ends[27]>=biggest48199){
-                  biggest48199=ends[27];
+                thread44174(tdone,ends);
+                thread44175(tdone,ends);
+                int biggest44176 = 0;
+                if(ends[27]>=biggest44176){
+                  biggest44176=ends[27];
                 }
-                if(ends[28]>=biggest48199){
-                  biggest48199=ends[28];
+                if(ends[28]>=biggest44176){
+                  biggest44176=ends[28];
                 }
-                if(biggest48199 == 1){
+                if(biggest44176 == 1){
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
                 }
               }
               else {
-                S39726=2;
+                S35703=2;
                 if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 173, column: 15
-                  thread48200(tdone,ends);
-                  thread48201(tdone,ends);
-                  int biggest48202 = 0;
-                  if(ends[29]>=biggest48202){
-                    biggest48202=ends[29];
+                  thread44177(tdone,ends);
+                  thread44178(tdone,ends);
+                  int biggest44179 = 0;
+                  if(ends[29]>=biggest44179){
+                    biggest44179=ends[29];
                   }
-                  if(ends[30]>=biggest48202){
-                    biggest48202=ends[30];
+                  if(ends[30]>=biggest44179){
+                    biggest44179=ends[30];
                   }
-                  if(biggest48202 == 1){
+                  if(biggest44179 == 1){
                     active[26]=1;
                     ends[26]=1;
                     tdone[26]=1;
                   }
                 }
                 else {
-                  S39726=3;
+                  S35703=3;
                   if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 215, column: 15
-                    thread48203(tdone,ends);
-                    thread48204(tdone,ends);
-                    int biggest48205 = 0;
-                    if(ends[31]>=biggest48205){
-                      biggest48205=ends[31];
+                    thread44180(tdone,ends);
+                    thread44181(tdone,ends);
+                    int biggest44182 = 0;
+                    if(ends[31]>=biggest44182){
+                      biggest44182=ends[31];
                     }
-                    if(ends[32]>=biggest48205){
-                      biggest48205=ends[32];
+                    if(ends[32]>=biggest44182){
+                      biggest44182=ends[32];
                     }
-                    if(biggest48205 == 1){
+                    if(biggest44182 == 1){
                       active[26]=1;
                       ends[26]=1;
                       tdone[26]=1;
                     }
                   }
                   else {
-                    S39726=4;
+                    S35703=4;
                     if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-                      thread48206(tdone,ends);
-                      thread48207(tdone,ends);
-                      int biggest48208 = 0;
-                      if(ends[33]>=biggest48208){
-                        biggest48208=ends[33];
+                      thread44183(tdone,ends);
+                      thread44184(tdone,ends);
+                      int biggest44185 = 0;
+                      if(ends[33]>=biggest44185){
+                        biggest44185=ends[33];
                       }
-                      if(ends[34]>=biggest48208){
-                        biggest48208=ends[34];
+                      if(ends[34]>=biggest44185){
+                        biggest44185=ends[34];
                       }
-                      if(biggest48208 == 1){
+                      if(biggest44185 == 1){
                         active[26]=1;
                         ends[26]=1;
                         tdone[26]=1;
                       }
                     }
                     else {
-                      S39726=5;
+                      S35703=5;
                       active[26]=1;
                       ends[26]=1;
                       tdone[26]=1;
@@ -1779,77 +1779,77 @@ public class Controller extends ClockDomain{
             break;
           
           case 1 : 
-            thread48209(tdone,ends);
-            thread48210(tdone,ends);
-            int biggest48211 = 0;
-            if(ends[27]>=biggest48211){
-              biggest48211=ends[27];
+            thread44186(tdone,ends);
+            thread44187(tdone,ends);
+            int biggest44188 = 0;
+            if(ends[27]>=biggest44188){
+              biggest44188=ends[27];
             }
-            if(ends[28]>=biggest48211){
-              biggest48211=ends[28];
+            if(ends[28]>=biggest44188){
+              biggest44188=ends[28];
             }
-            if(biggest48211 == 1){
+            if(biggest44188 == 1){
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
             }
             //FINXME code
-            if(biggest48211 == 0){
-              S39726=2;
+            if(biggest44188 == 0){
+              S35703=2;
               if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 173, column: 15
-                thread48212(tdone,ends);
-                thread48213(tdone,ends);
-                int biggest48214 = 0;
-                if(ends[29]>=biggest48214){
-                  biggest48214=ends[29];
+                thread44189(tdone,ends);
+                thread44190(tdone,ends);
+                int biggest44191 = 0;
+                if(ends[29]>=biggest44191){
+                  biggest44191=ends[29];
                 }
-                if(ends[30]>=biggest48214){
-                  biggest48214=ends[30];
+                if(ends[30]>=biggest44191){
+                  biggest44191=ends[30];
                 }
-                if(biggest48214 == 1){
+                if(biggest44191 == 1){
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
                 }
               }
               else {
-                S39726=3;
+                S35703=3;
                 if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 215, column: 15
-                  thread48215(tdone,ends);
-                  thread48216(tdone,ends);
-                  int biggest48217 = 0;
-                  if(ends[31]>=biggest48217){
-                    biggest48217=ends[31];
+                  thread44192(tdone,ends);
+                  thread44193(tdone,ends);
+                  int biggest44194 = 0;
+                  if(ends[31]>=biggest44194){
+                    biggest44194=ends[31];
                   }
-                  if(ends[32]>=biggest48217){
-                    biggest48217=ends[32];
+                  if(ends[32]>=biggest44194){
+                    biggest44194=ends[32];
                   }
-                  if(biggest48217 == 1){
+                  if(biggest44194 == 1){
                     active[26]=1;
                     ends[26]=1;
                     tdone[26]=1;
                   }
                 }
                 else {
-                  S39726=4;
+                  S35703=4;
                   if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-                    thread48218(tdone,ends);
-                    thread48219(tdone,ends);
-                    int biggest48220 = 0;
-                    if(ends[33]>=biggest48220){
-                      biggest48220=ends[33];
+                    thread44195(tdone,ends);
+                    thread44196(tdone,ends);
+                    int biggest44197 = 0;
+                    if(ends[33]>=biggest44197){
+                      biggest44197=ends[33];
                     }
-                    if(ends[34]>=biggest48220){
-                      biggest48220=ends[34];
+                    if(ends[34]>=biggest44197){
+                      biggest44197=ends[34];
                     }
-                    if(biggest48220 == 1){
+                    if(biggest44197 == 1){
                       active[26]=1;
                       ends[26]=1;
                       tdone[26]=1;
                     }
                   }
                   else {
-                    S39726=5;
+                    S35703=5;
                     active[26]=1;
                     ends[26]=1;
                     tdone[26]=1;
@@ -1860,59 +1860,59 @@ public class Controller extends ClockDomain{
             break;
           
           case 2 : 
-            thread48221(tdone,ends);
-            thread48222(tdone,ends);
-            int biggest48223 = 0;
-            if(ends[29]>=biggest48223){
-              biggest48223=ends[29];
+            thread44198(tdone,ends);
+            thread44199(tdone,ends);
+            int biggest44200 = 0;
+            if(ends[29]>=biggest44200){
+              biggest44200=ends[29];
             }
-            if(ends[30]>=biggest48223){
-              biggest48223=ends[30];
+            if(ends[30]>=biggest44200){
+              biggest44200=ends[30];
             }
-            if(biggest48223 == 1){
+            if(biggest44200 == 1){
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
             }
             //FINXME code
-            if(biggest48223 == 0){
-              S39726=3;
+            if(biggest44200 == 0){
+              S35703=3;
               if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 215, column: 15
-                thread48224(tdone,ends);
-                thread48225(tdone,ends);
-                int biggest48226 = 0;
-                if(ends[31]>=biggest48226){
-                  biggest48226=ends[31];
+                thread44201(tdone,ends);
+                thread44202(tdone,ends);
+                int biggest44203 = 0;
+                if(ends[31]>=biggest44203){
+                  biggest44203=ends[31];
                 }
-                if(ends[32]>=biggest48226){
-                  biggest48226=ends[32];
+                if(ends[32]>=biggest44203){
+                  biggest44203=ends[32];
                 }
-                if(biggest48226 == 1){
+                if(biggest44203 == 1){
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
                 }
               }
               else {
-                S39726=4;
+                S35703=4;
                 if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-                  thread48227(tdone,ends);
-                  thread48228(tdone,ends);
-                  int biggest48229 = 0;
-                  if(ends[33]>=biggest48229){
-                    biggest48229=ends[33];
+                  thread44204(tdone,ends);
+                  thread44205(tdone,ends);
+                  int biggest44206 = 0;
+                  if(ends[33]>=biggest44206){
+                    biggest44206=ends[33];
                   }
-                  if(ends[34]>=biggest48229){
-                    biggest48229=ends[34];
+                  if(ends[34]>=biggest44206){
+                    biggest44206=ends[34];
                   }
-                  if(biggest48229 == 1){
+                  if(biggest44206 == 1){
                     active[26]=1;
                     ends[26]=1;
                     tdone[26]=1;
                   }
                 }
                 else {
-                  S39726=5;
+                  S35703=5;
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
@@ -1922,41 +1922,41 @@ public class Controller extends ClockDomain{
             break;
           
           case 3 : 
-            thread48230(tdone,ends);
-            thread48231(tdone,ends);
-            int biggest48232 = 0;
-            if(ends[31]>=biggest48232){
-              biggest48232=ends[31];
+            thread44207(tdone,ends);
+            thread44208(tdone,ends);
+            int biggest44209 = 0;
+            if(ends[31]>=biggest44209){
+              biggest44209=ends[31];
             }
-            if(ends[32]>=biggest48232){
-              biggest48232=ends[32];
+            if(ends[32]>=biggest44209){
+              biggest44209=ends[32];
             }
-            if(biggest48232 == 1){
+            if(biggest44209 == 1){
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
             }
             //FINXME code
-            if(biggest48232 == 0){
-              S39726=4;
+            if(biggest44209 == 0){
+              S35703=4;
               if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-                thread48233(tdone,ends);
-                thread48234(tdone,ends);
-                int biggest48235 = 0;
-                if(ends[33]>=biggest48235){
-                  biggest48235=ends[33];
+                thread44210(tdone,ends);
+                thread44211(tdone,ends);
+                int biggest44212 = 0;
+                if(ends[33]>=biggest44212){
+                  biggest44212=ends[33];
                 }
-                if(ends[34]>=biggest48235){
-                  biggest48235=ends[34];
+                if(ends[34]>=biggest44212){
+                  biggest44212=ends[34];
                 }
-                if(biggest48235 == 1){
+                if(biggest44212 == 1){
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
                 }
               }
               else {
-                S39726=5;
+                S35703=5;
                 active[26]=1;
                 ends[26]=1;
                 tdone[26]=1;
@@ -1965,25 +1965,25 @@ public class Controller extends ClockDomain{
             break;
           
           case 4 : 
-            thread48236(tdone,ends);
-            thread48237(tdone,ends);
-            int biggest48238 = 0;
-            if(ends[33]>=biggest48238){
-              biggest48238=ends[33];
+            thread44213(tdone,ends);
+            thread44214(tdone,ends);
+            int biggest44215 = 0;
+            if(ends[33]>=biggest44215){
+              biggest44215=ends[33];
             }
-            if(ends[34]>=biggest48238){
-              biggest48238=ends[34];
+            if(ends[34]>=biggest44215){
+              biggest44215=ends[34];
             }
-            if(biggest48238 == 1){
+            if(biggest44215 == 1){
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
             }
             //FINXME code
-            if(biggest48238 == 0){
+            if(biggest44215 == 0){
               LiquidFillerDone.setPresent();//sysj/controller.sysj line: 298, column: 7
               currsigs.addElement(LiquidFillerDone);
-              S39726=5;
+              S35703=5;
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
@@ -1991,8 +1991,8 @@ public class Controller extends ClockDomain{
             break;
           
           case 5 : 
-            S39726=5;
-            S39726=0;
+            S35703=5;
+            S35703=0;
             if(NewOrder_11.getprestatus()){//sysj/controller.sysj line: 119, column: 15
               System.out.println("NewOrder Received FIRST");//sysj/controller.sysj line: 120, column: 7
               Counter.setPresent();//sysj/controller.sysj line: 122, column: 9
@@ -2003,80 +2003,80 @@ public class Controller extends ClockDomain{
               tdone[26]=1;
             }
             else {
-              S39726=1;
+              S35703=1;
               if(Ready.getprestatus()){//sysj/controller.sysj line: 128, column: 15
                 System.out.println("Ready Received FIRST");//sysj/controller.sysj line: 129, column: 7
-                thread48239(tdone,ends);
-                thread48240(tdone,ends);
-                int biggest48241 = 0;
-                if(ends[27]>=biggest48241){
-                  biggest48241=ends[27];
+                thread44216(tdone,ends);
+                thread44217(tdone,ends);
+                int biggest44218 = 0;
+                if(ends[27]>=biggest44218){
+                  biggest44218=ends[27];
                 }
-                if(ends[28]>=biggest48241){
-                  biggest48241=ends[28];
+                if(ends[28]>=biggest44218){
+                  biggest44218=ends[28];
                 }
-                if(biggest48241 == 1){
+                if(biggest44218 == 1){
                   active[26]=1;
                   ends[26]=1;
                   tdone[26]=1;
                 }
               }
               else {
-                S39726=2;
+                S35703=2;
                 if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 173, column: 15
-                  thread48242(tdone,ends);
-                  thread48243(tdone,ends);
-                  int biggest48244 = 0;
-                  if(ends[29]>=biggest48244){
-                    biggest48244=ends[29];
+                  thread44219(tdone,ends);
+                  thread44220(tdone,ends);
+                  int biggest44221 = 0;
+                  if(ends[29]>=biggest44221){
+                    biggest44221=ends[29];
                   }
-                  if(ends[30]>=biggest48244){
-                    biggest48244=ends[30];
+                  if(ends[30]>=biggest44221){
+                    biggest44221=ends[30];
                   }
-                  if(biggest48244 == 1){
+                  if(biggest44221 == 1){
                     active[26]=1;
                     ends[26]=1;
                     tdone[26]=1;
                   }
                 }
                 else {
-                  S39726=3;
+                  S35703=3;
                   if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 215, column: 15
-                    thread48245(tdone,ends);
-                    thread48246(tdone,ends);
-                    int biggest48247 = 0;
-                    if(ends[31]>=biggest48247){
-                      biggest48247=ends[31];
+                    thread44222(tdone,ends);
+                    thread44223(tdone,ends);
+                    int biggest44224 = 0;
+                    if(ends[31]>=biggest44224){
+                      biggest44224=ends[31];
                     }
-                    if(ends[32]>=biggest48247){
-                      biggest48247=ends[32];
+                    if(ends[32]>=biggest44224){
+                      biggest44224=ends[32];
                     }
-                    if(biggest48247 == 1){
+                    if(biggest44224 == 1){
                       active[26]=1;
                       ends[26]=1;
                       tdone[26]=1;
                     }
                   }
                   else {
-                    S39726=4;
+                    S35703=4;
                     if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-                      thread48248(tdone,ends);
-                      thread48249(tdone,ends);
-                      int biggest48250 = 0;
-                      if(ends[33]>=biggest48250){
-                        biggest48250=ends[33];
+                      thread44225(tdone,ends);
+                      thread44226(tdone,ends);
+                      int biggest44227 = 0;
+                      if(ends[33]>=biggest44227){
+                        biggest44227=ends[33];
                       }
-                      if(ends[34]>=biggest48250){
-                        biggest48250=ends[34];
+                      if(ends[34]>=biggest44227){
+                        biggest44227=ends[34];
                       }
-                      if(biggest48250 == 1){
+                      if(biggest44227 == 1){
                         active[26]=1;
                         ends[26]=1;
                         tdone[26]=1;
                       }
                     }
                     else {
-                      S39726=5;
+                      S35703=5;
                       active[26]=1;
                       ends[26]=1;
                       tdone[26]=1;
@@ -2093,8 +2093,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48193(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44170(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -2103,8 +2103,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48192(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44169(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -2115,27 +2115,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48191(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44168(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48192(tdone,ends);
-    thread48193(tdone,ends);
-    int biggest48194 = 0;
-    if(ends[24]>=biggest48194){
-      biggest48194=ends[24];
+    thread44169(tdone,ends);
+    thread44170(tdone,ends);
+    int biggest44171 = 0;
+    if(ends[24]>=biggest44171){
+      biggest44171=ends[24];
     }
-    if(ends[25]>=biggest48194){
-      biggest48194=ends[25];
+    if(ends[25]>=biggest44171){
+      biggest44171=ends[25];
     }
-    if(biggest48194 == 1){
+    if(biggest44171 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48189(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44166(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -2144,8 +2144,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48188(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44165(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -2156,27 +2156,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48187(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44164(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48188(tdone,ends);
-    thread48189(tdone,ends);
-    int biggest48190 = 0;
-    if(ends[21]>=biggest48190){
-      biggest48190=ends[21];
+    thread44165(tdone,ends);
+    thread44166(tdone,ends);
+    int biggest44167 = 0;
+    if(ends[21]>=biggest44167){
+      biggest44167=ends[21];
     }
-    if(ends[22]>=biggest48190){
-      biggest48190=ends[22];
+    if(ends[22]>=biggest44167){
+      biggest44167=ends[22];
     }
-    if(biggest48190 == 1){
+    if(biggest44167 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48185(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44162(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -2185,8 +2185,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48184(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44161(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -2197,27 +2197,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48183(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44160(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48184(tdone,ends);
-    thread48185(tdone,ends);
-    int biggest48186 = 0;
-    if(ends[18]>=biggest48186){
-      biggest48186=ends[18];
+    thread44161(tdone,ends);
+    thread44162(tdone,ends);
+    int biggest44163 = 0;
+    if(ends[18]>=biggest44163){
+      biggest44163=ends[18];
     }
-    if(ends[19]>=biggest48186){
-      biggest48186=ends[19];
+    if(ends[19]>=biggest44163){
+      biggest44163=ends[19];
     }
-    if(biggest48186 == 1){
+    if(biggest44163 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48181(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44158(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -2226,8 +2226,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48180(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44157(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -2238,27 +2238,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48179(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44156(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48180(tdone,ends);
-    thread48181(tdone,ends);
-    int biggest48182 = 0;
-    if(ends[15]>=biggest48182){
-      biggest48182=ends[15];
+    thread44157(tdone,ends);
+    thread44158(tdone,ends);
+    int biggest44159 = 0;
+    if(ends[15]>=biggest44159){
+      biggest44159=ends[15];
     }
-    if(ends[16]>=biggest48182){
-      biggest48182=ends[16];
+    if(ends[16]>=biggest44159){
+      biggest44159=ends[16];
     }
-    if(biggest48182 == 1){
+    if(biggest44159 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48176(int [] tdone, int [] ends){
-        switch(S28521){
+  public void thread44153(int [] tdone, int [] ends){
+        switch(S24498){
       case 0 : 
         active[25]=0;
         ends[25]=0;
@@ -2267,7 +2267,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 104, column: 20
-          S28521=0;
+          S24498=0;
           active[25]=0;
           ends[25]=0;
           tdone[25]=1;
@@ -2285,8 +2285,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48175(int [] tdone, int [] ends){
-        switch(S28515){
+  public void thread44152(int [] tdone, int [] ends){
+        switch(S24492){
       case 0 : 
         active[24]=0;
         ends[24]=0;
@@ -2295,7 +2295,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FourthLiquidDone.getprestatus()){//sysj/controller.sysj line: 97, column: 20
-          S28515=0;
+          S24492=0;
           active[24]=0;
           ends[24]=0;
           tdone[24]=1;
@@ -2313,8 +2313,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48174(int [] tdone, int [] ends){
-        switch(S28539){
+  public void thread44151(int [] tdone, int [] ends){
+        switch(S24516){
       case 0 : 
         active[23]=0;
         ends[23]=0;
@@ -2322,24 +2322,24 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread48175(tdone,ends);
-        thread48176(tdone,ends);
-        int biggest48177 = 0;
-        if(ends[24]>=biggest48177){
-          biggest48177=ends[24];
+        thread44152(tdone,ends);
+        thread44153(tdone,ends);
+        int biggest44154 = 0;
+        if(ends[24]>=biggest44154){
+          biggest44154=ends[24];
         }
-        if(ends[25]>=biggest48177){
-          biggest48177=ends[25];
+        if(ends[25]>=biggest44154){
+          biggest44154=ends[25];
         }
-        if(biggest48177 == 1){
+        if(biggest44154 == 1){
           active[23]=1;
           ends[23]=1;
           tdone[23]=1;
         }
         //FINXME code
-        if(biggest48177 == 0){
+        if(biggest44154 == 0){
           System.out.println("L4 END");//sysj/controller.sysj line: 108, column: 13
-          S28539=0;
+          S24516=0;
           active[23]=0;
           ends[23]=0;
           tdone[23]=1;
@@ -2349,8 +2349,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48172(int [] tdone, int [] ends){
-        switch(S28487){
+  public void thread44149(int [] tdone, int [] ends){
+        switch(S24464){
       case 0 : 
         active[22]=0;
         ends[22]=0;
@@ -2359,7 +2359,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 87, column: 20
-          S28487=0;
+          S24464=0;
           active[22]=0;
           ends[22]=0;
           tdone[22]=1;
@@ -2377,8 +2377,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48171(int [] tdone, int [] ends){
-        switch(S28481){
+  public void thread44148(int [] tdone, int [] ends){
+        switch(S24458){
       case 0 : 
         active[21]=0;
         ends[21]=0;
@@ -2387,7 +2387,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 80, column: 20
-          S28481=0;
+          S24458=0;
           active[21]=0;
           ends[21]=0;
           tdone[21]=1;
@@ -2405,8 +2405,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48170(int [] tdone, int [] ends){
-        switch(S28505){
+  public void thread44147(int [] tdone, int [] ends){
+        switch(S24482){
       case 0 : 
         active[20]=0;
         ends[20]=0;
@@ -2414,24 +2414,24 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread48171(tdone,ends);
-        thread48172(tdone,ends);
-        int biggest48173 = 0;
-        if(ends[21]>=biggest48173){
-          biggest48173=ends[21];
+        thread44148(tdone,ends);
+        thread44149(tdone,ends);
+        int biggest44150 = 0;
+        if(ends[21]>=biggest44150){
+          biggest44150=ends[21];
         }
-        if(ends[22]>=biggest48173){
-          biggest48173=ends[22];
+        if(ends[22]>=biggest44150){
+          biggest44150=ends[22];
         }
-        if(biggest48173 == 1){
+        if(biggest44150 == 1){
           active[20]=1;
           ends[20]=1;
           tdone[20]=1;
         }
         //FINXME code
-        if(biggest48173 == 0){
+        if(biggest44150 == 0){
           System.out.println("L3 END");//sysj/controller.sysj line: 91, column: 13
-          S28505=0;
+          S24482=0;
           active[20]=0;
           ends[20]=0;
           tdone[20]=1;
@@ -2441,8 +2441,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48168(int [] tdone, int [] ends){
-        switch(S28453){
+  public void thread44145(int [] tdone, int [] ends){
+        switch(S24430){
       case 0 : 
         active[19]=0;
         ends[19]=0;
@@ -2451,7 +2451,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 70, column: 20
-          S28453=0;
+          S24430=0;
           active[19]=0;
           ends[19]=0;
           tdone[19]=1;
@@ -2469,8 +2469,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48167(int [] tdone, int [] ends){
-        switch(S28447){
+  public void thread44144(int [] tdone, int [] ends){
+        switch(S24424){
       case 0 : 
         active[18]=0;
         ends[18]=0;
@@ -2479,7 +2479,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 63, column: 20
-          S28447=0;
+          S24424=0;
           active[18]=0;
           ends[18]=0;
           tdone[18]=1;
@@ -2497,8 +2497,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48166(int [] tdone, int [] ends){
-        switch(S28471){
+  public void thread44143(int [] tdone, int [] ends){
+        switch(S24448){
       case 0 : 
         active[17]=0;
         ends[17]=0;
@@ -2506,24 +2506,24 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread48167(tdone,ends);
-        thread48168(tdone,ends);
-        int biggest48169 = 0;
-        if(ends[18]>=biggest48169){
-          biggest48169=ends[18];
+        thread44144(tdone,ends);
+        thread44145(tdone,ends);
+        int biggest44146 = 0;
+        if(ends[18]>=biggest44146){
+          biggest44146=ends[18];
         }
-        if(ends[19]>=biggest48169){
-          biggest48169=ends[19];
+        if(ends[19]>=biggest44146){
+          biggest44146=ends[19];
         }
-        if(biggest48169 == 1){
+        if(biggest44146 == 1){
           active[17]=1;
           ends[17]=1;
           tdone[17]=1;
         }
         //FINXME code
-        if(biggest48169 == 0){
+        if(biggest44146 == 0){
           System.out.println("L2 END");//sysj/controller.sysj line: 74, column: 13
-          S28471=0;
+          S24448=0;
           active[17]=0;
           ends[17]=0;
           tdone[17]=1;
@@ -2533,8 +2533,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48164(int [] tdone, int [] ends){
-        switch(S28419){
+  public void thread44141(int [] tdone, int [] ends){
+        switch(S24396){
       case 0 : 
         active[16]=0;
         ends[16]=0;
@@ -2543,7 +2543,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 53, column: 20
-          S28419=0;
+          S24396=0;
           active[16]=0;
           ends[16]=0;
           tdone[16]=1;
@@ -2561,8 +2561,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48163(int [] tdone, int [] ends){
-        switch(S28413){
+  public void thread44140(int [] tdone, int [] ends){
+        switch(S24390){
       case 0 : 
         active[15]=0;
         ends[15]=0;
@@ -2571,7 +2571,7 @@ public class Controller extends ClockDomain{
       
       case 1 : 
         if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 46, column: 20
-          S28413=0;
+          S24390=0;
           active[15]=0;
           ends[15]=0;
           tdone[15]=1;
@@ -2589,8 +2589,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48162(int [] tdone, int [] ends){
-        switch(S28437){
+  public void thread44139(int [] tdone, int [] ends){
+        switch(S24414){
       case 0 : 
         active[14]=0;
         ends[14]=0;
@@ -2598,24 +2598,24 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        thread48163(tdone,ends);
-        thread48164(tdone,ends);
-        int biggest48165 = 0;
-        if(ends[15]>=biggest48165){
-          biggest48165=ends[15];
+        thread44140(tdone,ends);
+        thread44141(tdone,ends);
+        int biggest44142 = 0;
+        if(ends[15]>=biggest44142){
+          biggest44142=ends[15];
         }
-        if(ends[16]>=biggest48165){
-          biggest48165=ends[16];
+        if(ends[16]>=biggest44142){
+          biggest44142=ends[16];
         }
-        if(biggest48165 == 1){
+        if(biggest44142 == 1){
           active[14]=1;
           ends[14]=1;
           tdone[14]=1;
         }
         //FINXME code
-        if(biggest48165 == 0){
+        if(biggest44142 == 0){
           System.out.println("L1 END");//sysj/controller.sysj line: 57, column: 13
-          S28437=0;
+          S24414=0;
           active[14]=0;
           ends[14]=0;
           tdone[14]=1;
@@ -2625,8 +2625,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread48159(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44136(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -2635,8 +2635,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48158(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44135(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -2647,27 +2647,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48157(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44134(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48158(tdone,ends);
-    thread48159(tdone,ends);
-    int biggest48160 = 0;
-    if(ends[24]>=biggest48160){
-      biggest48160=ends[24];
+    thread44135(tdone,ends);
+    thread44136(tdone,ends);
+    int biggest44137 = 0;
+    if(ends[24]>=biggest44137){
+      biggest44137=ends[24];
     }
-    if(ends[25]>=biggest48160){
-      biggest48160=ends[25];
+    if(ends[25]>=biggest44137){
+      biggest44137=ends[25];
     }
-    if(biggest48160 == 1){
+    if(biggest44137 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48155(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44132(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -2676,8 +2676,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48154(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44131(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -2688,27 +2688,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48153(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44130(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48154(tdone,ends);
-    thread48155(tdone,ends);
-    int biggest48156 = 0;
-    if(ends[21]>=biggest48156){
-      biggest48156=ends[21];
+    thread44131(tdone,ends);
+    thread44132(tdone,ends);
+    int biggest44133 = 0;
+    if(ends[21]>=biggest44133){
+      biggest44133=ends[21];
     }
-    if(ends[22]>=biggest48156){
-      biggest48156=ends[22];
+    if(ends[22]>=biggest44133){
+      biggest44133=ends[22];
     }
-    if(biggest48156 == 1){
+    if(biggest44133 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48151(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44128(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -2717,8 +2717,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48150(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44127(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -2729,27 +2729,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48149(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44126(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48150(tdone,ends);
-    thread48151(tdone,ends);
-    int biggest48152 = 0;
-    if(ends[18]>=biggest48152){
-      biggest48152=ends[18];
+    thread44127(tdone,ends);
+    thread44128(tdone,ends);
+    int biggest44129 = 0;
+    if(ends[18]>=biggest44129){
+      biggest44129=ends[18];
     }
-    if(ends[19]>=biggest48152){
-      biggest48152=ends[19];
+    if(ends[19]>=biggest44129){
+      biggest44129=ends[19];
     }
-    if(biggest48152 == 1){
+    if(biggest44129 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48147(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44124(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -2758,8 +2758,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48146(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44123(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -2770,27 +2770,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48145(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44122(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48146(tdone,ends);
-    thread48147(tdone,ends);
-    int biggest48148 = 0;
-    if(ends[15]>=biggest48148){
-      biggest48148=ends[15];
+    thread44123(tdone,ends);
+    thread44124(tdone,ends);
+    int biggest44125 = 0;
+    if(ends[15]>=biggest44125){
+      biggest44125=ends[15];
     }
-    if(ends[16]>=biggest48148){
-      biggest48148=ends[16];
+    if(ends[16]>=biggest44125){
+      biggest44125=ends[16];
     }
-    if(biggest48148 == 1){
+    if(biggest44125 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48142(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44119(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -2799,8 +2799,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48141(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44118(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -2811,27 +2811,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48140(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44117(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48141(tdone,ends);
-    thread48142(tdone,ends);
-    int biggest48143 = 0;
-    if(ends[24]>=biggest48143){
-      biggest48143=ends[24];
+    thread44118(tdone,ends);
+    thread44119(tdone,ends);
+    int biggest44120 = 0;
+    if(ends[24]>=biggest44120){
+      biggest44120=ends[24];
     }
-    if(ends[25]>=biggest48143){
-      biggest48143=ends[25];
+    if(ends[25]>=biggest44120){
+      biggest44120=ends[25];
     }
-    if(biggest48143 == 1){
+    if(biggest44120 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48138(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44115(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -2840,8 +2840,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48137(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44114(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -2852,27 +2852,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48136(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44113(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48137(tdone,ends);
-    thread48138(tdone,ends);
-    int biggest48139 = 0;
-    if(ends[21]>=biggest48139){
-      biggest48139=ends[21];
+    thread44114(tdone,ends);
+    thread44115(tdone,ends);
+    int biggest44116 = 0;
+    if(ends[21]>=biggest44116){
+      biggest44116=ends[21];
     }
-    if(ends[22]>=biggest48139){
-      biggest48139=ends[22];
+    if(ends[22]>=biggest44116){
+      biggest44116=ends[22];
     }
-    if(biggest48139 == 1){
+    if(biggest44116 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48134(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44111(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -2881,8 +2881,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48133(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44110(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -2893,27 +2893,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48132(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44109(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48133(tdone,ends);
-    thread48134(tdone,ends);
-    int biggest48135 = 0;
-    if(ends[18]>=biggest48135){
-      biggest48135=ends[18];
+    thread44110(tdone,ends);
+    thread44111(tdone,ends);
+    int biggest44112 = 0;
+    if(ends[18]>=biggest44112){
+      biggest44112=ends[18];
     }
-    if(ends[19]>=biggest48135){
-      biggest48135=ends[19];
+    if(ends[19]>=biggest44112){
+      biggest44112=ends[19];
     }
-    if(biggest48135 == 1){
+    if(biggest44112 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48130(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44107(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -2922,8 +2922,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48129(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44106(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -2934,27 +2934,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48128(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44105(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48129(tdone,ends);
-    thread48130(tdone,ends);
-    int biggest48131 = 0;
-    if(ends[15]>=biggest48131){
-      biggest48131=ends[15];
+    thread44106(tdone,ends);
+    thread44107(tdone,ends);
+    int biggest44108 = 0;
+    if(ends[15]>=biggest44108){
+      biggest44108=ends[15];
     }
-    if(ends[16]>=biggest48131){
-      biggest48131=ends[16];
+    if(ends[16]>=biggest44108){
+      biggest44108=ends[16];
     }
-    if(biggest48131 == 1){
+    if(biggest44108 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48125(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44102(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -2963,8 +2963,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48124(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44101(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -2975,27 +2975,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48123(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44100(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48124(tdone,ends);
-    thread48125(tdone,ends);
-    int biggest48126 = 0;
-    if(ends[24]>=biggest48126){
-      biggest48126=ends[24];
+    thread44101(tdone,ends);
+    thread44102(tdone,ends);
+    int biggest44103 = 0;
+    if(ends[24]>=biggest44103){
+      biggest44103=ends[24];
     }
-    if(ends[25]>=biggest48126){
-      biggest48126=ends[25];
+    if(ends[25]>=biggest44103){
+      biggest44103=ends[25];
     }
-    if(biggest48126 == 1){
+    if(biggest44103 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48121(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44098(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3004,8 +3004,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48120(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44097(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3016,27 +3016,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48119(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44096(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48120(tdone,ends);
-    thread48121(tdone,ends);
-    int biggest48122 = 0;
-    if(ends[21]>=biggest48122){
-      biggest48122=ends[21];
+    thread44097(tdone,ends);
+    thread44098(tdone,ends);
+    int biggest44099 = 0;
+    if(ends[21]>=biggest44099){
+      biggest44099=ends[21];
     }
-    if(ends[22]>=biggest48122){
-      biggest48122=ends[22];
+    if(ends[22]>=biggest44099){
+      biggest44099=ends[22];
     }
-    if(biggest48122 == 1){
+    if(biggest44099 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48117(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44094(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3045,8 +3045,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48116(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44093(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3057,27 +3057,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48115(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44092(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48116(tdone,ends);
-    thread48117(tdone,ends);
-    int biggest48118 = 0;
-    if(ends[18]>=biggest48118){
-      biggest48118=ends[18];
+    thread44093(tdone,ends);
+    thread44094(tdone,ends);
+    int biggest44095 = 0;
+    if(ends[18]>=biggest44095){
+      biggest44095=ends[18];
     }
-    if(ends[19]>=biggest48118){
-      biggest48118=ends[19];
+    if(ends[19]>=biggest44095){
+      biggest44095=ends[19];
     }
-    if(biggest48118 == 1){
+    if(biggest44095 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48113(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44090(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3086,8 +3086,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48112(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44089(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3098,27 +3098,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48111(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44088(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48112(tdone,ends);
-    thread48113(tdone,ends);
-    int biggest48114 = 0;
-    if(ends[15]>=biggest48114){
-      biggest48114=ends[15];
+    thread44089(tdone,ends);
+    thread44090(tdone,ends);
+    int biggest44091 = 0;
+    if(ends[15]>=biggest44091){
+      biggest44091=ends[15];
     }
-    if(ends[16]>=biggest48114){
-      biggest48114=ends[16];
+    if(ends[16]>=biggest44091){
+      biggest44091=ends[16];
     }
-    if(biggest48114 == 1){
+    if(biggest44091 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48108(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44085(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3127,8 +3127,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48107(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44084(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3139,27 +3139,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48106(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44083(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48107(tdone,ends);
-    thread48108(tdone,ends);
-    int biggest48109 = 0;
-    if(ends[24]>=biggest48109){
-      biggest48109=ends[24];
+    thread44084(tdone,ends);
+    thread44085(tdone,ends);
+    int biggest44086 = 0;
+    if(ends[24]>=biggest44086){
+      biggest44086=ends[24];
     }
-    if(ends[25]>=biggest48109){
-      biggest48109=ends[25];
+    if(ends[25]>=biggest44086){
+      biggest44086=ends[25];
     }
-    if(biggest48109 == 1){
+    if(biggest44086 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48104(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44081(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3168,8 +3168,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48103(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44080(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3180,27 +3180,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48102(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44079(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48103(tdone,ends);
-    thread48104(tdone,ends);
-    int biggest48105 = 0;
-    if(ends[21]>=biggest48105){
-      biggest48105=ends[21];
+    thread44080(tdone,ends);
+    thread44081(tdone,ends);
+    int biggest44082 = 0;
+    if(ends[21]>=biggest44082){
+      biggest44082=ends[21];
     }
-    if(ends[22]>=biggest48105){
-      biggest48105=ends[22];
+    if(ends[22]>=biggest44082){
+      biggest44082=ends[22];
     }
-    if(biggest48105 == 1){
+    if(biggest44082 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48100(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44077(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3209,8 +3209,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48099(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44076(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3221,27 +3221,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48098(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44075(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48099(tdone,ends);
-    thread48100(tdone,ends);
-    int biggest48101 = 0;
-    if(ends[18]>=biggest48101){
-      biggest48101=ends[18];
+    thread44076(tdone,ends);
+    thread44077(tdone,ends);
+    int biggest44078 = 0;
+    if(ends[18]>=biggest44078){
+      biggest44078=ends[18];
     }
-    if(ends[19]>=biggest48101){
-      biggest48101=ends[19];
+    if(ends[19]>=biggest44078){
+      biggest44078=ends[19];
     }
-    if(biggest48101 == 1){
+    if(biggest44078 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48096(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44073(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3250,8 +3250,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48095(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44072(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3262,27 +3262,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48094(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44071(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48095(tdone,ends);
-    thread48096(tdone,ends);
-    int biggest48097 = 0;
-    if(ends[15]>=biggest48097){
-      biggest48097=ends[15];
+    thread44072(tdone,ends);
+    thread44073(tdone,ends);
+    int biggest44074 = 0;
+    if(ends[15]>=biggest44074){
+      biggest44074=ends[15];
     }
-    if(ends[16]>=biggest48097){
-      biggest48097=ends[16];
+    if(ends[16]>=biggest44074){
+      biggest44074=ends[16];
     }
-    if(biggest48097 == 1){
+    if(biggest44074 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48091(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44068(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3291,8 +3291,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48090(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44067(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3303,27 +3303,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48089(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44066(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48090(tdone,ends);
-    thread48091(tdone,ends);
-    int biggest48092 = 0;
-    if(ends[24]>=biggest48092){
-      biggest48092=ends[24];
+    thread44067(tdone,ends);
+    thread44068(tdone,ends);
+    int biggest44069 = 0;
+    if(ends[24]>=biggest44069){
+      biggest44069=ends[24];
     }
-    if(ends[25]>=biggest48092){
-      biggest48092=ends[25];
+    if(ends[25]>=biggest44069){
+      biggest44069=ends[25];
     }
-    if(biggest48092 == 1){
+    if(biggest44069 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48087(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44064(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3332,8 +3332,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48086(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44063(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3344,27 +3344,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48085(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44062(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48086(tdone,ends);
-    thread48087(tdone,ends);
-    int biggest48088 = 0;
-    if(ends[21]>=biggest48088){
-      biggest48088=ends[21];
+    thread44063(tdone,ends);
+    thread44064(tdone,ends);
+    int biggest44065 = 0;
+    if(ends[21]>=biggest44065){
+      biggest44065=ends[21];
     }
-    if(ends[22]>=biggest48088){
-      biggest48088=ends[22];
+    if(ends[22]>=biggest44065){
+      biggest44065=ends[22];
     }
-    if(biggest48088 == 1){
+    if(biggest44065 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48083(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44060(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3373,8 +3373,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48082(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44059(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3385,27 +3385,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48081(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44058(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48082(tdone,ends);
-    thread48083(tdone,ends);
-    int biggest48084 = 0;
-    if(ends[18]>=biggest48084){
-      biggest48084=ends[18];
+    thread44059(tdone,ends);
+    thread44060(tdone,ends);
+    int biggest44061 = 0;
+    if(ends[18]>=biggest44061){
+      biggest44061=ends[18];
     }
-    if(ends[19]>=biggest48084){
-      biggest48084=ends[19];
+    if(ends[19]>=biggest44061){
+      biggest44061=ends[19];
     }
-    if(biggest48084 == 1){
+    if(biggest44061 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48079(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44056(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3414,8 +3414,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48078(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44055(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3426,27 +3426,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48077(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44054(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48078(tdone,ends);
-    thread48079(tdone,ends);
-    int biggest48080 = 0;
-    if(ends[15]>=biggest48080){
-      biggest48080=ends[15];
+    thread44055(tdone,ends);
+    thread44056(tdone,ends);
+    int biggest44057 = 0;
+    if(ends[15]>=biggest44057){
+      biggest44057=ends[15];
     }
-    if(ends[16]>=biggest48080){
-      biggest48080=ends[16];
+    if(ends[16]>=biggest44057){
+      biggest44057=ends[16];
     }
-    if(biggest48080 == 1){
+    if(biggest44057 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48074(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44051(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3455,8 +3455,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48073(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44050(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3467,27 +3467,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48072(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44049(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48073(tdone,ends);
-    thread48074(tdone,ends);
-    int biggest48075 = 0;
-    if(ends[24]>=biggest48075){
-      biggest48075=ends[24];
+    thread44050(tdone,ends);
+    thread44051(tdone,ends);
+    int biggest44052 = 0;
+    if(ends[24]>=biggest44052){
+      biggest44052=ends[24];
     }
-    if(ends[25]>=biggest48075){
-      biggest48075=ends[25];
+    if(ends[25]>=biggest44052){
+      biggest44052=ends[25];
     }
-    if(biggest48075 == 1){
+    if(biggest44052 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48070(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44047(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3496,8 +3496,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48069(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44046(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3508,27 +3508,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48068(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44045(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48069(tdone,ends);
-    thread48070(tdone,ends);
-    int biggest48071 = 0;
-    if(ends[21]>=biggest48071){
-      biggest48071=ends[21];
+    thread44046(tdone,ends);
+    thread44047(tdone,ends);
+    int biggest44048 = 0;
+    if(ends[21]>=biggest44048){
+      biggest44048=ends[21];
     }
-    if(ends[22]>=biggest48071){
-      biggest48071=ends[22];
+    if(ends[22]>=biggest44048){
+      biggest44048=ends[22];
     }
-    if(biggest48071 == 1){
+    if(biggest44048 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48066(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44043(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3537,8 +3537,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48065(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44042(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3549,27 +3549,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48064(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44041(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48065(tdone,ends);
-    thread48066(tdone,ends);
-    int biggest48067 = 0;
-    if(ends[18]>=biggest48067){
-      biggest48067=ends[18];
+    thread44042(tdone,ends);
+    thread44043(tdone,ends);
+    int biggest44044 = 0;
+    if(ends[18]>=biggest44044){
+      biggest44044=ends[18];
     }
-    if(ends[19]>=biggest48067){
-      biggest48067=ends[19];
+    if(ends[19]>=biggest44044){
+      biggest44044=ends[19];
     }
-    if(biggest48067 == 1){
+    if(biggest44044 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48062(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44039(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3578,8 +3578,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48061(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44038(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3590,27 +3590,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48060(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44037(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48061(tdone,ends);
-    thread48062(tdone,ends);
-    int biggest48063 = 0;
-    if(ends[15]>=biggest48063){
-      biggest48063=ends[15];
+    thread44038(tdone,ends);
+    thread44039(tdone,ends);
+    int biggest44040 = 0;
+    if(ends[15]>=biggest44040){
+      biggest44040=ends[15];
     }
-    if(ends[16]>=biggest48063){
-      biggest48063=ends[16];
+    if(ends[16]>=biggest44040){
+      biggest44040=ends[16];
     }
-    if(biggest48063 == 1){
+    if(biggest44040 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48057(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44034(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3619,8 +3619,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48056(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44033(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3631,27 +3631,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48055(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44032(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48056(tdone,ends);
-    thread48057(tdone,ends);
-    int biggest48058 = 0;
-    if(ends[24]>=biggest48058){
-      biggest48058=ends[24];
+    thread44033(tdone,ends);
+    thread44034(tdone,ends);
+    int biggest44035 = 0;
+    if(ends[24]>=biggest44035){
+      biggest44035=ends[24];
     }
-    if(ends[25]>=biggest48058){
-      biggest48058=ends[25];
+    if(ends[25]>=biggest44035){
+      biggest44035=ends[25];
     }
-    if(biggest48058 == 1){
+    if(biggest44035 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48053(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44030(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3660,8 +3660,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48052(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44029(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3672,27 +3672,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48051(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44028(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48052(tdone,ends);
-    thread48053(tdone,ends);
-    int biggest48054 = 0;
-    if(ends[21]>=biggest48054){
-      biggest48054=ends[21];
+    thread44029(tdone,ends);
+    thread44030(tdone,ends);
+    int biggest44031 = 0;
+    if(ends[21]>=biggest44031){
+      biggest44031=ends[21];
     }
-    if(ends[22]>=biggest48054){
-      biggest48054=ends[22];
+    if(ends[22]>=biggest44031){
+      biggest44031=ends[22];
     }
-    if(biggest48054 == 1){
+    if(biggest44031 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48049(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44026(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3701,8 +3701,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48048(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44025(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3713,27 +3713,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48047(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44024(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48048(tdone,ends);
-    thread48049(tdone,ends);
-    int biggest48050 = 0;
-    if(ends[18]>=biggest48050){
-      biggest48050=ends[18];
+    thread44025(tdone,ends);
+    thread44026(tdone,ends);
+    int biggest44027 = 0;
+    if(ends[18]>=biggest44027){
+      biggest44027=ends[18];
     }
-    if(ends[19]>=biggest48050){
-      biggest48050=ends[19];
+    if(ends[19]>=biggest44027){
+      biggest44027=ends[19];
     }
-    if(biggest48050 == 1){
+    if(biggest44027 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48045(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44022(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3742,8 +3742,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48044(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44021(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3754,27 +3754,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48043(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44020(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48044(tdone,ends);
-    thread48045(tdone,ends);
-    int biggest48046 = 0;
-    if(ends[15]>=biggest48046){
-      biggest48046=ends[15];
+    thread44021(tdone,ends);
+    thread44022(tdone,ends);
+    int biggest44023 = 0;
+    if(ends[15]>=biggest44023){
+      biggest44023=ends[15];
     }
-    if(ends[16]>=biggest48046){
-      biggest48046=ends[16];
+    if(ends[16]>=biggest44023){
+      biggest44023=ends[16];
     }
-    if(biggest48046 == 1){
+    if(biggest44023 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48040(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44017(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3783,8 +3783,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48039(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread44016(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3795,27 +3795,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48038(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread44015(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48039(tdone,ends);
-    thread48040(tdone,ends);
-    int biggest48041 = 0;
-    if(ends[24]>=biggest48041){
-      biggest48041=ends[24];
+    thread44016(tdone,ends);
+    thread44017(tdone,ends);
+    int biggest44018 = 0;
+    if(ends[24]>=biggest44018){
+      biggest44018=ends[24];
     }
-    if(ends[25]>=biggest48041){
-      biggest48041=ends[25];
+    if(ends[25]>=biggest44018){
+      biggest44018=ends[25];
     }
-    if(biggest48041 == 1){
+    if(biggest44018 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48036(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread44013(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3824,8 +3824,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48035(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread44012(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -3836,27 +3836,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48034(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread44011(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48035(tdone,ends);
-    thread48036(tdone,ends);
-    int biggest48037 = 0;
-    if(ends[21]>=biggest48037){
-      biggest48037=ends[21];
+    thread44012(tdone,ends);
+    thread44013(tdone,ends);
+    int biggest44014 = 0;
+    if(ends[21]>=biggest44014){
+      biggest44014=ends[21];
     }
-    if(ends[22]>=biggest48037){
-      biggest48037=ends[22];
+    if(ends[22]>=biggest44014){
+      biggest44014=ends[22];
     }
-    if(biggest48037 == 1){
+    if(biggest44014 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48032(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread44009(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -3865,8 +3865,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48031(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread44008(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -3877,27 +3877,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48030(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread44007(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48031(tdone,ends);
-    thread48032(tdone,ends);
-    int biggest48033 = 0;
-    if(ends[18]>=biggest48033){
-      biggest48033=ends[18];
+    thread44008(tdone,ends);
+    thread44009(tdone,ends);
+    int biggest44010 = 0;
+    if(ends[18]>=biggest44010){
+      biggest44010=ends[18];
     }
-    if(ends[19]>=biggest48033){
-      biggest48033=ends[19];
+    if(ends[19]>=biggest44010){
+      biggest44010=ends[19];
     }
-    if(biggest48033 == 1){
+    if(biggest44010 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48028(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread44005(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -3906,8 +3906,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48027(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread44004(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -3918,27 +3918,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48026(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread44003(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48027(tdone,ends);
-    thread48028(tdone,ends);
-    int biggest48029 = 0;
-    if(ends[15]>=biggest48029){
-      biggest48029=ends[15];
+    thread44004(tdone,ends);
+    thread44005(tdone,ends);
+    int biggest44006 = 0;
+    if(ends[15]>=biggest44006){
+      biggest44006=ends[15];
     }
-    if(ends[16]>=biggest48029){
-      biggest48029=ends[16];
+    if(ends[16]>=biggest44006){
+      biggest44006=ends[16];
     }
-    if(biggest48029 == 1){
+    if(biggest44006 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48023(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread44000(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -3947,8 +3947,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48022(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43999(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -3959,27 +3959,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48021(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43998(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48022(tdone,ends);
-    thread48023(tdone,ends);
-    int biggest48024 = 0;
-    if(ends[24]>=biggest48024){
-      biggest48024=ends[24];
+    thread43999(tdone,ends);
+    thread44000(tdone,ends);
+    int biggest44001 = 0;
+    if(ends[24]>=biggest44001){
+      biggest44001=ends[24];
     }
-    if(ends[25]>=biggest48024){
-      biggest48024=ends[25];
+    if(ends[25]>=biggest44001){
+      biggest44001=ends[25];
     }
-    if(biggest48024 == 1){
+    if(biggest44001 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48019(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43996(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -3988,8 +3988,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48018(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43995(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4000,27 +4000,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48017(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43994(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48018(tdone,ends);
-    thread48019(tdone,ends);
-    int biggest48020 = 0;
-    if(ends[21]>=biggest48020){
-      biggest48020=ends[21];
+    thread43995(tdone,ends);
+    thread43996(tdone,ends);
+    int biggest43997 = 0;
+    if(ends[21]>=biggest43997){
+      biggest43997=ends[21];
     }
-    if(ends[22]>=biggest48020){
-      biggest48020=ends[22];
+    if(ends[22]>=biggest43997){
+      biggest43997=ends[22];
     }
-    if(biggest48020 == 1){
+    if(biggest43997 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread48015(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43992(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4029,8 +4029,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread48014(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43991(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4041,27 +4041,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread48013(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43990(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread48014(tdone,ends);
-    thread48015(tdone,ends);
-    int biggest48016 = 0;
-    if(ends[18]>=biggest48016){
-      biggest48016=ends[18];
+    thread43991(tdone,ends);
+    thread43992(tdone,ends);
+    int biggest43993 = 0;
+    if(ends[18]>=biggest43993){
+      biggest43993=ends[18];
     }
-    if(ends[19]>=biggest48016){
-      biggest48016=ends[19];
+    if(ends[19]>=biggest43993){
+      biggest43993=ends[19];
     }
-    if(biggest48016 == 1){
+    if(biggest43993 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread48011(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43988(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4070,8 +4070,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread48010(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43987(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4082,27 +4082,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread48009(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43986(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread48010(tdone,ends);
-    thread48011(tdone,ends);
-    int biggest48012 = 0;
-    if(ends[15]>=biggest48012){
-      biggest48012=ends[15];
+    thread43987(tdone,ends);
+    thread43988(tdone,ends);
+    int biggest43989 = 0;
+    if(ends[15]>=biggest43989){
+      biggest43989=ends[15];
     }
-    if(ends[16]>=biggest48012){
-      biggest48012=ends[16];
+    if(ends[16]>=biggest43989){
+      biggest43989=ends[16];
     }
-    if(biggest48012 == 1){
+    if(biggest43989 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread48006(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43983(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4111,8 +4111,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread48005(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43982(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4123,27 +4123,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread48004(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43981(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread48005(tdone,ends);
-    thread48006(tdone,ends);
-    int biggest48007 = 0;
-    if(ends[24]>=biggest48007){
-      biggest48007=ends[24];
+    thread43982(tdone,ends);
+    thread43983(tdone,ends);
+    int biggest43984 = 0;
+    if(ends[24]>=biggest43984){
+      biggest43984=ends[24];
     }
-    if(ends[25]>=biggest48007){
-      biggest48007=ends[25];
+    if(ends[25]>=biggest43984){
+      biggest43984=ends[25];
     }
-    if(biggest48007 == 1){
+    if(biggest43984 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread48002(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43979(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4152,8 +4152,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread48001(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43978(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4164,27 +4164,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread48000(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43977(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread48001(tdone,ends);
-    thread48002(tdone,ends);
-    int biggest48003 = 0;
-    if(ends[21]>=biggest48003){
-      biggest48003=ends[21];
+    thread43978(tdone,ends);
+    thread43979(tdone,ends);
+    int biggest43980 = 0;
+    if(ends[21]>=biggest43980){
+      biggest43980=ends[21];
     }
-    if(ends[22]>=biggest48003){
-      biggest48003=ends[22];
+    if(ends[22]>=biggest43980){
+      biggest43980=ends[22];
     }
-    if(biggest48003 == 1){
+    if(biggest43980 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47998(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43975(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4193,8 +4193,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47997(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43974(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4205,27 +4205,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47996(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43973(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47997(tdone,ends);
-    thread47998(tdone,ends);
-    int biggest47999 = 0;
-    if(ends[18]>=biggest47999){
-      biggest47999=ends[18];
+    thread43974(tdone,ends);
+    thread43975(tdone,ends);
+    int biggest43976 = 0;
+    if(ends[18]>=biggest43976){
+      biggest43976=ends[18];
     }
-    if(ends[19]>=biggest47999){
-      biggest47999=ends[19];
+    if(ends[19]>=biggest43976){
+      biggest43976=ends[19];
     }
-    if(biggest47999 == 1){
+    if(biggest43976 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47994(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43971(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4234,8 +4234,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47993(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43970(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4246,27 +4246,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47992(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43969(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47993(tdone,ends);
-    thread47994(tdone,ends);
-    int biggest47995 = 0;
-    if(ends[15]>=biggest47995){
-      biggest47995=ends[15];
+    thread43970(tdone,ends);
+    thread43971(tdone,ends);
+    int biggest43972 = 0;
+    if(ends[15]>=biggest43972){
+      biggest43972=ends[15];
     }
-    if(ends[16]>=biggest47995){
-      biggest47995=ends[16];
+    if(ends[16]>=biggest43972){
+      biggest43972=ends[16];
     }
-    if(biggest47995 == 1){
+    if(biggest43972 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47989(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43966(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4275,8 +4275,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47988(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43965(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4287,27 +4287,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47987(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43964(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47988(tdone,ends);
-    thread47989(tdone,ends);
-    int biggest47990 = 0;
-    if(ends[24]>=biggest47990){
-      biggest47990=ends[24];
+    thread43965(tdone,ends);
+    thread43966(tdone,ends);
+    int biggest43967 = 0;
+    if(ends[24]>=biggest43967){
+      biggest43967=ends[24];
     }
-    if(ends[25]>=biggest47990){
-      biggest47990=ends[25];
+    if(ends[25]>=biggest43967){
+      biggest43967=ends[25];
     }
-    if(biggest47990 == 1){
+    if(biggest43967 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47985(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43962(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4316,8 +4316,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47984(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43961(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4328,27 +4328,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47983(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43960(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47984(tdone,ends);
-    thread47985(tdone,ends);
-    int biggest47986 = 0;
-    if(ends[21]>=biggest47986){
-      biggest47986=ends[21];
+    thread43961(tdone,ends);
+    thread43962(tdone,ends);
+    int biggest43963 = 0;
+    if(ends[21]>=biggest43963){
+      biggest43963=ends[21];
     }
-    if(ends[22]>=biggest47986){
-      biggest47986=ends[22];
+    if(ends[22]>=biggest43963){
+      biggest43963=ends[22];
     }
-    if(biggest47986 == 1){
+    if(biggest43963 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47981(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43958(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4357,8 +4357,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47980(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43957(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4369,27 +4369,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47979(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43956(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47980(tdone,ends);
-    thread47981(tdone,ends);
-    int biggest47982 = 0;
-    if(ends[18]>=biggest47982){
-      biggest47982=ends[18];
+    thread43957(tdone,ends);
+    thread43958(tdone,ends);
+    int biggest43959 = 0;
+    if(ends[18]>=biggest43959){
+      biggest43959=ends[18];
     }
-    if(ends[19]>=biggest47982){
-      biggest47982=ends[19];
+    if(ends[19]>=biggest43959){
+      biggest43959=ends[19];
     }
-    if(biggest47982 == 1){
+    if(biggest43959 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47977(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43954(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4398,8 +4398,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47976(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43953(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4410,27 +4410,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47975(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43952(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47976(tdone,ends);
-    thread47977(tdone,ends);
-    int biggest47978 = 0;
-    if(ends[15]>=biggest47978){
-      biggest47978=ends[15];
+    thread43953(tdone,ends);
+    thread43954(tdone,ends);
+    int biggest43955 = 0;
+    if(ends[15]>=biggest43955){
+      biggest43955=ends[15];
     }
-    if(ends[16]>=biggest47978){
-      biggest47978=ends[16];
+    if(ends[16]>=biggest43955){
+      biggest43955=ends[16];
     }
-    if(biggest47978 == 1){
+    if(biggest43955 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47972(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43949(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4439,8 +4439,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47971(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43948(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4451,27 +4451,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47970(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43947(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47971(tdone,ends);
-    thread47972(tdone,ends);
-    int biggest47973 = 0;
-    if(ends[24]>=biggest47973){
-      biggest47973=ends[24];
+    thread43948(tdone,ends);
+    thread43949(tdone,ends);
+    int biggest43950 = 0;
+    if(ends[24]>=biggest43950){
+      biggest43950=ends[24];
     }
-    if(ends[25]>=biggest47973){
-      biggest47973=ends[25];
+    if(ends[25]>=biggest43950){
+      biggest43950=ends[25];
     }
-    if(biggest47973 == 1){
+    if(biggest43950 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47968(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43945(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4480,8 +4480,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47967(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43944(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4492,27 +4492,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47966(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43943(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47967(tdone,ends);
-    thread47968(tdone,ends);
-    int biggest47969 = 0;
-    if(ends[21]>=biggest47969){
-      biggest47969=ends[21];
+    thread43944(tdone,ends);
+    thread43945(tdone,ends);
+    int biggest43946 = 0;
+    if(ends[21]>=biggest43946){
+      biggest43946=ends[21];
     }
-    if(ends[22]>=biggest47969){
-      biggest47969=ends[22];
+    if(ends[22]>=biggest43946){
+      biggest43946=ends[22];
     }
-    if(biggest47969 == 1){
+    if(biggest43946 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47964(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43941(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4521,8 +4521,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47963(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43940(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4533,27 +4533,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47962(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43939(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47963(tdone,ends);
-    thread47964(tdone,ends);
-    int biggest47965 = 0;
-    if(ends[18]>=biggest47965){
-      biggest47965=ends[18];
+    thread43940(tdone,ends);
+    thread43941(tdone,ends);
+    int biggest43942 = 0;
+    if(ends[18]>=biggest43942){
+      biggest43942=ends[18];
     }
-    if(ends[19]>=biggest47965){
-      biggest47965=ends[19];
+    if(ends[19]>=biggest43942){
+      biggest43942=ends[19];
     }
-    if(biggest47965 == 1){
+    if(biggest43942 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47960(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43937(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4562,8 +4562,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47959(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43936(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4574,27 +4574,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47958(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43935(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47959(tdone,ends);
-    thread47960(tdone,ends);
-    int biggest47961 = 0;
-    if(ends[15]>=biggest47961){
-      biggest47961=ends[15];
+    thread43936(tdone,ends);
+    thread43937(tdone,ends);
+    int biggest43938 = 0;
+    if(ends[15]>=biggest43938){
+      biggest43938=ends[15];
     }
-    if(ends[16]>=biggest47961){
-      biggest47961=ends[16];
+    if(ends[16]>=biggest43938){
+      biggest43938=ends[16];
     }
-    if(biggest47961 == 1){
+    if(biggest43938 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47955(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43932(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4603,8 +4603,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47954(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43931(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4615,27 +4615,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47953(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43930(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47954(tdone,ends);
-    thread47955(tdone,ends);
-    int biggest47956 = 0;
-    if(ends[24]>=biggest47956){
-      biggest47956=ends[24];
+    thread43931(tdone,ends);
+    thread43932(tdone,ends);
+    int biggest43933 = 0;
+    if(ends[24]>=biggest43933){
+      biggest43933=ends[24];
     }
-    if(ends[25]>=biggest47956){
-      biggest47956=ends[25];
+    if(ends[25]>=biggest43933){
+      biggest43933=ends[25];
     }
-    if(biggest47956 == 1){
+    if(biggest43933 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47951(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43928(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4644,8 +4644,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47950(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43927(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4656,27 +4656,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47949(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43926(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47950(tdone,ends);
-    thread47951(tdone,ends);
-    int biggest47952 = 0;
-    if(ends[21]>=biggest47952){
-      biggest47952=ends[21];
+    thread43927(tdone,ends);
+    thread43928(tdone,ends);
+    int biggest43929 = 0;
+    if(ends[21]>=biggest43929){
+      biggest43929=ends[21];
     }
-    if(ends[22]>=biggest47952){
-      biggest47952=ends[22];
+    if(ends[22]>=biggest43929){
+      biggest43929=ends[22];
     }
-    if(biggest47952 == 1){
+    if(biggest43929 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47947(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43924(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4685,8 +4685,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47946(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43923(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4697,27 +4697,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47945(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43922(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47946(tdone,ends);
-    thread47947(tdone,ends);
-    int biggest47948 = 0;
-    if(ends[18]>=biggest47948){
-      biggest47948=ends[18];
+    thread43923(tdone,ends);
+    thread43924(tdone,ends);
+    int biggest43925 = 0;
+    if(ends[18]>=biggest43925){
+      biggest43925=ends[18];
     }
-    if(ends[19]>=biggest47948){
-      biggest47948=ends[19];
+    if(ends[19]>=biggest43925){
+      biggest43925=ends[19];
     }
-    if(biggest47948 == 1){
+    if(biggest43925 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47943(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43920(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4726,8 +4726,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47942(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43919(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4738,27 +4738,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47941(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43918(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47942(tdone,ends);
-    thread47943(tdone,ends);
-    int biggest47944 = 0;
-    if(ends[15]>=biggest47944){
-      biggest47944=ends[15];
+    thread43919(tdone,ends);
+    thread43920(tdone,ends);
+    int biggest43921 = 0;
+    if(ends[15]>=biggest43921){
+      biggest43921=ends[15];
     }
-    if(ends[16]>=biggest47944){
-      biggest47944=ends[16];
+    if(ends[16]>=biggest43921){
+      biggest43921=ends[16];
     }
-    if(biggest47944 == 1){
+    if(biggest43921 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47938(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43915(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4767,8 +4767,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47937(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43914(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4779,27 +4779,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47936(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43913(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47937(tdone,ends);
-    thread47938(tdone,ends);
-    int biggest47939 = 0;
-    if(ends[24]>=biggest47939){
-      biggest47939=ends[24];
+    thread43914(tdone,ends);
+    thread43915(tdone,ends);
+    int biggest43916 = 0;
+    if(ends[24]>=biggest43916){
+      biggest43916=ends[24];
     }
-    if(ends[25]>=biggest47939){
-      biggest47939=ends[25];
+    if(ends[25]>=biggest43916){
+      biggest43916=ends[25];
     }
-    if(biggest47939 == 1){
+    if(biggest43916 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47934(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43911(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4808,8 +4808,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47933(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43910(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4820,27 +4820,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47932(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43909(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47933(tdone,ends);
-    thread47934(tdone,ends);
-    int biggest47935 = 0;
-    if(ends[21]>=biggest47935){
-      biggest47935=ends[21];
+    thread43910(tdone,ends);
+    thread43911(tdone,ends);
+    int biggest43912 = 0;
+    if(ends[21]>=biggest43912){
+      biggest43912=ends[21];
     }
-    if(ends[22]>=biggest47935){
-      biggest47935=ends[22];
+    if(ends[22]>=biggest43912){
+      biggest43912=ends[22];
     }
-    if(biggest47935 == 1){
+    if(biggest43912 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47930(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43907(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -4849,8 +4849,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47929(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43906(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -4861,27 +4861,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47928(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43905(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47929(tdone,ends);
-    thread47930(tdone,ends);
-    int biggest47931 = 0;
-    if(ends[18]>=biggest47931){
-      biggest47931=ends[18];
+    thread43906(tdone,ends);
+    thread43907(tdone,ends);
+    int biggest43908 = 0;
+    if(ends[18]>=biggest43908){
+      biggest43908=ends[18];
     }
-    if(ends[19]>=biggest47931){
-      biggest47931=ends[19];
+    if(ends[19]>=biggest43908){
+      biggest43908=ends[19];
     }
-    if(biggest47931 == 1){
+    if(biggest43908 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47926(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43903(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -4890,8 +4890,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47925(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43902(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -4902,27 +4902,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47924(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43901(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47925(tdone,ends);
-    thread47926(tdone,ends);
-    int biggest47927 = 0;
-    if(ends[15]>=biggest47927){
-      biggest47927=ends[15];
+    thread43902(tdone,ends);
+    thread43903(tdone,ends);
+    int biggest43904 = 0;
+    if(ends[15]>=biggest43904){
+      biggest43904=ends[15];
     }
-    if(ends[16]>=biggest47927){
-      biggest47927=ends[16];
+    if(ends[16]>=biggest43904){
+      biggest43904=ends[16];
     }
-    if(biggest47927 == 1){
+    if(biggest43904 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47921(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43898(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -4931,8 +4931,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47920(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43897(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -4943,27 +4943,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47919(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43896(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47920(tdone,ends);
-    thread47921(tdone,ends);
-    int biggest47922 = 0;
-    if(ends[24]>=biggest47922){
-      biggest47922=ends[24];
+    thread43897(tdone,ends);
+    thread43898(tdone,ends);
+    int biggest43899 = 0;
+    if(ends[24]>=biggest43899){
+      biggest43899=ends[24];
     }
-    if(ends[25]>=biggest47922){
-      biggest47922=ends[25];
+    if(ends[25]>=biggest43899){
+      biggest43899=ends[25];
     }
-    if(biggest47922 == 1){
+    if(biggest43899 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47917(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43894(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -4972,8 +4972,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47916(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43893(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -4984,27 +4984,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47915(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43892(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47916(tdone,ends);
-    thread47917(tdone,ends);
-    int biggest47918 = 0;
-    if(ends[21]>=biggest47918){
-      biggest47918=ends[21];
+    thread43893(tdone,ends);
+    thread43894(tdone,ends);
+    int biggest43895 = 0;
+    if(ends[21]>=biggest43895){
+      biggest43895=ends[21];
     }
-    if(ends[22]>=biggest47918){
-      biggest47918=ends[22];
+    if(ends[22]>=biggest43895){
+      biggest43895=ends[22];
     }
-    if(biggest47918 == 1){
+    if(biggest43895 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47913(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43890(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5013,8 +5013,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47912(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43889(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5025,27 +5025,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47911(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43888(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47912(tdone,ends);
-    thread47913(tdone,ends);
-    int biggest47914 = 0;
-    if(ends[18]>=biggest47914){
-      biggest47914=ends[18];
+    thread43889(tdone,ends);
+    thread43890(tdone,ends);
+    int biggest43891 = 0;
+    if(ends[18]>=biggest43891){
+      biggest43891=ends[18];
     }
-    if(ends[19]>=biggest47914){
-      biggest47914=ends[19];
+    if(ends[19]>=biggest43891){
+      biggest43891=ends[19];
     }
-    if(biggest47914 == 1){
+    if(biggest43891 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47909(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43886(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5054,8 +5054,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47908(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43885(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5066,27 +5066,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47907(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43884(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47908(tdone,ends);
-    thread47909(tdone,ends);
-    int biggest47910 = 0;
-    if(ends[15]>=biggest47910){
-      biggest47910=ends[15];
+    thread43885(tdone,ends);
+    thread43886(tdone,ends);
+    int biggest43887 = 0;
+    if(ends[15]>=biggest43887){
+      biggest43887=ends[15];
     }
-    if(ends[16]>=biggest47910){
-      biggest47910=ends[16];
+    if(ends[16]>=biggest43887){
+      biggest43887=ends[16];
     }
-    if(biggest47910 == 1){
+    if(biggest43887 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47904(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43881(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5095,8 +5095,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47903(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43880(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5107,27 +5107,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47902(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43879(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47903(tdone,ends);
-    thread47904(tdone,ends);
-    int biggest47905 = 0;
-    if(ends[24]>=biggest47905){
-      biggest47905=ends[24];
+    thread43880(tdone,ends);
+    thread43881(tdone,ends);
+    int biggest43882 = 0;
+    if(ends[24]>=biggest43882){
+      biggest43882=ends[24];
     }
-    if(ends[25]>=biggest47905){
-      biggest47905=ends[25];
+    if(ends[25]>=biggest43882){
+      biggest43882=ends[25];
     }
-    if(biggest47905 == 1){
+    if(biggest43882 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47900(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43877(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5136,8 +5136,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47899(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43876(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5148,27 +5148,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47898(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43875(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47899(tdone,ends);
-    thread47900(tdone,ends);
-    int biggest47901 = 0;
-    if(ends[21]>=biggest47901){
-      biggest47901=ends[21];
+    thread43876(tdone,ends);
+    thread43877(tdone,ends);
+    int biggest43878 = 0;
+    if(ends[21]>=biggest43878){
+      biggest43878=ends[21];
     }
-    if(ends[22]>=biggest47901){
-      biggest47901=ends[22];
+    if(ends[22]>=biggest43878){
+      biggest43878=ends[22];
     }
-    if(biggest47901 == 1){
+    if(biggest43878 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47896(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43873(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5177,8 +5177,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47895(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43872(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5189,27 +5189,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47894(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43871(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47895(tdone,ends);
-    thread47896(tdone,ends);
-    int biggest47897 = 0;
-    if(ends[18]>=biggest47897){
-      biggest47897=ends[18];
+    thread43872(tdone,ends);
+    thread43873(tdone,ends);
+    int biggest43874 = 0;
+    if(ends[18]>=biggest43874){
+      biggest43874=ends[18];
     }
-    if(ends[19]>=biggest47897){
-      biggest47897=ends[19];
+    if(ends[19]>=biggest43874){
+      biggest43874=ends[19];
     }
-    if(biggest47897 == 1){
+    if(biggest43874 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47892(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43869(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5218,8 +5218,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47891(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43868(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5230,27 +5230,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47890(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43867(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47891(tdone,ends);
-    thread47892(tdone,ends);
-    int biggest47893 = 0;
-    if(ends[15]>=biggest47893){
-      biggest47893=ends[15];
+    thread43868(tdone,ends);
+    thread43869(tdone,ends);
+    int biggest43870 = 0;
+    if(ends[15]>=biggest43870){
+      biggest43870=ends[15];
     }
-    if(ends[16]>=biggest47893){
-      biggest47893=ends[16];
+    if(ends[16]>=biggest43870){
+      biggest43870=ends[16];
     }
-    if(biggest47893 == 1){
+    if(biggest43870 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47887(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43864(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5259,8 +5259,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47886(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43863(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5271,27 +5271,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47885(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43862(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47886(tdone,ends);
-    thread47887(tdone,ends);
-    int biggest47888 = 0;
-    if(ends[24]>=biggest47888){
-      biggest47888=ends[24];
+    thread43863(tdone,ends);
+    thread43864(tdone,ends);
+    int biggest43865 = 0;
+    if(ends[24]>=biggest43865){
+      biggest43865=ends[24];
     }
-    if(ends[25]>=biggest47888){
-      biggest47888=ends[25];
+    if(ends[25]>=biggest43865){
+      biggest43865=ends[25];
     }
-    if(biggest47888 == 1){
+    if(biggest43865 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47883(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43860(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5300,8 +5300,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47882(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43859(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5312,27 +5312,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47881(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43858(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47882(tdone,ends);
-    thread47883(tdone,ends);
-    int biggest47884 = 0;
-    if(ends[21]>=biggest47884){
-      biggest47884=ends[21];
+    thread43859(tdone,ends);
+    thread43860(tdone,ends);
+    int biggest43861 = 0;
+    if(ends[21]>=biggest43861){
+      biggest43861=ends[21];
     }
-    if(ends[22]>=biggest47884){
-      biggest47884=ends[22];
+    if(ends[22]>=biggest43861){
+      biggest43861=ends[22];
     }
-    if(biggest47884 == 1){
+    if(biggest43861 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47879(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43856(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5341,8 +5341,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47878(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43855(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5353,27 +5353,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47877(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43854(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47878(tdone,ends);
-    thread47879(tdone,ends);
-    int biggest47880 = 0;
-    if(ends[18]>=biggest47880){
-      biggest47880=ends[18];
+    thread43855(tdone,ends);
+    thread43856(tdone,ends);
+    int biggest43857 = 0;
+    if(ends[18]>=biggest43857){
+      biggest43857=ends[18];
     }
-    if(ends[19]>=biggest47880){
-      biggest47880=ends[19];
+    if(ends[19]>=biggest43857){
+      biggest43857=ends[19];
     }
-    if(biggest47880 == 1){
+    if(biggest43857 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47875(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43852(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5382,8 +5382,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47874(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43851(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5394,27 +5394,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47873(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43850(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47874(tdone,ends);
-    thread47875(tdone,ends);
-    int biggest47876 = 0;
-    if(ends[15]>=biggest47876){
-      biggest47876=ends[15];
+    thread43851(tdone,ends);
+    thread43852(tdone,ends);
+    int biggest43853 = 0;
+    if(ends[15]>=biggest43853){
+      biggest43853=ends[15];
     }
-    if(ends[16]>=biggest47876){
-      biggest47876=ends[16];
+    if(ends[16]>=biggest43853){
+      biggest43853=ends[16];
     }
-    if(biggest47876 == 1){
+    if(biggest43853 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47870(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43847(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5423,8 +5423,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47869(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43846(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5435,27 +5435,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47868(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43845(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47869(tdone,ends);
-    thread47870(tdone,ends);
-    int biggest47871 = 0;
-    if(ends[24]>=biggest47871){
-      biggest47871=ends[24];
+    thread43846(tdone,ends);
+    thread43847(tdone,ends);
+    int biggest43848 = 0;
+    if(ends[24]>=biggest43848){
+      biggest43848=ends[24];
     }
-    if(ends[25]>=biggest47871){
-      biggest47871=ends[25];
+    if(ends[25]>=biggest43848){
+      biggest43848=ends[25];
     }
-    if(biggest47871 == 1){
+    if(biggest43848 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47866(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43843(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5464,8 +5464,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47865(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43842(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5476,27 +5476,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47864(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43841(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47865(tdone,ends);
-    thread47866(tdone,ends);
-    int biggest47867 = 0;
-    if(ends[21]>=biggest47867){
-      biggest47867=ends[21];
+    thread43842(tdone,ends);
+    thread43843(tdone,ends);
+    int biggest43844 = 0;
+    if(ends[21]>=biggest43844){
+      biggest43844=ends[21];
     }
-    if(ends[22]>=biggest47867){
-      biggest47867=ends[22];
+    if(ends[22]>=biggest43844){
+      biggest43844=ends[22];
     }
-    if(biggest47867 == 1){
+    if(biggest43844 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47862(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43839(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5505,8 +5505,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47861(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43838(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5517,27 +5517,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47860(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43837(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47861(tdone,ends);
-    thread47862(tdone,ends);
-    int biggest47863 = 0;
-    if(ends[18]>=biggest47863){
-      biggest47863=ends[18];
+    thread43838(tdone,ends);
+    thread43839(tdone,ends);
+    int biggest43840 = 0;
+    if(ends[18]>=biggest43840){
+      biggest43840=ends[18];
     }
-    if(ends[19]>=biggest47863){
-      biggest47863=ends[19];
+    if(ends[19]>=biggest43840){
+      biggest43840=ends[19];
     }
-    if(biggest47863 == 1){
+    if(biggest43840 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47858(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43835(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5546,8 +5546,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47857(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43834(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5558,27 +5558,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47856(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43833(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47857(tdone,ends);
-    thread47858(tdone,ends);
-    int biggest47859 = 0;
-    if(ends[15]>=biggest47859){
-      biggest47859=ends[15];
+    thread43834(tdone,ends);
+    thread43835(tdone,ends);
+    int biggest43836 = 0;
+    if(ends[15]>=biggest43836){
+      biggest43836=ends[15];
     }
-    if(ends[16]>=biggest47859){
-      biggest47859=ends[16];
+    if(ends[16]>=biggest43836){
+      biggest43836=ends[16];
     }
-    if(biggest47859 == 1){
+    if(biggest43836 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47853(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43830(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5587,8 +5587,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47852(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43829(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5599,27 +5599,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47851(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43828(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47852(tdone,ends);
-    thread47853(tdone,ends);
-    int biggest47854 = 0;
-    if(ends[24]>=biggest47854){
-      biggest47854=ends[24];
+    thread43829(tdone,ends);
+    thread43830(tdone,ends);
+    int biggest43831 = 0;
+    if(ends[24]>=biggest43831){
+      biggest43831=ends[24];
     }
-    if(ends[25]>=biggest47854){
-      biggest47854=ends[25];
+    if(ends[25]>=biggest43831){
+      biggest43831=ends[25];
     }
-    if(biggest47854 == 1){
+    if(biggest43831 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47849(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43826(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5628,8 +5628,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47848(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43825(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5640,27 +5640,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47847(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43824(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47848(tdone,ends);
-    thread47849(tdone,ends);
-    int biggest47850 = 0;
-    if(ends[21]>=biggest47850){
-      biggest47850=ends[21];
+    thread43825(tdone,ends);
+    thread43826(tdone,ends);
+    int biggest43827 = 0;
+    if(ends[21]>=biggest43827){
+      biggest43827=ends[21];
     }
-    if(ends[22]>=biggest47850){
-      biggest47850=ends[22];
+    if(ends[22]>=biggest43827){
+      biggest43827=ends[22];
     }
-    if(biggest47850 == 1){
+    if(biggest43827 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47845(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43822(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5669,8 +5669,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47844(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43821(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5681,27 +5681,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47843(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43820(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47844(tdone,ends);
-    thread47845(tdone,ends);
-    int biggest47846 = 0;
-    if(ends[18]>=biggest47846){
-      biggest47846=ends[18];
+    thread43821(tdone,ends);
+    thread43822(tdone,ends);
+    int biggest43823 = 0;
+    if(ends[18]>=biggest43823){
+      biggest43823=ends[18];
     }
-    if(ends[19]>=biggest47846){
-      biggest47846=ends[19];
+    if(ends[19]>=biggest43823){
+      biggest43823=ends[19];
     }
-    if(biggest47846 == 1){
+    if(biggest43823 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47841(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43818(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5710,8 +5710,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47840(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43817(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5722,27 +5722,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47839(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43816(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47840(tdone,ends);
-    thread47841(tdone,ends);
-    int biggest47842 = 0;
-    if(ends[15]>=biggest47842){
-      biggest47842=ends[15];
+    thread43817(tdone,ends);
+    thread43818(tdone,ends);
+    int biggest43819 = 0;
+    if(ends[15]>=biggest43819){
+      biggest43819=ends[15];
     }
-    if(ends[16]>=biggest47842){
-      biggest47842=ends[16];
+    if(ends[16]>=biggest43819){
+      biggest43819=ends[16];
     }
-    if(biggest47842 == 1){
+    if(biggest43819 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47836(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43813(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5751,8 +5751,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47835(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43812(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5763,27 +5763,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47834(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43811(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47835(tdone,ends);
-    thread47836(tdone,ends);
-    int biggest47837 = 0;
-    if(ends[24]>=biggest47837){
-      biggest47837=ends[24];
+    thread43812(tdone,ends);
+    thread43813(tdone,ends);
+    int biggest43814 = 0;
+    if(ends[24]>=biggest43814){
+      biggest43814=ends[24];
     }
-    if(ends[25]>=biggest47837){
-      biggest47837=ends[25];
+    if(ends[25]>=biggest43814){
+      biggest43814=ends[25];
     }
-    if(biggest47837 == 1){
+    if(biggest43814 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47832(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43809(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5792,8 +5792,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47831(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43808(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5804,27 +5804,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47830(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43807(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47831(tdone,ends);
-    thread47832(tdone,ends);
-    int biggest47833 = 0;
-    if(ends[21]>=biggest47833){
-      biggest47833=ends[21];
+    thread43808(tdone,ends);
+    thread43809(tdone,ends);
+    int biggest43810 = 0;
+    if(ends[21]>=biggest43810){
+      biggest43810=ends[21];
     }
-    if(ends[22]>=biggest47833){
-      biggest47833=ends[22];
+    if(ends[22]>=biggest43810){
+      biggest43810=ends[22];
     }
-    if(biggest47833 == 1){
+    if(biggest43810 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47828(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43805(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5833,8 +5833,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47827(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43804(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -5845,27 +5845,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47826(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43803(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47827(tdone,ends);
-    thread47828(tdone,ends);
-    int biggest47829 = 0;
-    if(ends[18]>=biggest47829){
-      biggest47829=ends[18];
+    thread43804(tdone,ends);
+    thread43805(tdone,ends);
+    int biggest43806 = 0;
+    if(ends[18]>=biggest43806){
+      biggest43806=ends[18];
     }
-    if(ends[19]>=biggest47829){
-      biggest47829=ends[19];
+    if(ends[19]>=biggest43806){
+      biggest43806=ends[19];
     }
-    if(biggest47829 == 1){
+    if(biggest43806 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47824(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43801(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -5874,8 +5874,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47823(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43800(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -5886,27 +5886,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47822(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43799(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47823(tdone,ends);
-    thread47824(tdone,ends);
-    int biggest47825 = 0;
-    if(ends[15]>=biggest47825){
-      biggest47825=ends[15];
+    thread43800(tdone,ends);
+    thread43801(tdone,ends);
+    int biggest43802 = 0;
+    if(ends[15]>=biggest43802){
+      biggest43802=ends[15];
     }
-    if(ends[16]>=biggest47825){
-      biggest47825=ends[16];
+    if(ends[16]>=biggest43802){
+      biggest43802=ends[16];
     }
-    if(biggest47825 == 1){
+    if(biggest43802 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47819(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43796(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -5915,8 +5915,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47818(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43795(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -5927,27 +5927,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47817(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43794(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47818(tdone,ends);
-    thread47819(tdone,ends);
-    int biggest47820 = 0;
-    if(ends[24]>=biggest47820){
-      biggest47820=ends[24];
+    thread43795(tdone,ends);
+    thread43796(tdone,ends);
+    int biggest43797 = 0;
+    if(ends[24]>=biggest43797){
+      biggest43797=ends[24];
     }
-    if(ends[25]>=biggest47820){
-      biggest47820=ends[25];
+    if(ends[25]>=biggest43797){
+      biggest43797=ends[25];
     }
-    if(biggest47820 == 1){
+    if(biggest43797 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47815(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43792(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -5956,8 +5956,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47814(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43791(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -5968,27 +5968,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47813(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43790(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47814(tdone,ends);
-    thread47815(tdone,ends);
-    int biggest47816 = 0;
-    if(ends[21]>=biggest47816){
-      biggest47816=ends[21];
+    thread43791(tdone,ends);
+    thread43792(tdone,ends);
+    int biggest43793 = 0;
+    if(ends[21]>=biggest43793){
+      biggest43793=ends[21];
     }
-    if(ends[22]>=biggest47816){
-      biggest47816=ends[22];
+    if(ends[22]>=biggest43793){
+      biggest43793=ends[22];
     }
-    if(biggest47816 == 1){
+    if(biggest43793 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47811(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43788(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -5997,8 +5997,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47810(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43787(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -6009,27 +6009,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47809(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43786(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47810(tdone,ends);
-    thread47811(tdone,ends);
-    int biggest47812 = 0;
-    if(ends[18]>=biggest47812){
-      biggest47812=ends[18];
+    thread43787(tdone,ends);
+    thread43788(tdone,ends);
+    int biggest43789 = 0;
+    if(ends[18]>=biggest43789){
+      biggest43789=ends[18];
     }
-    if(ends[19]>=biggest47812){
-      biggest47812=ends[19];
+    if(ends[19]>=biggest43789){
+      biggest43789=ends[19];
     }
-    if(biggest47812 == 1){
+    if(biggest43789 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47807(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43784(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -6038,8 +6038,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47806(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43783(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -6050,27 +6050,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47805(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43782(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47806(tdone,ends);
-    thread47807(tdone,ends);
-    int biggest47808 = 0;
-    if(ends[15]>=biggest47808){
-      biggest47808=ends[15];
+    thread43783(tdone,ends);
+    thread43784(tdone,ends);
+    int biggest43785 = 0;
+    if(ends[15]>=biggest43785){
+      biggest43785=ends[15];
     }
-    if(ends[16]>=biggest47808){
-      biggest47808=ends[16];
+    if(ends[16]>=biggest43785){
+      biggest43785=ends[16];
     }
-    if(biggest47808 == 1){
+    if(biggest43785 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47802(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43779(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -6079,8 +6079,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47801(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43778(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -6091,27 +6091,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47800(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43777(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47801(tdone,ends);
-    thread47802(tdone,ends);
-    int biggest47803 = 0;
-    if(ends[24]>=biggest47803){
-      biggest47803=ends[24];
+    thread43778(tdone,ends);
+    thread43779(tdone,ends);
+    int biggest43780 = 0;
+    if(ends[24]>=biggest43780){
+      biggest43780=ends[24];
     }
-    if(ends[25]>=biggest47803){
-      biggest47803=ends[25];
+    if(ends[25]>=biggest43780){
+      biggest43780=ends[25];
     }
-    if(biggest47803 == 1){
+    if(biggest43780 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47798(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43775(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -6120,8 +6120,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47797(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43774(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -6132,27 +6132,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47796(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43773(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47797(tdone,ends);
-    thread47798(tdone,ends);
-    int biggest47799 = 0;
-    if(ends[21]>=biggest47799){
-      biggest47799=ends[21];
+    thread43774(tdone,ends);
+    thread43775(tdone,ends);
+    int biggest43776 = 0;
+    if(ends[21]>=biggest43776){
+      biggest43776=ends[21];
     }
-    if(ends[22]>=biggest47799){
-      biggest47799=ends[22];
+    if(ends[22]>=biggest43776){
+      biggest43776=ends[22];
     }
-    if(biggest47799 == 1){
+    if(biggest43776 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47794(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43771(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -6161,8 +6161,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47793(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43770(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -6173,27 +6173,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47792(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43769(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47793(tdone,ends);
-    thread47794(tdone,ends);
-    int biggest47795 = 0;
-    if(ends[18]>=biggest47795){
-      biggest47795=ends[18];
+    thread43770(tdone,ends);
+    thread43771(tdone,ends);
+    int biggest43772 = 0;
+    if(ends[18]>=biggest43772){
+      biggest43772=ends[18];
     }
-    if(ends[19]>=biggest47795){
-      biggest47795=ends[19];
+    if(ends[19]>=biggest43772){
+      biggest43772=ends[19];
     }
-    if(biggest47795 == 1){
+    if(biggest43772 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47790(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43767(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -6202,8 +6202,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47789(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43766(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -6214,27 +6214,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47788(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43765(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47789(tdone,ends);
-    thread47790(tdone,ends);
-    int biggest47791 = 0;
-    if(ends[15]>=biggest47791){
-      biggest47791=ends[15];
+    thread43766(tdone,ends);
+    thread43767(tdone,ends);
+    int biggest43768 = 0;
+    if(ends[15]>=biggest43768){
+      biggest43768=ends[15];
     }
-    if(ends[16]>=biggest47791){
-      biggest47791=ends[16];
+    if(ends[16]>=biggest43768){
+      biggest43768=ends[16];
     }
-    if(biggest47791 == 1){
+    if(biggest43768 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47785(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43762(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -6243,8 +6243,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47784(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43761(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -6255,27 +6255,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47783(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43760(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47784(tdone,ends);
-    thread47785(tdone,ends);
-    int biggest47786 = 0;
-    if(ends[24]>=biggest47786){
-      biggest47786=ends[24];
+    thread43761(tdone,ends);
+    thread43762(tdone,ends);
+    int biggest43763 = 0;
+    if(ends[24]>=biggest43763){
+      biggest43763=ends[24];
     }
-    if(ends[25]>=biggest47786){
-      biggest47786=ends[25];
+    if(ends[25]>=biggest43763){
+      biggest43763=ends[25];
     }
-    if(biggest47786 == 1){
+    if(biggest43763 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47781(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43758(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -6284,8 +6284,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47780(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43757(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -6296,27 +6296,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47779(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43756(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47780(tdone,ends);
-    thread47781(tdone,ends);
-    int biggest47782 = 0;
-    if(ends[21]>=biggest47782){
-      biggest47782=ends[21];
+    thread43757(tdone,ends);
+    thread43758(tdone,ends);
+    int biggest43759 = 0;
+    if(ends[21]>=biggest43759){
+      biggest43759=ends[21];
     }
-    if(ends[22]>=biggest47782){
-      biggest47782=ends[22];
+    if(ends[22]>=biggest43759){
+      biggest43759=ends[22];
     }
-    if(biggest47782 == 1){
+    if(biggest43759 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47777(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43754(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -6325,8 +6325,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47776(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43753(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -6337,27 +6337,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47775(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43752(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47776(tdone,ends);
-    thread47777(tdone,ends);
-    int biggest47778 = 0;
-    if(ends[18]>=biggest47778){
-      biggest47778=ends[18];
+    thread43753(tdone,ends);
+    thread43754(tdone,ends);
+    int biggest43755 = 0;
+    if(ends[18]>=biggest43755){
+      biggest43755=ends[18];
     }
-    if(ends[19]>=biggest47778){
-      biggest47778=ends[19];
+    if(ends[19]>=biggest43755){
+      biggest43755=ends[19];
     }
-    if(biggest47778 == 1){
+    if(biggest43755 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47773(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43750(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -6366,8 +6366,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47772(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43749(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -6378,27 +6378,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47771(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43748(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47772(tdone,ends);
-    thread47773(tdone,ends);
-    int biggest47774 = 0;
-    if(ends[15]>=biggest47774){
-      biggest47774=ends[15];
+    thread43749(tdone,ends);
+    thread43750(tdone,ends);
+    int biggest43751 = 0;
+    if(ends[15]>=biggest43751){
+      biggest43751=ends[15];
     }
-    if(ends[16]>=biggest47774){
-      biggest47774=ends[16];
+    if(ends[16]>=biggest43751){
+      biggest43751=ends[16];
     }
-    if(biggest47774 == 1){
+    if(biggest43751 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47768(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43745(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -6407,8 +6407,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47767(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43744(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -6419,27 +6419,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47766(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43743(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47767(tdone,ends);
-    thread47768(tdone,ends);
-    int biggest47769 = 0;
-    if(ends[24]>=biggest47769){
-      biggest47769=ends[24];
+    thread43744(tdone,ends);
+    thread43745(tdone,ends);
+    int biggest43746 = 0;
+    if(ends[24]>=biggest43746){
+      biggest43746=ends[24];
     }
-    if(ends[25]>=biggest47769){
-      biggest47769=ends[25];
+    if(ends[25]>=biggest43746){
+      biggest43746=ends[25];
     }
-    if(biggest47769 == 1){
+    if(biggest43746 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47764(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43741(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -6448,8 +6448,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47763(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43740(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -6460,27 +6460,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47762(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43739(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47763(tdone,ends);
-    thread47764(tdone,ends);
-    int biggest47765 = 0;
-    if(ends[21]>=biggest47765){
-      biggest47765=ends[21];
+    thread43740(tdone,ends);
+    thread43741(tdone,ends);
+    int biggest43742 = 0;
+    if(ends[21]>=biggest43742){
+      biggest43742=ends[21];
     }
-    if(ends[22]>=biggest47765){
-      biggest47765=ends[22];
+    if(ends[22]>=biggest43742){
+      biggest43742=ends[22];
     }
-    if(biggest47765 == 1){
+    if(biggest43742 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47760(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43737(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -6489,8 +6489,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47759(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43736(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -6501,27 +6501,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47758(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43735(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47759(tdone,ends);
-    thread47760(tdone,ends);
-    int biggest47761 = 0;
-    if(ends[18]>=biggest47761){
-      biggest47761=ends[18];
+    thread43736(tdone,ends);
+    thread43737(tdone,ends);
+    int biggest43738 = 0;
+    if(ends[18]>=biggest43738){
+      biggest43738=ends[18];
     }
-    if(ends[19]>=biggest47761){
-      biggest47761=ends[19];
+    if(ends[19]>=biggest43738){
+      biggest43738=ends[19];
     }
-    if(biggest47761 == 1){
+    if(biggest43738 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47756(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43733(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -6530,8 +6530,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47755(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43732(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -6542,27 +6542,27 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47754(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43731(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47755(tdone,ends);
-    thread47756(tdone,ends);
-    int biggest47757 = 0;
-    if(ends[15]>=biggest47757){
-      biggest47757=ends[15];
+    thread43732(tdone,ends);
+    thread43733(tdone,ends);
+    int biggest43734 = 0;
+    if(ends[15]>=biggest43734){
+      biggest43734=ends[15];
     }
-    if(ends[16]>=biggest47757){
-      biggest47757=ends[16];
+    if(ends[16]>=biggest43734){
+      biggest43734=ends[16];
     }
-    if(biggest47757 == 1){
+    if(biggest43734 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47753(int [] tdone, int [] ends){
-        switch(S38881){
+  public void thread43730(int [] tdone, int [] ends){
+        switch(S34858){
       case 0 : 
         active[13]=0;
         ends[13]=0;
@@ -6570,174 +6570,174 @@ public class Controller extends ClockDomain{
         break;
       
       case 1 : 
-        switch(S30853){
+        switch(S26830){
           case 0 : 
-            switch(S26951){
+            switch(S22928){
               case 0 : 
-                switch(S26847){
+                switch(S22824){
                   case 0 : 
                     if(!FirstLiquid_in.isPartnerPresent() || FirstLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 35, column: 8
                       FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
-                      S26847=1;
+                      S22824=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S26842){
+                      switch(S22819){
                         case 0 : 
                           if(!FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                             FirstLiquid_in.setACK(true);//sysj/controller.sysj line: 35, column: 8
-                            S26842=1;
+                            S22819=1;
                             if(FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                               FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 35, column: 8
-                              S26951=1;
-                              S26869=0;
+                              S22928=1;
+                              S22846=0;
                               if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                                 FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                                S26869=1;
+                                S22846=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S26864=0;
+                                S22841=0;
                                 if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                                   FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                                  S26864=1;
+                                  S22841=1;
                                   if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                                     FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 36, column: 14
-                                    S26951=2;
-                                    S26958=0;
+                                    S22928=2;
+                                    S22935=0;
                                     if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                                       SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                                      S26958=1;
+                                      S22935=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S26953=0;
+                                      S22930=0;
                                       if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                         SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                                        S26953=1;
+                                        S22930=1;
                                         if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                           SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 37, column: 8
-                                          S26951=3;
-                                          S27090=0;
+                                          S22928=3;
+                                          S23067=0;
                                           if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                             SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                            S27090=1;
+                                            S23067=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S27085=0;
+                                            S23062=0;
                                             if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                               SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                              S27085=1;
+                                              S23062=1;
                                               if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                                 SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 38, column: 14
-                                                S26951=4;
-                                                S27266=0;
+                                                S22928=4;
+                                                S23243=0;
                                                 if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                                   ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                                  S27266=1;
+                                                  S23243=1;
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
                                                 }
                                                 else {
-                                                  S27261=0;
+                                                  S23238=0;
                                                   if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                     ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                                    S27261=1;
+                                                    S23238=1;
                                                     if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                       ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                                       ends[13]=2;
                                                       ;//sysj/controller.sysj line: 39, column: 14
-                                                      S26951=5;
-                                                      S27486=0;
+                                                      S22928=5;
+                                                      S23463=0;
                                                       if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                                         ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                                        S27486=1;
+                                                        S23463=1;
                                                         active[13]=1;
                                                         ends[13]=1;
                                                         tdone[13]=1;
                                                       }
                                                       else {
-                                                        S27481=0;
+                                                        S23458=0;
                                                         if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                           ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                          S27481=1;
+                                                          S23458=1;
                                                           if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                             ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                             ends[13]=2;
                                                             ;//sysj/controller.sysj line: 40, column: 14
-                                                            S26951=6;
-                                                            S27750=0;
+                                                            S22928=6;
+                                                            S23727=0;
                                                             if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                              S27750=1;
+                                                              S23727=1;
                                                               active[13]=1;
                                                               ends[13]=1;
                                                               tdone[13]=1;
                                                             }
                                                             else {
-                                                              S27745=0;
+                                                              S23722=0;
                                                               if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                                 FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                                S27745=1;
+                                                                S23722=1;
                                                                 if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                                   FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                                   ends[13]=2;
                                                                   ;//sysj/controller.sysj line: 41, column: 14
-                                                                  S26951=7;
-                                                                  S28058=0;
+                                                                  S22928=7;
+                                                                  S24035=0;
                                                                   if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                                    S28058=1;
+                                                                    S24035=1;
                                                                     active[13]=1;
                                                                     ends[13]=1;
                                                                     tdone[13]=1;
                                                                   }
                                                                   else {
-                                                                    S28053=0;
+                                                                    S24030=0;
                                                                     if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                       FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                                      S28053=1;
+                                                                      S24030=1;
                                                                       if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                         FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                                         ends[13]=2;
                                                                         ;//sysj/controller.sysj line: 42, column: 14
-                                                                        S26951=8;
-                                                                        thread47754(tdone,ends);
-                                                                        thread47758(tdone,ends);
-                                                                        thread47762(tdone,ends);
-                                                                        thread47766(tdone,ends);
-                                                                        int biggest47770 = 0;
-                                                                        if(ends[14]>=biggest47770){
-                                                                          biggest47770=ends[14];
+                                                                        S22928=8;
+                                                                        thread43731(tdone,ends);
+                                                                        thread43735(tdone,ends);
+                                                                        thread43739(tdone,ends);
+                                                                        thread43743(tdone,ends);
+                                                                        int biggest43747 = 0;
+                                                                        if(ends[14]>=biggest43747){
+                                                                          biggest43747=ends[14];
                                                                         }
-                                                                        if(ends[17]>=biggest47770){
-                                                                          biggest47770=ends[17];
+                                                                        if(ends[17]>=biggest43747){
+                                                                          biggest43747=ends[17];
                                                                         }
-                                                                        if(ends[20]>=biggest47770){
-                                                                          biggest47770=ends[20];
+                                                                        if(ends[20]>=biggest43747){
+                                                                          biggest43747=ends[20];
                                                                         }
-                                                                        if(ends[23]>=biggest47770){
-                                                                          biggest47770=ends[23];
+                                                                        if(ends[23]>=biggest43747){
+                                                                          biggest43747=ends[23];
                                                                         }
-                                                                        if(biggest47770 == 1){
+                                                                        if(biggest43747 == 1){
                                                                           active[13]=1;
                                                                           ends[13]=1;
                                                                           tdone[13]=1;
@@ -6852,151 +6852,151 @@ public class Controller extends ClockDomain{
                             FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 35, column: 8
-                            S26951=1;
-                            S26869=0;
+                            S22928=1;
+                            S22846=0;
                             if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                               FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                              S26869=1;
+                              S22846=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S26864=0;
+                              S22841=0;
                               if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                                 FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                                S26864=1;
+                                S22841=1;
                                 if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                                   FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 36, column: 14
-                                  S26951=2;
-                                  S26958=0;
+                                  S22928=2;
+                                  S22935=0;
                                   if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                                     SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                                    S26958=1;
+                                    S22935=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S26953=0;
+                                    S22930=0;
                                     if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                       SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                                      S26953=1;
+                                      S22930=1;
                                       if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                         SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 37, column: 8
-                                        S26951=3;
-                                        S27090=0;
+                                        S22928=3;
+                                        S23067=0;
                                         if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                           SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                          S27090=1;
+                                          S23067=1;
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
                                         }
                                         else {
-                                          S27085=0;
+                                          S23062=0;
                                           if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                             SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                            S27085=1;
+                                            S23062=1;
                                             if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                               SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                               ends[13]=2;
                                               ;//sysj/controller.sysj line: 38, column: 14
-                                              S26951=4;
-                                              S27266=0;
+                                              S22928=4;
+                                              S23243=0;
                                               if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                                 ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                                S27266=1;
+                                                S23243=1;
                                                 active[13]=1;
                                                 ends[13]=1;
                                                 tdone[13]=1;
                                               }
                                               else {
-                                                S27261=0;
+                                                S23238=0;
                                                 if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                   ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                                  S27261=1;
+                                                  S23238=1;
                                                   if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                     ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                                     ends[13]=2;
                                                     ;//sysj/controller.sysj line: 39, column: 14
-                                                    S26951=5;
-                                                    S27486=0;
+                                                    S22928=5;
+                                                    S23463=0;
                                                     if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                                      S27486=1;
+                                                      S23463=1;
                                                       active[13]=1;
                                                       ends[13]=1;
                                                       tdone[13]=1;
                                                     }
                                                     else {
-                                                      S27481=0;
+                                                      S23458=0;
                                                       if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                         ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                        S27481=1;
+                                                        S23458=1;
                                                         if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                           ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                           ends[13]=2;
                                                           ;//sysj/controller.sysj line: 40, column: 14
-                                                          S26951=6;
-                                                          S27750=0;
+                                                          S22928=6;
+                                                          S23727=0;
                                                           if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                            S27750=1;
+                                                            S23727=1;
                                                             active[13]=1;
                                                             ends[13]=1;
                                                             tdone[13]=1;
                                                           }
                                                           else {
-                                                            S27745=0;
+                                                            S23722=0;
                                                             if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                               FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                              S27745=1;
+                                                              S23722=1;
                                                               if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                                 ends[13]=2;
                                                                 ;//sysj/controller.sysj line: 41, column: 14
-                                                                S26951=7;
-                                                                S28058=0;
+                                                                S22928=7;
+                                                                S24035=0;
                                                                 if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                                  S28058=1;
+                                                                  S24035=1;
                                                                   active[13]=1;
                                                                   ends[13]=1;
                                                                   tdone[13]=1;
                                                                 }
                                                                 else {
-                                                                  S28053=0;
+                                                                  S24030=0;
                                                                   if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                     FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                                    S28053=1;
+                                                                    S24030=1;
                                                                     if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                                       ends[13]=2;
                                                                       ;//sysj/controller.sysj line: 42, column: 14
-                                                                      S26951=8;
-                                                                      thread47771(tdone,ends);
-                                                                      thread47775(tdone,ends);
-                                                                      thread47779(tdone,ends);
-                                                                      thread47783(tdone,ends);
-                                                                      int biggest47787 = 0;
-                                                                      if(ends[14]>=biggest47787){
-                                                                        biggest47787=ends[14];
+                                                                      S22928=8;
+                                                                      thread43748(tdone,ends);
+                                                                      thread43752(tdone,ends);
+                                                                      thread43756(tdone,ends);
+                                                                      thread43760(tdone,ends);
+                                                                      int biggest43764 = 0;
+                                                                      if(ends[14]>=biggest43764){
+                                                                        biggest43764=ends[14];
                                                                       }
-                                                                      if(ends[17]>=biggest47787){
-                                                                        biggest47787=ends[17];
+                                                                      if(ends[17]>=biggest43764){
+                                                                        biggest43764=ends[17];
                                                                       }
-                                                                      if(ends[20]>=biggest47787){
-                                                                        biggest47787=ends[20];
+                                                                      if(ends[20]>=biggest43764){
+                                                                        biggest43764=ends[20];
                                                                       }
-                                                                      if(ends[23]>=biggest47787){
-                                                                        biggest47787=ends[23];
+                                                                      if(ends[23]>=biggest43764){
+                                                                        biggest43764=ends[23];
                                                                       }
-                                                                      if(biggest47787 == 1){
+                                                                      if(biggest43764 == 1){
                                                                         active[13]=1;
                                                                         ends[13]=1;
                                                                         tdone[13]=1;
@@ -7105,169 +7105,169 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S26847=1;
-                    S26847=0;
+                    S22824=1;
+                    S22824=0;
                     if(!FirstLiquid_in.isPartnerPresent() || FirstLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 35, column: 8
                       FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
-                      S26847=1;
+                      S22824=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S26842=0;
+                      S22819=0;
                       if(!FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                         FirstLiquid_in.setACK(true);//sysj/controller.sysj line: 35, column: 8
-                        S26842=1;
+                        S22819=1;
                         if(FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                           FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 35, column: 8
-                          S26951=1;
-                          S26869=0;
+                          S22928=1;
+                          S22846=0;
                           if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                             FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                            S26869=1;
+                            S22846=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S26864=0;
+                            S22841=0;
                             if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                               FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                              S26864=1;
+                              S22841=1;
                               if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                                 FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 36, column: 14
-                                S26951=2;
-                                S26958=0;
+                                S22928=2;
+                                S22935=0;
                                 if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                                   SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                                  S26958=1;
+                                  S22935=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S26953=0;
+                                  S22930=0;
                                   if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                     SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                                    S26953=1;
+                                    S22930=1;
                                     if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                       SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 37, column: 8
-                                      S26951=3;
-                                      S27090=0;
+                                      S22928=3;
+                                      S23067=0;
                                       if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                         SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                        S27090=1;
+                                        S23067=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S27085=0;
+                                        S23062=0;
                                         if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                           SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                          S27085=1;
+                                          S23062=1;
                                           if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                             SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 38, column: 14
-                                            S26951=4;
-                                            S27266=0;
+                                            S22928=4;
+                                            S23243=0;
                                             if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                               ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                              S27266=1;
+                                              S23243=1;
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
                                             }
                                             else {
-                                              S27261=0;
+                                              S23238=0;
                                               if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                 ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                                S27261=1;
+                                                S23238=1;
                                                 if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                   ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                                   ends[13]=2;
                                                   ;//sysj/controller.sysj line: 39, column: 14
-                                                  S26951=5;
-                                                  S27486=0;
+                                                  S22928=5;
+                                                  S23463=0;
                                                   if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                                     ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                                    S27486=1;
+                                                    S23463=1;
                                                     active[13]=1;
                                                     ends[13]=1;
                                                     tdone[13]=1;
                                                   }
                                                   else {
-                                                    S27481=0;
+                                                    S23458=0;
                                                     if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                       ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                      S27481=1;
+                                                      S23458=1;
                                                       if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                         ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                         ends[13]=2;
                                                         ;//sysj/controller.sysj line: 40, column: 14
-                                                        S26951=6;
-                                                        S27750=0;
+                                                        S22928=6;
+                                                        S23727=0;
                                                         if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                           FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                          S27750=1;
+                                                          S23727=1;
                                                           active[13]=1;
                                                           ends[13]=1;
                                                           tdone[13]=1;
                                                         }
                                                         else {
-                                                          S27745=0;
+                                                          S23722=0;
                                                           if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                             FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                            S27745=1;
+                                                            S23722=1;
                                                             if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                               ends[13]=2;
                                                               ;//sysj/controller.sysj line: 41, column: 14
-                                                              S26951=7;
-                                                              S28058=0;
+                                                              S22928=7;
+                                                              S24035=0;
                                                               if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                                S28058=1;
+                                                                S24035=1;
                                                                 active[13]=1;
                                                                 ends[13]=1;
                                                                 tdone[13]=1;
                                                               }
                                                               else {
-                                                                S28053=0;
+                                                                S24030=0;
                                                                 if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                   FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                                  S28053=1;
+                                                                  S24030=1;
                                                                   if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                                     ends[13]=2;
                                                                     ;//sysj/controller.sysj line: 42, column: 14
-                                                                    S26951=8;
-                                                                    thread47788(tdone,ends);
-                                                                    thread47792(tdone,ends);
-                                                                    thread47796(tdone,ends);
-                                                                    thread47800(tdone,ends);
-                                                                    int biggest47804 = 0;
-                                                                    if(ends[14]>=biggest47804){
-                                                                      biggest47804=ends[14];
+                                                                    S22928=8;
+                                                                    thread43765(tdone,ends);
+                                                                    thread43769(tdone,ends);
+                                                                    thread43773(tdone,ends);
+                                                                    thread43777(tdone,ends);
+                                                                    int biggest43781 = 0;
+                                                                    if(ends[14]>=biggest43781){
+                                                                      biggest43781=ends[14];
                                                                     }
-                                                                    if(ends[17]>=biggest47804){
-                                                                      biggest47804=ends[17];
+                                                                    if(ends[17]>=biggest43781){
+                                                                      biggest43781=ends[17];
                                                                     }
-                                                                    if(ends[20]>=biggest47804){
-                                                                      biggest47804=ends[20];
+                                                                    if(ends[20]>=biggest43781){
+                                                                      biggest43781=ends[20];
                                                                     }
-                                                                    if(ends[23]>=biggest47804){
-                                                                      biggest47804=ends[23];
+                                                                    if(ends[23]>=biggest43781){
+                                                                      biggest43781=ends[23];
                                                                     }
-                                                                    if(biggest47804 == 1){
+                                                                    if(biggest43781 == 1){
                                                                       active[13]=1;
                                                                       ends[13]=1;
                                                                       tdone[13]=1;
@@ -7382,152 +7382,152 @@ public class Controller extends ClockDomain{
                 break;
               
               case 1 : 
-                switch(S26869){
+                switch(S22846){
                   case 0 : 
                     if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                       FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                      S26869=1;
+                      S22846=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S26864){
+                      switch(S22841){
                         case 0 : 
                           if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                             FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                            S26864=1;
+                            S22841=1;
                             if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                               FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 36, column: 14
-                              S26951=2;
-                              S26958=0;
+                              S22928=2;
+                              S22935=0;
                               if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                                 SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                                S26958=1;
+                                S22935=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S26953=0;
+                                S22930=0;
                                 if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                   SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                                  S26953=1;
+                                  S22930=1;
                                   if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                     SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 37, column: 8
-                                    S26951=3;
-                                    S27090=0;
+                                    S22928=3;
+                                    S23067=0;
                                     if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                       SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                      S27090=1;
+                                      S23067=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S27085=0;
+                                      S23062=0;
                                       if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                         SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                        S27085=1;
+                                        S23062=1;
                                         if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                           SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 38, column: 14
-                                          S26951=4;
-                                          S27266=0;
+                                          S22928=4;
+                                          S23243=0;
                                           if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                             ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                            S27266=1;
+                                            S23243=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S27261=0;
+                                            S23238=0;
                                             if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                               ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                              S27261=1;
+                                              S23238=1;
                                               if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                                 ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 39, column: 14
-                                                S26951=5;
-                                                S27486=0;
+                                                S22928=5;
+                                                S23463=0;
                                                 if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                                   ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                                  S27486=1;
+                                                  S23463=1;
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
                                                 }
                                                 else {
-                                                  S27481=0;
+                                                  S23458=0;
                                                   if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                     ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                    S27481=1;
+                                                    S23458=1;
                                                     if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                       ends[13]=2;
                                                       ;//sysj/controller.sysj line: 40, column: 14
-                                                      S26951=6;
-                                                      S27750=0;
+                                                      S22928=6;
+                                                      S23727=0;
                                                       if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                         FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                        S27750=1;
+                                                        S23727=1;
                                                         active[13]=1;
                                                         ends[13]=1;
                                                         tdone[13]=1;
                                                       }
                                                       else {
-                                                        S27745=0;
+                                                        S23722=0;
                                                         if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                           FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                          S27745=1;
+                                                          S23722=1;
                                                           if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                             ends[13]=2;
                                                             ;//sysj/controller.sysj line: 41, column: 14
-                                                            S26951=7;
-                                                            S28058=0;
+                                                            S22928=7;
+                                                            S24035=0;
                                                             if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                              S28058=1;
+                                                              S24035=1;
                                                               active[13]=1;
                                                               ends[13]=1;
                                                               tdone[13]=1;
                                                             }
                                                             else {
-                                                              S28053=0;
+                                                              S24030=0;
                                                               if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                 FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                                S28053=1;
+                                                                S24030=1;
                                                                 if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                                   ends[13]=2;
                                                                   ;//sysj/controller.sysj line: 42, column: 14
-                                                                  S26951=8;
-                                                                  thread47805(tdone,ends);
-                                                                  thread47809(tdone,ends);
-                                                                  thread47813(tdone,ends);
-                                                                  thread47817(tdone,ends);
-                                                                  int biggest47821 = 0;
-                                                                  if(ends[14]>=biggest47821){
-                                                                    biggest47821=ends[14];
+                                                                  S22928=8;
+                                                                  thread43782(tdone,ends);
+                                                                  thread43786(tdone,ends);
+                                                                  thread43790(tdone,ends);
+                                                                  thread43794(tdone,ends);
+                                                                  int biggest43798 = 0;
+                                                                  if(ends[14]>=biggest43798){
+                                                                    biggest43798=ends[14];
                                                                   }
-                                                                  if(ends[17]>=biggest47821){
-                                                                    biggest47821=ends[17];
+                                                                  if(ends[17]>=biggest43798){
+                                                                    biggest43798=ends[17];
                                                                   }
-                                                                  if(ends[20]>=biggest47821){
-                                                                    biggest47821=ends[20];
+                                                                  if(ends[20]>=biggest43798){
+                                                                    biggest43798=ends[20];
                                                                   }
-                                                                  if(ends[23]>=biggest47821){
-                                                                    biggest47821=ends[23];
+                                                                  if(ends[23]>=biggest43798){
+                                                                    biggest43798=ends[23];
                                                                   }
-                                                                  if(biggest47821 == 1){
+                                                                  if(biggest43798 == 1){
                                                                     active[13]=1;
                                                                     ends[13]=1;
                                                                     tdone[13]=1;
@@ -7629,133 +7629,133 @@ public class Controller extends ClockDomain{
                             FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 36, column: 14
-                            S26951=2;
-                            S26958=0;
+                            S22928=2;
+                            S22935=0;
                             if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                               SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                              S26958=1;
+                              S22935=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S26953=0;
+                              S22930=0;
                               if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                 SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                                S26953=1;
+                                S22930=1;
                                 if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                   SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 37, column: 8
-                                  S26951=3;
-                                  S27090=0;
+                                  S22928=3;
+                                  S23067=0;
                                   if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                     SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                    S27090=1;
+                                    S23067=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S27085=0;
+                                    S23062=0;
                                     if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                       SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                      S27085=1;
+                                      S23062=1;
                                       if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                         SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 38, column: 14
-                                        S26951=4;
-                                        S27266=0;
+                                        S22928=4;
+                                        S23243=0;
                                         if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                           ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                          S27266=1;
+                                          S23243=1;
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
                                         }
                                         else {
-                                          S27261=0;
+                                          S23238=0;
                                           if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                             ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                            S27261=1;
+                                            S23238=1;
                                             if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                               ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                               ends[13]=2;
                                               ;//sysj/controller.sysj line: 39, column: 14
-                                              S26951=5;
-                                              S27486=0;
+                                              S22928=5;
+                                              S23463=0;
                                               if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                                 ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                                S27486=1;
+                                                S23463=1;
                                                 active[13]=1;
                                                 ends[13]=1;
                                                 tdone[13]=1;
                                               }
                                               else {
-                                                S27481=0;
+                                                S23458=0;
                                                 if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                   ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                  S27481=1;
+                                                  S23458=1;
                                                   if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                     ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                     ends[13]=2;
                                                     ;//sysj/controller.sysj line: 40, column: 14
-                                                    S26951=6;
-                                                    S27750=0;
+                                                    S22928=6;
+                                                    S23727=0;
                                                     if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                      S27750=1;
+                                                      S23727=1;
                                                       active[13]=1;
                                                       ends[13]=1;
                                                       tdone[13]=1;
                                                     }
                                                     else {
-                                                      S27745=0;
+                                                      S23722=0;
                                                       if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                         FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                        S27745=1;
+                                                        S23722=1;
                                                         if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                           FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                           ends[13]=2;
                                                           ;//sysj/controller.sysj line: 41, column: 14
-                                                          S26951=7;
-                                                          S28058=0;
+                                                          S22928=7;
+                                                          S24035=0;
                                                           if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                            S28058=1;
+                                                            S24035=1;
                                                             active[13]=1;
                                                             ends[13]=1;
                                                             tdone[13]=1;
                                                           }
                                                           else {
-                                                            S28053=0;
+                                                            S24030=0;
                                                             if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                               FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                              S28053=1;
+                                                              S24030=1;
                                                               if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                                 ends[13]=2;
                                                                 ;//sysj/controller.sysj line: 42, column: 14
-                                                                S26951=8;
-                                                                thread47822(tdone,ends);
-                                                                thread47826(tdone,ends);
-                                                                thread47830(tdone,ends);
-                                                                thread47834(tdone,ends);
-                                                                int biggest47838 = 0;
-                                                                if(ends[14]>=biggest47838){
-                                                                  biggest47838=ends[14];
+                                                                S22928=8;
+                                                                thread43799(tdone,ends);
+                                                                thread43803(tdone,ends);
+                                                                thread43807(tdone,ends);
+                                                                thread43811(tdone,ends);
+                                                                int biggest43815 = 0;
+                                                                if(ends[14]>=biggest43815){
+                                                                  biggest43815=ends[14];
                                                                 }
-                                                                if(ends[17]>=biggest47838){
-                                                                  biggest47838=ends[17];
+                                                                if(ends[17]>=biggest43815){
+                                                                  biggest43815=ends[17];
                                                                 }
-                                                                if(ends[20]>=biggest47838){
-                                                                  biggest47838=ends[20];
+                                                                if(ends[20]>=biggest43815){
+                                                                  biggest43815=ends[20];
                                                                 }
-                                                                if(ends[23]>=biggest47838){
-                                                                  biggest47838=ends[23];
+                                                                if(ends[23]>=biggest43815){
+                                                                  biggest43815=ends[23];
                                                                 }
-                                                                if(biggest47838 == 1){
+                                                                if(biggest43815 == 1){
                                                                   active[13]=1;
                                                                   ends[13]=1;
                                                                   tdone[13]=1;
@@ -7851,151 +7851,151 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S26869=1;
-                    S26869=0;
+                    S22846=1;
+                    S22846=0;
                     if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                       FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                      S26869=1;
+                      S22846=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S26864=0;
+                      S22841=0;
                       if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                         FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                        S26864=1;
+                        S22841=1;
                         if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                           FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 36, column: 14
-                          S26951=2;
-                          S26958=0;
+                          S22928=2;
+                          S22935=0;
                           if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                             SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                            S26958=1;
+                            S22935=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S26953=0;
+                            S22930=0;
                             if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                               SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                              S26953=1;
+                              S22930=1;
                               if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                 SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 37, column: 8
-                                S26951=3;
-                                S27090=0;
+                                S22928=3;
+                                S23067=0;
                                 if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                   SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                  S27090=1;
+                                  S23067=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S27085=0;
+                                  S23062=0;
                                   if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                     SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                    S27085=1;
+                                    S23062=1;
                                     if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                       SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 38, column: 14
-                                      S26951=4;
-                                      S27266=0;
+                                      S22928=4;
+                                      S23243=0;
                                       if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                         ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                        S27266=1;
+                                        S23243=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S27261=0;
+                                        S23238=0;
                                         if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                           ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                          S27261=1;
+                                          S23238=1;
                                           if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                             ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 39, column: 14
-                                            S26951=5;
-                                            S27486=0;
+                                            S22928=5;
+                                            S23463=0;
                                             if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                               ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                              S27486=1;
+                                              S23463=1;
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
                                             }
                                             else {
-                                              S27481=0;
+                                              S23458=0;
                                               if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                 ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                S27481=1;
+                                                S23458=1;
                                                 if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                   ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                   ends[13]=2;
                                                   ;//sysj/controller.sysj line: 40, column: 14
-                                                  S26951=6;
-                                                  S27750=0;
+                                                  S22928=6;
+                                                  S23727=0;
                                                   if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                     FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                    S27750=1;
+                                                    S23727=1;
                                                     active[13]=1;
                                                     ends[13]=1;
                                                     tdone[13]=1;
                                                   }
                                                   else {
-                                                    S27745=0;
+                                                    S23722=0;
                                                     if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                       FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                      S27745=1;
+                                                      S23722=1;
                                                       if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                         FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                         ends[13]=2;
                                                         ;//sysj/controller.sysj line: 41, column: 14
-                                                        S26951=7;
-                                                        S28058=0;
+                                                        S22928=7;
+                                                        S24035=0;
                                                         if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                          S28058=1;
+                                                          S24035=1;
                                                           active[13]=1;
                                                           ends[13]=1;
                                                           tdone[13]=1;
                                                         }
                                                         else {
-                                                          S28053=0;
+                                                          S24030=0;
                                                           if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                             FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                            S28053=1;
+                                                            S24030=1;
                                                             if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                               ends[13]=2;
                                                               ;//sysj/controller.sysj line: 42, column: 14
-                                                              S26951=8;
-                                                              thread47839(tdone,ends);
-                                                              thread47843(tdone,ends);
-                                                              thread47847(tdone,ends);
-                                                              thread47851(tdone,ends);
-                                                              int biggest47855 = 0;
-                                                              if(ends[14]>=biggest47855){
-                                                                biggest47855=ends[14];
+                                                              S22928=8;
+                                                              thread43816(tdone,ends);
+                                                              thread43820(tdone,ends);
+                                                              thread43824(tdone,ends);
+                                                              thread43828(tdone,ends);
+                                                              int biggest43832 = 0;
+                                                              if(ends[14]>=biggest43832){
+                                                                biggest43832=ends[14];
                                                               }
-                                                              if(ends[17]>=biggest47855){
-                                                                biggest47855=ends[17];
+                                                              if(ends[17]>=biggest43832){
+                                                                biggest43832=ends[17];
                                                               }
-                                                              if(ends[20]>=biggest47855){
-                                                                biggest47855=ends[20];
+                                                              if(ends[20]>=biggest43832){
+                                                                biggest43832=ends[20];
                                                               }
-                                                              if(ends[23]>=biggest47855){
-                                                                biggest47855=ends[23];
+                                                              if(ends[23]>=biggest43832){
+                                                                biggest43832=ends[23];
                                                               }
-                                                              if(biggest47855 == 1){
+                                                              if(biggest43832 == 1){
                                                                 active[13]=1;
                                                                 ends[13]=1;
                                                                 tdone[13]=1;
@@ -8097,134 +8097,134 @@ public class Controller extends ClockDomain{
                 break;
               
               case 2 : 
-                switch(S26958){
+                switch(S22935){
                   case 0 : 
                     if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                       SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                      S26958=1;
+                      S22935=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S26953){
+                      switch(S22930){
                         case 0 : 
                           if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                             SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                            S26953=1;
+                            S22930=1;
                             if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                               SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 37, column: 8
-                              S26951=3;
-                              S27090=0;
+                              S22928=3;
+                              S23067=0;
                               if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                 SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                S27090=1;
+                                S23067=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S27085=0;
+                                S23062=0;
                                 if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                   SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                  S27085=1;
+                                  S23062=1;
                                   if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                     SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 38, column: 14
-                                    S26951=4;
-                                    S27266=0;
+                                    S22928=4;
+                                    S23243=0;
                                     if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                       ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                      S27266=1;
+                                      S23243=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S27261=0;
+                                      S23238=0;
                                       if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                         ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                        S27261=1;
+                                        S23238=1;
                                         if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                           ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 39, column: 14
-                                          S26951=5;
-                                          S27486=0;
+                                          S22928=5;
+                                          S23463=0;
                                           if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                             ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                            S27486=1;
+                                            S23463=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S27481=0;
+                                            S23458=0;
                                             if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                               ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                              S27481=1;
+                                              S23458=1;
                                               if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                 ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 40, column: 14
-                                                S26951=6;
-                                                S27750=0;
+                                                S22928=6;
+                                                S23727=0;
                                                 if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                   FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                  S27750=1;
+                                                  S23727=1;
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
                                                 }
                                                 else {
-                                                  S27745=0;
+                                                  S23722=0;
                                                   if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                     FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                    S27745=1;
+                                                    S23722=1;
                                                     if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                       ends[13]=2;
                                                       ;//sysj/controller.sysj line: 41, column: 14
-                                                      S26951=7;
-                                                      S28058=0;
+                                                      S22928=7;
+                                                      S24035=0;
                                                       if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                         FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                        S28058=1;
+                                                        S24035=1;
                                                         active[13]=1;
                                                         ends[13]=1;
                                                         tdone[13]=1;
                                                       }
                                                       else {
-                                                        S28053=0;
+                                                        S24030=0;
                                                         if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                           FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                          S28053=1;
+                                                          S24030=1;
                                                           if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                             ends[13]=2;
                                                             ;//sysj/controller.sysj line: 42, column: 14
-                                                            S26951=8;
-                                                            thread47856(tdone,ends);
-                                                            thread47860(tdone,ends);
-                                                            thread47864(tdone,ends);
-                                                            thread47868(tdone,ends);
-                                                            int biggest47872 = 0;
-                                                            if(ends[14]>=biggest47872){
-                                                              biggest47872=ends[14];
+                                                            S22928=8;
+                                                            thread43833(tdone,ends);
+                                                            thread43837(tdone,ends);
+                                                            thread43841(tdone,ends);
+                                                            thread43845(tdone,ends);
+                                                            int biggest43849 = 0;
+                                                            if(ends[14]>=biggest43849){
+                                                              biggest43849=ends[14];
                                                             }
-                                                            if(ends[17]>=biggest47872){
-                                                              biggest47872=ends[17];
+                                                            if(ends[17]>=biggest43849){
+                                                              biggest43849=ends[17];
                                                             }
-                                                            if(ends[20]>=biggest47872){
-                                                              biggest47872=ends[20];
+                                                            if(ends[20]>=biggest43849){
+                                                              biggest43849=ends[20];
                                                             }
-                                                            if(ends[23]>=biggest47872){
-                                                              biggest47872=ends[23];
+                                                            if(ends[23]>=biggest43849){
+                                                              biggest43849=ends[23];
                                                             }
-                                                            if(biggest47872 == 1){
+                                                            if(biggest43849 == 1){
                                                               active[13]=1;
                                                               ends[13]=1;
                                                               tdone[13]=1;
@@ -8313,115 +8313,115 @@ public class Controller extends ClockDomain{
                             SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 37, column: 8
-                            S26951=3;
-                            S27090=0;
+                            S22928=3;
+                            S23067=0;
                             if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                               SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                              S27090=1;
+                              S23067=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S27085=0;
+                              S23062=0;
                               if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                 SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                S27085=1;
+                                S23062=1;
                                 if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                   SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 38, column: 14
-                                  S26951=4;
-                                  S27266=0;
+                                  S22928=4;
+                                  S23243=0;
                                   if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                     ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                    S27266=1;
+                                    S23243=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S27261=0;
+                                    S23238=0;
                                     if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                       ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                      S27261=1;
+                                      S23238=1;
                                       if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                         ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 39, column: 14
-                                        S26951=5;
-                                        S27486=0;
+                                        S22928=5;
+                                        S23463=0;
                                         if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                           ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                          S27486=1;
+                                          S23463=1;
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
                                         }
                                         else {
-                                          S27481=0;
+                                          S23458=0;
                                           if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                             ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                            S27481=1;
+                                            S23458=1;
                                             if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                               ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                               ends[13]=2;
                                               ;//sysj/controller.sysj line: 40, column: 14
-                                              S26951=6;
-                                              S27750=0;
+                                              S22928=6;
+                                              S23727=0;
                                               if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                S27750=1;
+                                                S23727=1;
                                                 active[13]=1;
                                                 ends[13]=1;
                                                 tdone[13]=1;
                                               }
                                               else {
-                                                S27745=0;
+                                                S23722=0;
                                                 if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                   FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                  S27745=1;
+                                                  S23722=1;
                                                   if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                     FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                     ends[13]=2;
                                                     ;//sysj/controller.sysj line: 41, column: 14
-                                                    S26951=7;
-                                                    S28058=0;
+                                                    S22928=7;
+                                                    S24035=0;
                                                     if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                      S28058=1;
+                                                      S24035=1;
                                                       active[13]=1;
                                                       ends[13]=1;
                                                       tdone[13]=1;
                                                     }
                                                     else {
-                                                      S28053=0;
+                                                      S24030=0;
                                                       if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                         FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                        S28053=1;
+                                                        S24030=1;
                                                         if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                           ends[13]=2;
                                                           ;//sysj/controller.sysj line: 42, column: 14
-                                                          S26951=8;
-                                                          thread47873(tdone,ends);
-                                                          thread47877(tdone,ends);
-                                                          thread47881(tdone,ends);
-                                                          thread47885(tdone,ends);
-                                                          int biggest47889 = 0;
-                                                          if(ends[14]>=biggest47889){
-                                                            biggest47889=ends[14];
+                                                          S22928=8;
+                                                          thread43850(tdone,ends);
+                                                          thread43854(tdone,ends);
+                                                          thread43858(tdone,ends);
+                                                          thread43862(tdone,ends);
+                                                          int biggest43866 = 0;
+                                                          if(ends[14]>=biggest43866){
+                                                            biggest43866=ends[14];
                                                           }
-                                                          if(ends[17]>=biggest47889){
-                                                            biggest47889=ends[17];
+                                                          if(ends[17]>=biggest43866){
+                                                            biggest43866=ends[17];
                                                           }
-                                                          if(ends[20]>=biggest47889){
-                                                            biggest47889=ends[20];
+                                                          if(ends[20]>=biggest43866){
+                                                            biggest43866=ends[20];
                                                           }
-                                                          if(ends[23]>=biggest47889){
-                                                            biggest47889=ends[23];
+                                                          if(ends[23]>=biggest43866){
+                                                            biggest43866=ends[23];
                                                           }
-                                                          if(biggest47889 == 1){
+                                                          if(biggest43866 == 1){
                                                             active[13]=1;
                                                             ends[13]=1;
                                                             tdone[13]=1;
@@ -8504,133 +8504,133 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S26958=1;
-                    S26958=0;
+                    S22935=1;
+                    S22935=0;
                     if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                       SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                      S26958=1;
+                      S22935=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S26953=0;
+                      S22930=0;
                       if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                         SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                        S26953=1;
+                        S22930=1;
                         if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                           SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 37, column: 8
-                          S26951=3;
-                          S27090=0;
+                          S22928=3;
+                          S23067=0;
                           if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                             SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                            S27090=1;
+                            S23067=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S27085=0;
+                            S23062=0;
                             if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                               SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                              S27085=1;
+                              S23062=1;
                               if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                 SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 38, column: 14
-                                S26951=4;
-                                S27266=0;
+                                S22928=4;
+                                S23243=0;
                                 if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                   ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                  S27266=1;
+                                  S23243=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S27261=0;
+                                  S23238=0;
                                   if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                     ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                    S27261=1;
+                                    S23238=1;
                                     if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                       ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 39, column: 14
-                                      S26951=5;
-                                      S27486=0;
+                                      S22928=5;
+                                      S23463=0;
                                       if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                         ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                        S27486=1;
+                                        S23463=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S27481=0;
+                                        S23458=0;
                                         if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                           ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                          S27481=1;
+                                          S23458=1;
                                           if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                             ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 40, column: 14
-                                            S26951=6;
-                                            S27750=0;
+                                            S22928=6;
+                                            S23727=0;
                                             if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                              S27750=1;
+                                              S23727=1;
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
                                             }
                                             else {
-                                              S27745=0;
+                                              S23722=0;
                                               if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                 FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                S27745=1;
+                                                S23722=1;
                                                 if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                   FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                   ends[13]=2;
                                                   ;//sysj/controller.sysj line: 41, column: 14
-                                                  S26951=7;
-                                                  S28058=0;
+                                                  S22928=7;
+                                                  S24035=0;
                                                   if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                    S28058=1;
+                                                    S24035=1;
                                                     active[13]=1;
                                                     ends[13]=1;
                                                     tdone[13]=1;
                                                   }
                                                   else {
-                                                    S28053=0;
+                                                    S24030=0;
                                                     if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                       FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                      S28053=1;
+                                                      S24030=1;
                                                       if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                         FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                         ends[13]=2;
                                                         ;//sysj/controller.sysj line: 42, column: 14
-                                                        S26951=8;
-                                                        thread47890(tdone,ends);
-                                                        thread47894(tdone,ends);
-                                                        thread47898(tdone,ends);
-                                                        thread47902(tdone,ends);
-                                                        int biggest47906 = 0;
-                                                        if(ends[14]>=biggest47906){
-                                                          biggest47906=ends[14];
+                                                        S22928=8;
+                                                        thread43867(tdone,ends);
+                                                        thread43871(tdone,ends);
+                                                        thread43875(tdone,ends);
+                                                        thread43879(tdone,ends);
+                                                        int biggest43883 = 0;
+                                                        if(ends[14]>=biggest43883){
+                                                          biggest43883=ends[14];
                                                         }
-                                                        if(ends[17]>=biggest47906){
-                                                          biggest47906=ends[17];
+                                                        if(ends[17]>=biggest43883){
+                                                          biggest43883=ends[17];
                                                         }
-                                                        if(ends[20]>=biggest47906){
-                                                          biggest47906=ends[20];
+                                                        if(ends[20]>=biggest43883){
+                                                          biggest43883=ends[20];
                                                         }
-                                                        if(ends[23]>=biggest47906){
-                                                          biggest47906=ends[23];
+                                                        if(ends[23]>=biggest43883){
+                                                          biggest43883=ends[23];
                                                         }
-                                                        if(biggest47906 == 1){
+                                                        if(biggest43883 == 1){
                                                           active[13]=1;
                                                           ends[13]=1;
                                                           tdone[13]=1;
@@ -8719,116 +8719,116 @@ public class Controller extends ClockDomain{
                 break;
               
               case 3 : 
-                switch(S27090){
+                switch(S23067){
                   case 0 : 
                     if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                       SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                      S27090=1;
+                      S23067=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S27085){
+                      switch(S23062){
                         case 0 : 
                           if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                             SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                            S27085=1;
+                            S23062=1;
                             if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                               SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 38, column: 14
-                              S26951=4;
-                              S27266=0;
+                              S22928=4;
+                              S23243=0;
                               if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                 ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                S27266=1;
+                                S23243=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S27261=0;
+                                S23238=0;
                                 if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                   ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                  S27261=1;
+                                  S23238=1;
                                   if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                     ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 39, column: 14
-                                    S26951=5;
-                                    S27486=0;
+                                    S22928=5;
+                                    S23463=0;
                                     if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                      S27486=1;
+                                      S23463=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S27481=0;
+                                      S23458=0;
                                       if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                         ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                        S27481=1;
+                                        S23458=1;
                                         if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                           ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 40, column: 14
-                                          S26951=6;
-                                          S27750=0;
+                                          S22928=6;
+                                          S23727=0;
                                           if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                            S27750=1;
+                                            S23727=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S27745=0;
+                                            S23722=0;
                                             if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                               FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                              S27745=1;
+                                              S23722=1;
                                               if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 41, column: 14
-                                                S26951=7;
-                                                S28058=0;
+                                                S22928=7;
+                                                S24035=0;
                                                 if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                  S28058=1;
+                                                  S24035=1;
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
                                                 }
                                                 else {
-                                                  S28053=0;
+                                                  S24030=0;
                                                   if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                     FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                    S28053=1;
+                                                    S24030=1;
                                                     if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                       ends[13]=2;
                                                       ;//sysj/controller.sysj line: 42, column: 14
-                                                      S26951=8;
-                                                      thread47907(tdone,ends);
-                                                      thread47911(tdone,ends);
-                                                      thread47915(tdone,ends);
-                                                      thread47919(tdone,ends);
-                                                      int biggest47923 = 0;
-                                                      if(ends[14]>=biggest47923){
-                                                        biggest47923=ends[14];
+                                                      S22928=8;
+                                                      thread43884(tdone,ends);
+                                                      thread43888(tdone,ends);
+                                                      thread43892(tdone,ends);
+                                                      thread43896(tdone,ends);
+                                                      int biggest43900 = 0;
+                                                      if(ends[14]>=biggest43900){
+                                                        biggest43900=ends[14];
                                                       }
-                                                      if(ends[17]>=biggest47923){
-                                                        biggest47923=ends[17];
+                                                      if(ends[17]>=biggest43900){
+                                                        biggest43900=ends[17];
                                                       }
-                                                      if(ends[20]>=biggest47923){
-                                                        biggest47923=ends[20];
+                                                      if(ends[20]>=biggest43900){
+                                                        biggest43900=ends[20];
                                                       }
-                                                      if(ends[23]>=biggest47923){
-                                                        biggest47923=ends[23];
+                                                      if(ends[23]>=biggest43900){
+                                                        biggest43900=ends[23];
                                                       }
-                                                      if(biggest47923 == 1){
+                                                      if(biggest43900 == 1){
                                                         active[13]=1;
                                                         ends[13]=1;
                                                         tdone[13]=1;
@@ -8904,97 +8904,97 @@ public class Controller extends ClockDomain{
                             SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 38, column: 14
-                            S26951=4;
-                            S27266=0;
+                            S22928=4;
+                            S23243=0;
                             if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                               ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                              S27266=1;
+                              S23243=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S27261=0;
+                              S23238=0;
                               if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                 ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                S27261=1;
+                                S23238=1;
                                 if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                   ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 39, column: 14
-                                  S26951=5;
-                                  S27486=0;
+                                  S22928=5;
+                                  S23463=0;
                                   if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                     ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                    S27486=1;
+                                    S23463=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S27481=0;
+                                    S23458=0;
                                     if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                       ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                      S27481=1;
+                                      S23458=1;
                                       if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                         ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 40, column: 14
-                                        S26951=6;
-                                        S27750=0;
+                                        S22928=6;
+                                        S23727=0;
                                         if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                           FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                          S27750=1;
+                                          S23727=1;
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
                                         }
                                         else {
-                                          S27745=0;
+                                          S23722=0;
                                           if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                             FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                            S27745=1;
+                                            S23722=1;
                                             if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                               ends[13]=2;
                                               ;//sysj/controller.sysj line: 41, column: 14
-                                              S26951=7;
-                                              S28058=0;
+                                              S22928=7;
+                                              S24035=0;
                                               if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                S28058=1;
+                                                S24035=1;
                                                 active[13]=1;
                                                 ends[13]=1;
                                                 tdone[13]=1;
                                               }
                                               else {
-                                                S28053=0;
+                                                S24030=0;
                                                 if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                   FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                  S28053=1;
+                                                  S24030=1;
                                                   if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                     ends[13]=2;
                                                     ;//sysj/controller.sysj line: 42, column: 14
-                                                    S26951=8;
-                                                    thread47924(tdone,ends);
-                                                    thread47928(tdone,ends);
-                                                    thread47932(tdone,ends);
-                                                    thread47936(tdone,ends);
-                                                    int biggest47940 = 0;
-                                                    if(ends[14]>=biggest47940){
-                                                      biggest47940=ends[14];
+                                                    S22928=8;
+                                                    thread43901(tdone,ends);
+                                                    thread43905(tdone,ends);
+                                                    thread43909(tdone,ends);
+                                                    thread43913(tdone,ends);
+                                                    int biggest43917 = 0;
+                                                    if(ends[14]>=biggest43917){
+                                                      biggest43917=ends[14];
                                                     }
-                                                    if(ends[17]>=biggest47940){
-                                                      biggest47940=ends[17];
+                                                    if(ends[17]>=biggest43917){
+                                                      biggest43917=ends[17];
                                                     }
-                                                    if(ends[20]>=biggest47940){
-                                                      biggest47940=ends[20];
+                                                    if(ends[20]>=biggest43917){
+                                                      biggest43917=ends[20];
                                                     }
-                                                    if(ends[23]>=biggest47940){
-                                                      biggest47940=ends[23];
+                                                    if(ends[23]>=biggest43917){
+                                                      biggest43917=ends[23];
                                                     }
-                                                    if(biggest47940 == 1){
+                                                    if(biggest43917 == 1){
                                                       active[13]=1;
                                                       ends[13]=1;
                                                       tdone[13]=1;
@@ -9064,115 +9064,115 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S27090=1;
-                    S27090=0;
+                    S23067=1;
+                    S23067=0;
                     if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                       SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                      S27090=1;
+                      S23067=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S27085=0;
+                      S23062=0;
                       if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                         SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                        S27085=1;
+                        S23062=1;
                         if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                           SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 38, column: 14
-                          S26951=4;
-                          S27266=0;
+                          S22928=4;
+                          S23243=0;
                           if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                             ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                            S27266=1;
+                            S23243=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S27261=0;
+                            S23238=0;
                             if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                               ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                              S27261=1;
+                              S23238=1;
                               if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                 ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 39, column: 14
-                                S26951=5;
-                                S27486=0;
+                                S22928=5;
+                                S23463=0;
                                 if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                   ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                  S27486=1;
+                                  S23463=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S27481=0;
+                                  S23458=0;
                                   if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                     ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                    S27481=1;
+                                    S23458=1;
                                     if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 40, column: 14
-                                      S26951=6;
-                                      S27750=0;
+                                      S22928=6;
+                                      S23727=0;
                                       if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                         FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                        S27750=1;
+                                        S23727=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S27745=0;
+                                        S23722=0;
                                         if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                           FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                          S27745=1;
+                                          S23722=1;
                                           if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 41, column: 14
-                                            S26951=7;
-                                            S28058=0;
+                                            S22928=7;
+                                            S24035=0;
                                             if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                              S28058=1;
+                                              S24035=1;
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
                                             }
                                             else {
-                                              S28053=0;
+                                              S24030=0;
                                               if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                 FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                S28053=1;
+                                                S24030=1;
                                                 if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                   ends[13]=2;
                                                   ;//sysj/controller.sysj line: 42, column: 14
-                                                  S26951=8;
-                                                  thread47941(tdone,ends);
-                                                  thread47945(tdone,ends);
-                                                  thread47949(tdone,ends);
-                                                  thread47953(tdone,ends);
-                                                  int biggest47957 = 0;
-                                                  if(ends[14]>=biggest47957){
-                                                    biggest47957=ends[14];
+                                                  S22928=8;
+                                                  thread43918(tdone,ends);
+                                                  thread43922(tdone,ends);
+                                                  thread43926(tdone,ends);
+                                                  thread43930(tdone,ends);
+                                                  int biggest43934 = 0;
+                                                  if(ends[14]>=biggest43934){
+                                                    biggest43934=ends[14];
                                                   }
-                                                  if(ends[17]>=biggest47957){
-                                                    biggest47957=ends[17];
+                                                  if(ends[17]>=biggest43934){
+                                                    biggest43934=ends[17];
                                                   }
-                                                  if(ends[20]>=biggest47957){
-                                                    biggest47957=ends[20];
+                                                  if(ends[20]>=biggest43934){
+                                                    biggest43934=ends[20];
                                                   }
-                                                  if(ends[23]>=biggest47957){
-                                                    biggest47957=ends[23];
+                                                  if(ends[23]>=biggest43934){
+                                                    biggest43934=ends[23];
                                                   }
-                                                  if(biggest47957 == 1){
+                                                  if(biggest43934 == 1){
                                                     active[13]=1;
                                                     ends[13]=1;
                                                     tdone[13]=1;
@@ -9248,98 +9248,98 @@ public class Controller extends ClockDomain{
                 break;
               
               case 4 : 
-                switch(S27266){
+                switch(S23243){
                   case 0 : 
                     if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                       ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                      S27266=1;
+                      S23243=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S27261){
+                      switch(S23238){
                         case 0 : 
                           if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                             ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                            S27261=1;
+                            S23238=1;
                             if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                               ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 39, column: 14
-                              S26951=5;
-                              S27486=0;
+                              S22928=5;
+                              S23463=0;
                               if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                 ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                S27486=1;
+                                S23463=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S27481=0;
+                                S23458=0;
                                 if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                   ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                  S27481=1;
+                                  S23458=1;
                                   if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                     ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 40, column: 14
-                                    S26951=6;
-                                    S27750=0;
+                                    S22928=6;
+                                    S23727=0;
                                     if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                      S27750=1;
+                                      S23727=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S27745=0;
+                                      S23722=0;
                                       if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                         FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                        S27745=1;
+                                        S23722=1;
                                         if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                           FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 41, column: 14
-                                          S26951=7;
-                                          S28058=0;
+                                          S22928=7;
+                                          S24035=0;
                                           if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                            S28058=1;
+                                            S24035=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S28053=0;
+                                            S24030=0;
                                             if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                               FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                              S28053=1;
+                                              S24030=1;
                                               if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 42, column: 14
-                                                S26951=8;
-                                                thread47958(tdone,ends);
-                                                thread47962(tdone,ends);
-                                                thread47966(tdone,ends);
-                                                thread47970(tdone,ends);
-                                                int biggest47974 = 0;
-                                                if(ends[14]>=biggest47974){
-                                                  biggest47974=ends[14];
+                                                S22928=8;
+                                                thread43935(tdone,ends);
+                                                thread43939(tdone,ends);
+                                                thread43943(tdone,ends);
+                                                thread43947(tdone,ends);
+                                                int biggest43951 = 0;
+                                                if(ends[14]>=biggest43951){
+                                                  biggest43951=ends[14];
                                                 }
-                                                if(ends[17]>=biggest47974){
-                                                  biggest47974=ends[17];
+                                                if(ends[17]>=biggest43951){
+                                                  biggest43951=ends[17];
                                                 }
-                                                if(ends[20]>=biggest47974){
-                                                  biggest47974=ends[20];
+                                                if(ends[20]>=biggest43951){
+                                                  biggest43951=ends[20];
                                                 }
-                                                if(ends[23]>=biggest47974){
-                                                  biggest47974=ends[23];
+                                                if(ends[23]>=biggest43951){
+                                                  biggest43951=ends[23];
                                                 }
-                                                if(biggest47974 == 1){
+                                                if(biggest43951 == 1){
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
@@ -9402,79 +9402,79 @@ public class Controller extends ClockDomain{
                             ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 39, column: 14
-                            S26951=5;
-                            S27486=0;
+                            S22928=5;
+                            S23463=0;
                             if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                               ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                              S27486=1;
+                              S23463=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S27481=0;
+                              S23458=0;
                               if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                 ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                S27481=1;
+                                S23458=1;
                                 if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                   ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 40, column: 14
-                                  S26951=6;
-                                  S27750=0;
+                                  S22928=6;
+                                  S23727=0;
                                   if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                     FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                    S27750=1;
+                                    S23727=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S27745=0;
+                                    S23722=0;
                                     if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                       FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                      S27745=1;
+                                      S23722=1;
                                       if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                         FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 41, column: 14
-                                        S26951=7;
-                                        S28058=0;
+                                        S22928=7;
+                                        S24035=0;
                                         if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                          S28058=1;
+                                          S24035=1;
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
                                         }
                                         else {
-                                          S28053=0;
+                                          S24030=0;
                                           if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                             FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                            S28053=1;
+                                            S24030=1;
                                             if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                               ends[13]=2;
                                               ;//sysj/controller.sysj line: 42, column: 14
-                                              S26951=8;
-                                              thread47975(tdone,ends);
-                                              thread47979(tdone,ends);
-                                              thread47983(tdone,ends);
-                                              thread47987(tdone,ends);
-                                              int biggest47991 = 0;
-                                              if(ends[14]>=biggest47991){
-                                                biggest47991=ends[14];
+                                              S22928=8;
+                                              thread43952(tdone,ends);
+                                              thread43956(tdone,ends);
+                                              thread43960(tdone,ends);
+                                              thread43964(tdone,ends);
+                                              int biggest43968 = 0;
+                                              if(ends[14]>=biggest43968){
+                                                biggest43968=ends[14];
                                               }
-                                              if(ends[17]>=biggest47991){
-                                                biggest47991=ends[17];
+                                              if(ends[17]>=biggest43968){
+                                                biggest43968=ends[17];
                                               }
-                                              if(ends[20]>=biggest47991){
-                                                biggest47991=ends[20];
+                                              if(ends[20]>=biggest43968){
+                                                biggest43968=ends[20];
                                               }
-                                              if(ends[23]>=biggest47991){
-                                                biggest47991=ends[23];
+                                              if(ends[23]>=biggest43968){
+                                                biggest43968=ends[23];
                                               }
-                                              if(biggest47991 == 1){
+                                              if(biggest43968 == 1){
                                                 active[13]=1;
                                                 ends[13]=1;
                                                 tdone[13]=1;
@@ -9531,97 +9531,97 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S27266=1;
-                    S27266=0;
+                    S23243=1;
+                    S23243=0;
                     if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                       ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                      S27266=1;
+                      S23243=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S27261=0;
+                      S23238=0;
                       if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                         ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                        S27261=1;
+                        S23238=1;
                         if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                           ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 39, column: 14
-                          S26951=5;
-                          S27486=0;
+                          S22928=5;
+                          S23463=0;
                           if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                             ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                            S27486=1;
+                            S23463=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S27481=0;
+                            S23458=0;
                             if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                               ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                              S27481=1;
+                              S23458=1;
                               if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                 ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 40, column: 14
-                                S26951=6;
-                                S27750=0;
+                                S22928=6;
+                                S23727=0;
                                 if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                   FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                  S27750=1;
+                                  S23727=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S27745=0;
+                                  S23722=0;
                                   if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                     FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                    S27745=1;
+                                    S23722=1;
                                     if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 41, column: 14
-                                      S26951=7;
-                                      S28058=0;
+                                      S22928=7;
+                                      S24035=0;
                                       if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                         FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                        S28058=1;
+                                        S24035=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S28053=0;
+                                        S24030=0;
                                         if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                           FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                          S28053=1;
+                                          S24030=1;
                                           if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 42, column: 14
-                                            S26951=8;
-                                            thread47992(tdone,ends);
-                                            thread47996(tdone,ends);
-                                            thread48000(tdone,ends);
-                                            thread48004(tdone,ends);
-                                            int biggest48008 = 0;
-                                            if(ends[14]>=biggest48008){
-                                              biggest48008=ends[14];
+                                            S22928=8;
+                                            thread43969(tdone,ends);
+                                            thread43973(tdone,ends);
+                                            thread43977(tdone,ends);
+                                            thread43981(tdone,ends);
+                                            int biggest43985 = 0;
+                                            if(ends[14]>=biggest43985){
+                                              biggest43985=ends[14];
                                             }
-                                            if(ends[17]>=biggest48008){
-                                              biggest48008=ends[17];
+                                            if(ends[17]>=biggest43985){
+                                              biggest43985=ends[17];
                                             }
-                                            if(ends[20]>=biggest48008){
-                                              biggest48008=ends[20];
+                                            if(ends[20]>=biggest43985){
+                                              biggest43985=ends[20];
                                             }
-                                            if(ends[23]>=biggest48008){
-                                              biggest48008=ends[23];
+                                            if(ends[23]>=biggest43985){
+                                              biggest43985=ends[23];
                                             }
-                                            if(biggest48008 == 1){
+                                            if(biggest43985 == 1){
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
@@ -9684,80 +9684,80 @@ public class Controller extends ClockDomain{
                 break;
               
               case 5 : 
-                switch(S27486){
+                switch(S23463){
                   case 0 : 
                     if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                      S27486=1;
+                      S23463=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S27481){
+                      switch(S23458){
                         case 0 : 
                           if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                             ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                            S27481=1;
+                            S23458=1;
                             if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                               ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 40, column: 14
-                              S26951=6;
-                              S27750=0;
+                              S22928=6;
+                              S23727=0;
                               if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                S27750=1;
+                                S23727=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S27745=0;
+                                S23722=0;
                                 if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                   FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                  S27745=1;
+                                  S23722=1;
                                   if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                     FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 41, column: 14
-                                    S26951=7;
-                                    S28058=0;
+                                    S22928=7;
+                                    S24035=0;
                                     if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                      S28058=1;
+                                      S24035=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S28053=0;
+                                      S24030=0;
                                       if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                         FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                        S28053=1;
+                                        S24030=1;
                                         if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 42, column: 14
-                                          S26951=8;
-                                          thread48009(tdone,ends);
-                                          thread48013(tdone,ends);
-                                          thread48017(tdone,ends);
-                                          thread48021(tdone,ends);
-                                          int biggest48025 = 0;
-                                          if(ends[14]>=biggest48025){
-                                            biggest48025=ends[14];
+                                          S22928=8;
+                                          thread43986(tdone,ends);
+                                          thread43990(tdone,ends);
+                                          thread43994(tdone,ends);
+                                          thread43998(tdone,ends);
+                                          int biggest44002 = 0;
+                                          if(ends[14]>=biggest44002){
+                                            biggest44002=ends[14];
                                           }
-                                          if(ends[17]>=biggest48025){
-                                            biggest48025=ends[17];
+                                          if(ends[17]>=biggest44002){
+                                            biggest44002=ends[17];
                                           }
-                                          if(ends[20]>=biggest48025){
-                                            biggest48025=ends[20];
+                                          if(ends[20]>=biggest44002){
+                                            biggest44002=ends[20];
                                           }
-                                          if(ends[23]>=biggest48025){
-                                            biggest48025=ends[23];
+                                          if(ends[23]>=biggest44002){
+                                            biggest44002=ends[23];
                                           }
-                                          if(biggest48025 == 1){
+                                          if(biggest44002 == 1){
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
@@ -9807,61 +9807,61 @@ public class Controller extends ClockDomain{
                             ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 40, column: 14
-                            S26951=6;
-                            S27750=0;
+                            S22928=6;
+                            S23727=0;
                             if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                              S27750=1;
+                              S23727=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S27745=0;
+                              S23722=0;
                               if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                 FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                S27745=1;
+                                S23722=1;
                                 if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                   FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 41, column: 14
-                                  S26951=7;
-                                  S28058=0;
+                                  S22928=7;
+                                  S24035=0;
                                   if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                    S28058=1;
+                                    S24035=1;
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
                                   }
                                   else {
-                                    S28053=0;
+                                    S24030=0;
                                     if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                       FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                      S28053=1;
+                                      S24030=1;
                                       if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                         FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                         ends[13]=2;
                                         ;//sysj/controller.sysj line: 42, column: 14
-                                        S26951=8;
-                                        thread48026(tdone,ends);
-                                        thread48030(tdone,ends);
-                                        thread48034(tdone,ends);
-                                        thread48038(tdone,ends);
-                                        int biggest48042 = 0;
-                                        if(ends[14]>=biggest48042){
-                                          biggest48042=ends[14];
+                                        S22928=8;
+                                        thread44003(tdone,ends);
+                                        thread44007(tdone,ends);
+                                        thread44011(tdone,ends);
+                                        thread44015(tdone,ends);
+                                        int biggest44019 = 0;
+                                        if(ends[14]>=biggest44019){
+                                          biggest44019=ends[14];
                                         }
-                                        if(ends[17]>=biggest48042){
-                                          biggest48042=ends[17];
+                                        if(ends[17]>=biggest44019){
+                                          biggest44019=ends[17];
                                         }
-                                        if(ends[20]>=biggest48042){
-                                          biggest48042=ends[20];
+                                        if(ends[20]>=biggest44019){
+                                          biggest44019=ends[20];
                                         }
-                                        if(ends[23]>=biggest48042){
-                                          biggest48042=ends[23];
+                                        if(ends[23]>=biggest44019){
+                                          biggest44019=ends[23];
                                         }
-                                        if(biggest48042 == 1){
+                                        if(biggest44019 == 1){
                                           active[13]=1;
                                           ends[13]=1;
                                           tdone[13]=1;
@@ -9905,79 +9905,79 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S27486=1;
-                    S27486=0;
+                    S23463=1;
+                    S23463=0;
                     if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                      S27486=1;
+                      S23463=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S27481=0;
+                      S23458=0;
                       if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                         ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                        S27481=1;
+                        S23458=1;
                         if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                           ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 40, column: 14
-                          S26951=6;
-                          S27750=0;
+                          S22928=6;
+                          S23727=0;
                           if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                            S27750=1;
+                            S23727=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S27745=0;
+                            S23722=0;
                             if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                               FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                              S27745=1;
+                              S23722=1;
                               if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 41, column: 14
-                                S26951=7;
-                                S28058=0;
+                                S22928=7;
+                                S24035=0;
                                 if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                  S28058=1;
+                                  S24035=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S28053=0;
+                                  S24030=0;
                                   if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                     FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                    S28053=1;
+                                    S24030=1;
                                     if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 42, column: 14
-                                      S26951=8;
-                                      thread48043(tdone,ends);
-                                      thread48047(tdone,ends);
-                                      thread48051(tdone,ends);
-                                      thread48055(tdone,ends);
-                                      int biggest48059 = 0;
-                                      if(ends[14]>=biggest48059){
-                                        biggest48059=ends[14];
+                                      S22928=8;
+                                      thread44020(tdone,ends);
+                                      thread44024(tdone,ends);
+                                      thread44028(tdone,ends);
+                                      thread44032(tdone,ends);
+                                      int biggest44036 = 0;
+                                      if(ends[14]>=biggest44036){
+                                        biggest44036=ends[14];
                                       }
-                                      if(ends[17]>=biggest48059){
-                                        biggest48059=ends[17];
+                                      if(ends[17]>=biggest44036){
+                                        biggest44036=ends[17];
                                       }
-                                      if(ends[20]>=biggest48059){
-                                        biggest48059=ends[20];
+                                      if(ends[20]>=biggest44036){
+                                        biggest44036=ends[20];
                                       }
-                                      if(ends[23]>=biggest48059){
-                                        biggest48059=ends[23];
+                                      if(ends[23]>=biggest44036){
+                                        biggest44036=ends[23];
                                       }
-                                      if(biggest48059 == 1){
+                                      if(biggest44036 == 1){
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
@@ -10027,62 +10027,62 @@ public class Controller extends ClockDomain{
                 break;
               
               case 6 : 
-                switch(S27750){
+                switch(S23727){
                   case 0 : 
                     if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                      S27750=1;
+                      S23727=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S27745){
+                      switch(S23722){
                         case 0 : 
                           if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                             FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                            S27745=1;
+                            S23722=1;
                             if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                               FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 41, column: 14
-                              S26951=7;
-                              S28058=0;
+                              S22928=7;
+                              S24035=0;
                               if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                S28058=1;
+                                S24035=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S28053=0;
+                                S24030=0;
                                 if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                   FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                  S28053=1;
+                                  S24030=1;
                                   if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                     FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 42, column: 14
-                                    S26951=8;
-                                    thread48060(tdone,ends);
-                                    thread48064(tdone,ends);
-                                    thread48068(tdone,ends);
-                                    thread48072(tdone,ends);
-                                    int biggest48076 = 0;
-                                    if(ends[14]>=biggest48076){
-                                      biggest48076=ends[14];
+                                    S22928=8;
+                                    thread44037(tdone,ends);
+                                    thread44041(tdone,ends);
+                                    thread44045(tdone,ends);
+                                    thread44049(tdone,ends);
+                                    int biggest44053 = 0;
+                                    if(ends[14]>=biggest44053){
+                                      biggest44053=ends[14];
                                     }
-                                    if(ends[17]>=biggest48076){
-                                      biggest48076=ends[17];
+                                    if(ends[17]>=biggest44053){
+                                      biggest44053=ends[17];
                                     }
-                                    if(ends[20]>=biggest48076){
-                                      biggest48076=ends[20];
+                                    if(ends[20]>=biggest44053){
+                                      biggest44053=ends[20];
                                     }
-                                    if(ends[23]>=biggest48076){
-                                      biggest48076=ends[23];
+                                    if(ends[23]>=biggest44053){
+                                      biggest44053=ends[23];
                                     }
-                                    if(biggest48076 == 1){
+                                    if(biggest44053 == 1){
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
@@ -10119,43 +10119,43 @@ public class Controller extends ClockDomain{
                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 41, column: 14
-                            S26951=7;
-                            S28058=0;
+                            S22928=7;
+                            S24035=0;
                             if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                              S28058=1;
+                              S24035=1;
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
                             }
                             else {
-                              S28053=0;
+                              S24030=0;
                               if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                 FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                S28053=1;
+                                S24030=1;
                                 if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                   ends[13]=2;
                                   ;//sysj/controller.sysj line: 42, column: 14
-                                  S26951=8;
-                                  thread48077(tdone,ends);
-                                  thread48081(tdone,ends);
-                                  thread48085(tdone,ends);
-                                  thread48089(tdone,ends);
-                                  int biggest48093 = 0;
-                                  if(ends[14]>=biggest48093){
-                                    biggest48093=ends[14];
+                                  S22928=8;
+                                  thread44054(tdone,ends);
+                                  thread44058(tdone,ends);
+                                  thread44062(tdone,ends);
+                                  thread44066(tdone,ends);
+                                  int biggest44070 = 0;
+                                  if(ends[14]>=biggest44070){
+                                    biggest44070=ends[14];
                                   }
-                                  if(ends[17]>=biggest48093){
-                                    biggest48093=ends[17];
+                                  if(ends[17]>=biggest44070){
+                                    biggest44070=ends[17];
                                   }
-                                  if(ends[20]>=biggest48093){
-                                    biggest48093=ends[20];
+                                  if(ends[20]>=biggest44070){
+                                    biggest44070=ends[20];
                                   }
-                                  if(ends[23]>=biggest48093){
-                                    biggest48093=ends[23];
+                                  if(ends[23]>=biggest44070){
+                                    biggest44070=ends[23];
                                   }
-                                  if(biggest48093 == 1){
+                                  if(biggest44070 == 1){
                                     active[13]=1;
                                     ends[13]=1;
                                     tdone[13]=1;
@@ -10186,61 +10186,61 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S27750=1;
-                    S27750=0;
+                    S23727=1;
+                    S23727=0;
                     if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                       FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                      S27750=1;
+                      S23727=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S27745=0;
+                      S23722=0;
                       if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                         FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                        S27745=1;
+                        S23722=1;
                         if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                           FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 41, column: 14
-                          S26951=7;
-                          S28058=0;
+                          S22928=7;
+                          S24035=0;
                           if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                            S28058=1;
+                            S24035=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S28053=0;
+                            S24030=0;
                             if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                               FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                              S28053=1;
+                              S24030=1;
                               if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                 FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 42, column: 14
-                                S26951=8;
-                                thread48094(tdone,ends);
-                                thread48098(tdone,ends);
-                                thread48102(tdone,ends);
-                                thread48106(tdone,ends);
-                                int biggest48110 = 0;
-                                if(ends[14]>=biggest48110){
-                                  biggest48110=ends[14];
+                                S22928=8;
+                                thread44071(tdone,ends);
+                                thread44075(tdone,ends);
+                                thread44079(tdone,ends);
+                                thread44083(tdone,ends);
+                                int biggest44087 = 0;
+                                if(ends[14]>=biggest44087){
+                                  biggest44087=ends[14];
                                 }
-                                if(ends[17]>=biggest48110){
-                                  biggest48110=ends[17];
+                                if(ends[17]>=biggest44087){
+                                  biggest44087=ends[17];
                                 }
-                                if(ends[20]>=biggest48110){
-                                  biggest48110=ends[20];
+                                if(ends[20]>=biggest44087){
+                                  biggest44087=ends[20];
                                 }
-                                if(ends[23]>=biggest48110){
-                                  biggest48110=ends[23];
+                                if(ends[23]>=biggest44087){
+                                  biggest44087=ends[23];
                                 }
-                                if(biggest48110 == 1){
+                                if(biggest44087 == 1){
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
@@ -10277,44 +10277,44 @@ public class Controller extends ClockDomain{
                 break;
               
               case 7 : 
-                switch(S28058){
+                switch(S24035){
                   case 0 : 
                     if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                      S28058=1;
+                      S24035=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      switch(S28053){
+                      switch(S24030){
                         case 0 : 
                           if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                             FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                            S28053=1;
+                            S24030=1;
                             if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 42, column: 14
-                              S26951=8;
-                              thread48111(tdone,ends);
-                              thread48115(tdone,ends);
-                              thread48119(tdone,ends);
-                              thread48123(tdone,ends);
-                              int biggest48127 = 0;
-                              if(ends[14]>=biggest48127){
-                                biggest48127=ends[14];
+                              S22928=8;
+                              thread44088(tdone,ends);
+                              thread44092(tdone,ends);
+                              thread44096(tdone,ends);
+                              thread44100(tdone,ends);
+                              int biggest44104 = 0;
+                              if(ends[14]>=biggest44104){
+                                biggest44104=ends[14];
                               }
-                              if(ends[17]>=biggest48127){
-                                biggest48127=ends[17];
+                              if(ends[17]>=biggest44104){
+                                biggest44104=ends[17];
                               }
-                              if(ends[20]>=biggest48127){
-                                biggest48127=ends[20];
+                              if(ends[20]>=biggest44104){
+                                biggest44104=ends[20];
                               }
-                              if(ends[23]>=biggest48127){
-                                biggest48127=ends[23];
+                              if(ends[23]>=biggest44104){
+                                biggest44104=ends[23];
                               }
-                              if(biggest48127 == 1){
+                              if(biggest44104 == 1){
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
@@ -10338,25 +10338,25 @@ public class Controller extends ClockDomain{
                             FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                             ends[13]=2;
                             ;//sysj/controller.sysj line: 42, column: 14
-                            S26951=8;
-                            thread48128(tdone,ends);
-                            thread48132(tdone,ends);
-                            thread48136(tdone,ends);
-                            thread48140(tdone,ends);
-                            int biggest48144 = 0;
-                            if(ends[14]>=biggest48144){
-                              biggest48144=ends[14];
+                            S22928=8;
+                            thread44105(tdone,ends);
+                            thread44109(tdone,ends);
+                            thread44113(tdone,ends);
+                            thread44117(tdone,ends);
+                            int biggest44121 = 0;
+                            if(ends[14]>=biggest44121){
+                              biggest44121=ends[14];
                             }
-                            if(ends[17]>=biggest48144){
-                              biggest48144=ends[17];
+                            if(ends[17]>=biggest44121){
+                              biggest44121=ends[17];
                             }
-                            if(ends[20]>=biggest48144){
-                              biggest48144=ends[20];
+                            if(ends[20]>=biggest44121){
+                              biggest44121=ends[20];
                             }
-                            if(ends[23]>=biggest48144){
-                              biggest48144=ends[23];
+                            if(ends[23]>=biggest44121){
+                              biggest44121=ends[23];
                             }
-                            if(biggest48144 == 1){
+                            if(biggest44121 == 1){
                               active[13]=1;
                               ends[13]=1;
                               tdone[13]=1;
@@ -10374,43 +10374,43 @@ public class Controller extends ClockDomain{
                     break;
                   
                   case 1 : 
-                    S28058=1;
-                    S28058=0;
+                    S24035=1;
+                    S24035=0;
                     if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                      S28058=1;
+                      S24035=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S28053=0;
+                      S24030=0;
                       if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                         FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                        S28053=1;
+                        S24030=1;
                         if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 42, column: 14
-                          S26951=8;
-                          thread48145(tdone,ends);
-                          thread48149(tdone,ends);
-                          thread48153(tdone,ends);
-                          thread48157(tdone,ends);
-                          int biggest48161 = 0;
-                          if(ends[14]>=biggest48161){
-                            biggest48161=ends[14];
+                          S22928=8;
+                          thread44122(tdone,ends);
+                          thread44126(tdone,ends);
+                          thread44130(tdone,ends);
+                          thread44134(tdone,ends);
+                          int biggest44138 = 0;
+                          if(ends[14]>=biggest44138){
+                            biggest44138=ends[14];
                           }
-                          if(ends[17]>=biggest48161){
-                            biggest48161=ends[17];
+                          if(ends[17]>=biggest44138){
+                            biggest44138=ends[17];
                           }
-                          if(ends[20]>=biggest48161){
-                            biggest48161=ends[20];
+                          if(ends[20]>=biggest44138){
+                            biggest44138=ends[20];
                           }
-                          if(ends[23]>=biggest48161){
-                            biggest48161=ends[23];
+                          if(ends[23]>=biggest44138){
+                            biggest44138=ends[23];
                           }
-                          if(biggest48161 == 1){
+                          if(biggest44138 == 1){
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
@@ -10434,31 +10434,31 @@ public class Controller extends ClockDomain{
                 break;
               
               case 8 : 
-                thread48162(tdone,ends);
-                thread48166(tdone,ends);
-                thread48170(tdone,ends);
-                thread48174(tdone,ends);
-                int biggest48178 = 0;
-                if(ends[14]>=biggest48178){
-                  biggest48178=ends[14];
+                thread44139(tdone,ends);
+                thread44143(tdone,ends);
+                thread44147(tdone,ends);
+                thread44151(tdone,ends);
+                int biggest44155 = 0;
+                if(ends[14]>=biggest44155){
+                  biggest44155=ends[14];
                 }
-                if(ends[17]>=biggest48178){
-                  biggest48178=ends[17];
+                if(ends[17]>=biggest44155){
+                  biggest44155=ends[17];
                 }
-                if(ends[20]>=biggest48178){
-                  biggest48178=ends[20];
+                if(ends[20]>=biggest44155){
+                  biggest44155=ends[20];
                 }
-                if(ends[23]>=biggest48178){
-                  biggest48178=ends[23];
+                if(ends[23]>=biggest44155){
+                  biggest44155=ends[23];
                 }
-                if(biggest48178 == 1){
+                if(biggest44155 == 1){
                   active[13]=1;
                   ends[13]=1;
                   tdone[13]=1;
                 }
                 //FINXME code
-                if(biggest48178 == 0){
-                  S30853=1;
+                if(biggest44155 == 0){
+                  S26830=1;
                   active[13]=1;
                   ends[13]=1;
                   tdone[13]=1;
@@ -10469,172 +10469,172 @@ public class Controller extends ClockDomain{
             break;
           
           case 1 : 
-            S30853=1;
-            S30853=0;
+            S26830=1;
+            S26830=0;
             if(request.getprestatus()){//sysj/controller.sysj line: 34, column: 14
-              S26951=0;
-              S26847=0;
+              S22928=0;
+              S22824=0;
               if(!FirstLiquid_in.isPartnerPresent() || FirstLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 35, column: 8
                 FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
-                S26847=1;
+                S22824=1;
                 active[13]=1;
                 ends[13]=1;
                 tdone[13]=1;
               }
               else {
-                S26842=0;
+                S22819=0;
                 if(!FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                   FirstLiquid_in.setACK(true);//sysj/controller.sysj line: 35, column: 8
-                  S26842=1;
+                  S22819=1;
                   if(FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
                     FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
                     ends[13]=2;
                     ;//sysj/controller.sysj line: 35, column: 8
-                    S26951=1;
-                    S26869=0;
+                    S22928=1;
+                    S22846=0;
                     if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
                       FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-                      S26869=1;
+                      S22846=1;
                       active[13]=1;
                       ends[13]=1;
                       tdone[13]=1;
                     }
                     else {
-                      S26864=0;
+                      S22841=0;
                       if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                         FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                        S26864=1;
+                        S22841=1;
                         if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                           FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                           ends[13]=2;
                           ;//sysj/controller.sysj line: 36, column: 14
-                          S26951=2;
-                          S26958=0;
+                          S22928=2;
+                          S22935=0;
                           if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                             SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                            S26958=1;
+                            S22935=1;
                             active[13]=1;
                             ends[13]=1;
                             tdone[13]=1;
                           }
                           else {
-                            S26953=0;
+                            S22930=0;
                             if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                               SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                              S26953=1;
+                              S22930=1;
                               if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                                 SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                                 ends[13]=2;
                                 ;//sysj/controller.sysj line: 37, column: 8
-                                S26951=3;
-                                S27090=0;
+                                S22928=3;
+                                S23067=0;
                                 if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                                   SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                                  S27090=1;
+                                  S23067=1;
                                   active[13]=1;
                                   ends[13]=1;
                                   tdone[13]=1;
                                 }
                                 else {
-                                  S27085=0;
+                                  S23062=0;
                                   if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                     SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                                    S27085=1;
+                                    S23062=1;
                                     if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                                       SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                                       ends[13]=2;
                                       ;//sysj/controller.sysj line: 38, column: 14
-                                      S26951=4;
-                                      S27266=0;
+                                      S22928=4;
+                                      S23243=0;
                                       if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                         ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                        S27266=1;
+                                        S23243=1;
                                         active[13]=1;
                                         ends[13]=1;
                                         tdone[13]=1;
                                       }
                                       else {
-                                        S27261=0;
+                                        S23238=0;
                                         if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                           ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                          S27261=1;
+                                          S23238=1;
                                           if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                             ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                             ends[13]=2;
                                             ;//sysj/controller.sysj line: 39, column: 14
-                                            S26951=5;
-                                            S27486=0;
+                                            S22928=5;
+                                            S23463=0;
                                             if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                               ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                              S27486=1;
+                                              S23463=1;
                                               active[13]=1;
                                               ends[13]=1;
                                               tdone[13]=1;
                                             }
                                             else {
-                                              S27481=0;
+                                              S23458=0;
                                               if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                 ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                                S27481=1;
+                                                S23458=1;
                                                 if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                                   ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                                   ends[13]=2;
                                                   ;//sysj/controller.sysj line: 40, column: 14
-                                                  S26951=6;
-                                                  S27750=0;
+                                                  S22928=6;
+                                                  S23727=0;
                                                   if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                                     FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                                    S27750=1;
+                                                    S23727=1;
                                                     active[13]=1;
                                                     ends[13]=1;
                                                     tdone[13]=1;
                                                   }
                                                   else {
-                                                    S27745=0;
+                                                    S23722=0;
                                                     if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                       FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                                      S27745=1;
+                                                      S23722=1;
                                                       if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                         FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                         ends[13]=2;
                                                         ;//sysj/controller.sysj line: 41, column: 14
-                                                        S26951=7;
-                                                        S28058=0;
+                                                        S22928=7;
+                                                        S24035=0;
                                                         if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                           FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                          S28058=1;
+                                                          S24035=1;
                                                           active[13]=1;
                                                           ends[13]=1;
                                                           tdone[13]=1;
                                                         }
                                                         else {
-                                                          S28053=0;
+                                                          S24030=0;
                                                           if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                             FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                            S28053=1;
+                                                            S24030=1;
                                                             if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                               FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                               ends[13]=2;
                                                               ;//sysj/controller.sysj line: 42, column: 14
-                                                              S26951=8;
-                                                              thread48179(tdone,ends);
-                                                              thread48183(tdone,ends);
-                                                              thread48187(tdone,ends);
-                                                              thread48191(tdone,ends);
-                                                              int biggest48195 = 0;
-                                                              if(ends[14]>=biggest48195){
-                                                                biggest48195=ends[14];
+                                                              S22928=8;
+                                                              thread44156(tdone,ends);
+                                                              thread44160(tdone,ends);
+                                                              thread44164(tdone,ends);
+                                                              thread44168(tdone,ends);
+                                                              int biggest44172 = 0;
+                                                              if(ends[14]>=biggest44172){
+                                                                biggest44172=ends[14];
                                                               }
-                                                              if(ends[17]>=biggest48195){
-                                                                biggest48195=ends[17];
+                                                              if(ends[17]>=biggest44172){
+                                                                biggest44172=ends[17];
                                                               }
-                                                              if(ends[20]>=biggest48195){
-                                                                biggest48195=ends[20];
+                                                              if(ends[20]>=biggest44172){
+                                                                biggest44172=ends[20];
                                                               }
-                                                              if(ends[23]>=biggest48195){
-                                                                biggest48195=ends[23];
+                                                              if(ends[23]>=biggest44172){
+                                                                biggest44172=ends[23];
                                                               }
-                                                              if(biggest48195 == 1){
+                                                              if(biggest44172 == 1){
                                                                 active[13]=1;
                                                                 ends[13]=1;
                                                                 tdone[13]=1;
@@ -10745,7 +10745,7 @@ public class Controller extends ClockDomain{
               }
             }
             else {
-              S30853=1;
+              S26830=1;
               active[13]=1;
               ends[13]=1;
               tdone[13]=1;
@@ -10758,8 +10758,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47752(int [] tdone, int [] ends){
-        switch(S26840){
+  public void thread43729(int [] tdone, int [] ends){
+        switch(S22817){
       case 0 : 
         active[12]=0;
         ends[12]=0;
@@ -10784,9 +10784,9 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47749(int [] tdone, int [] ends){
-        S41115=1;
-    S41024=0;
+  public void thread43726(int [] tdone, int [] ends){
+        S37092=1;
+    S37001=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 265, column: 12
       System.out.println("4L1 ON");//sysj/controller.sysj line: 266, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 268, column: 10
@@ -10796,7 +10796,7 @@ public class Controller extends ClockDomain{
       tdone[34]=1;
     }
     else {
-      S41024=1;
+      S37001=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 274, column: 12
         System.out.println("4L2 ON");//sysj/controller.sysj line: 275, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 277, column: 10
@@ -10806,7 +10806,7 @@ public class Controller extends ClockDomain{
         tdone[34]=1;
       }
       else {
-        S41024=2;
+        S37001=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 282, column: 12
           System.out.println("4L3 ON");//sysj/controller.sysj line: 283, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 285, column: 10
@@ -10816,7 +10816,7 @@ public class Controller extends ClockDomain{
           tdone[34]=1;
         }
         else {
-          S41024=3;
+          S37001=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 4){//sysj/controller.sysj line: 290, column: 12
             System.out.println("4L4 ON");//sysj/controller.sysj line: 291, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 293, column: 10
@@ -10826,7 +10826,7 @@ public class Controller extends ClockDomain{
             tdone[34]=1;
           }
           else {
-            S41115=0;
+            S37092=0;
             active[34]=0;
             ends[34]=0;
             tdone[34]=1;
@@ -10836,8 +10836,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47748(int [] tdone, int [] ends){
-        S40983=1;
+  public void thread43725(int [] tdone, int [] ends){
+        S36960=1;
     Counter.setPresent();//sysj/controller.sysj line: 260, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(5);//sysj/controller.sysj line: 260, column: 9
@@ -10846,9 +10846,9 @@ public class Controller extends ClockDomain{
     tdone[33]=1;
   }
 
-  public void thread47746(int [] tdone, int [] ends){
-        S40420=1;
-    S40329=0;
+  public void thread43723(int [] tdone, int [] ends){
+        S36397=1;
+    S36306=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 223, column: 12
       System.out.println("3L1 ON");//sysj/controller.sysj line: 224, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 226, column: 10
@@ -10858,7 +10858,7 @@ public class Controller extends ClockDomain{
       tdone[32]=1;
     }
     else {
-      S40329=1;
+      S36306=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 231, column: 12
         System.out.println("3L2 ON");//sysj/controller.sysj line: 232, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 234, column: 10
@@ -10868,7 +10868,7 @@ public class Controller extends ClockDomain{
         tdone[32]=1;
       }
       else {
-        S40329=2;
+        S36306=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 239, column: 12
           System.out.println("3L3 ON");//sysj/controller.sysj line: 240, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 242, column: 10
@@ -10878,7 +10878,7 @@ public class Controller extends ClockDomain{
           tdone[32]=1;
         }
         else {
-          S40329=3;
+          S36306=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 3){//sysj/controller.sysj line: 247, column: 12
             System.out.println("3L4 ON");//sysj/controller.sysj line: 248, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 250, column: 10
@@ -10888,7 +10888,7 @@ public class Controller extends ClockDomain{
             tdone[32]=1;
           }
           else {
-            S40420=0;
+            S36397=0;
             active[32]=0;
             ends[32]=0;
             tdone[32]=1;
@@ -10898,8 +10898,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47745(int [] tdone, int [] ends){
-        S40288=1;
+  public void thread43722(int [] tdone, int [] ends){
+        S36265=1;
     Counter.setPresent();//sysj/controller.sysj line: 218, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(4);//sysj/controller.sysj line: 218, column: 9
@@ -10908,9 +10908,9 @@ public class Controller extends ClockDomain{
     tdone[31]=1;
   }
 
-  public void thread47743(int [] tdone, int [] ends){
-        S39864=1;
-    S39773=0;
+  public void thread43720(int [] tdone, int [] ends){
+        S35841=1;
+    S35750=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 181, column: 12
       System.out.println("2L1 ON");//sysj/controller.sysj line: 182, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 184, column: 10
@@ -10920,7 +10920,7 @@ public class Controller extends ClockDomain{
       tdone[30]=1;
     }
     else {
-      S39773=1;
+      S35750=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 189, column: 12
         System.out.println("2L2 ON");//sysj/controller.sysj line: 190, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 192, column: 10
@@ -10930,7 +10930,7 @@ public class Controller extends ClockDomain{
         tdone[30]=1;
       }
       else {
-        S39773=2;
+        S35750=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 197, column: 12
           System.out.println("2L3 ON");//sysj/controller.sysj line: 198, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 200, column: 10
@@ -10940,7 +10940,7 @@ public class Controller extends ClockDomain{
           tdone[30]=1;
         }
         else {
-          S39773=3;
+          S35750=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 2){//sysj/controller.sysj line: 205, column: 12
             System.out.println("2L4 ON");//sysj/controller.sysj line: 206, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 208, column: 10
@@ -10950,7 +10950,7 @@ public class Controller extends ClockDomain{
             tdone[30]=1;
           }
           else {
-            S39864=0;
+            S35841=0;
             active[30]=0;
             ends[30]=0;
             tdone[30]=1;
@@ -10960,8 +10960,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47742(int [] tdone, int [] ends){
-        S39732=1;
+  public void thread43719(int [] tdone, int [] ends){
+        S35709=1;
     Counter.setPresent();//sysj/controller.sysj line: 176, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(3);//sysj/controller.sysj line: 176, column: 9
@@ -10970,9 +10970,9 @@ public class Controller extends ClockDomain{
     tdone[29]=1;
   }
 
-  public void thread47740(int [] tdone, int [] ends){
-        S39029=1;
-    S38938=0;
+  public void thread43717(int [] tdone, int [] ends){
+        S35006=1;
+    S34915=0;
     if((FirstLiquidInt_11.getpreval() == null ? 0 : ((Integer)FirstLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 138, column: 12
       System.out.println("1L1 ON");//sysj/controller.sysj line: 139, column: 9
       Liquid1On.setPresent();//sysj/controller.sysj line: 141, column: 10
@@ -10982,7 +10982,7 @@ public class Controller extends ClockDomain{
       tdone[28]=1;
     }
     else {
-      S38938=1;
+      S34915=1;
       if((SecondLiquidInt_11.getpreval() == null ? 0 : ((Integer)SecondLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 146, column: 12
         System.out.println("1L2 ON");//sysj/controller.sysj line: 147, column: 9
         Liquid2On.setPresent();//sysj/controller.sysj line: 149, column: 10
@@ -10992,7 +10992,7 @@ public class Controller extends ClockDomain{
         tdone[28]=1;
       }
       else {
-        S38938=2;
+        S34915=2;
         if((ThirdLiquidInt_11.getpreval() == null ? 0 : ((Integer)ThirdLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 154, column: 12
           System.out.println("1L3 ON");//sysj/controller.sysj line: 155, column: 9
           Liquid3On.setPresent();//sysj/controller.sysj line: 157, column: 10
@@ -11002,7 +11002,7 @@ public class Controller extends ClockDomain{
           tdone[28]=1;
         }
         else {
-          S38938=3;
+          S34915=3;
           if((FourthLiquidInt_11.getpreval() == null ? 0 : ((Integer)FourthLiquidInt_11.getpreval()).intValue()) == 1){//sysj/controller.sysj line: 162, column: 12
             System.out.println("1L4 ON");//sysj/controller.sysj line: 163, column: 9
             Liquid4On.setPresent();//sysj/controller.sysj line: 165, column: 10
@@ -11012,7 +11012,7 @@ public class Controller extends ClockDomain{
             tdone[28]=1;
           }
           else {
-            S39029=0;
+            S35006=0;
             active[28]=0;
             ends[28]=0;
             tdone[28]=1;
@@ -11022,8 +11022,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47739(int [] tdone, int [] ends){
-        S38897=1;
+  public void thread43716(int [] tdone, int [] ends){
+        S34874=1;
     Counter.setPresent();//sysj/controller.sysj line: 133, column: 9
     currsigs.addElement(Counter);
     Counter.setValue(2);//sysj/controller.sysj line: 133, column: 9
@@ -11032,9 +11032,9 @@ public class Controller extends ClockDomain{
     tdone[27]=1;
   }
 
-  public void thread47738(int [] tdone, int [] ends){
-        S47691=1;
-    S39726=0;
+  public void thread43715(int [] tdone, int [] ends){
+        S43668=1;
+    S35703=0;
     if(NewOrder_11.getprestatus()){//sysj/controller.sysj line: 119, column: 15
       System.out.println("NewOrder Received FIRST");//sysj/controller.sysj line: 120, column: 7
       Counter.setPresent();//sysj/controller.sysj line: 122, column: 9
@@ -11045,80 +11045,80 @@ public class Controller extends ClockDomain{
       tdone[26]=1;
     }
     else {
-      S39726=1;
+      S35703=1;
       if(Ready.getprestatus()){//sysj/controller.sysj line: 128, column: 15
         System.out.println("Ready Received FIRST");//sysj/controller.sysj line: 129, column: 7
-        thread47739(tdone,ends);
-        thread47740(tdone,ends);
-        int biggest47741 = 0;
-        if(ends[27]>=biggest47741){
-          biggest47741=ends[27];
+        thread43716(tdone,ends);
+        thread43717(tdone,ends);
+        int biggest43718 = 0;
+        if(ends[27]>=biggest43718){
+          biggest43718=ends[27];
         }
-        if(ends[28]>=biggest47741){
-          biggest47741=ends[28];
+        if(ends[28]>=biggest43718){
+          biggest43718=ends[28];
         }
-        if(biggest47741 == 1){
+        if(biggest43718 == 1){
           active[26]=1;
           ends[26]=1;
           tdone[26]=1;
         }
       }
       else {
-        S39726=2;
+        S35703=2;
         if(FirstLiquidDone.getprestatus()){//sysj/controller.sysj line: 173, column: 15
-          thread47742(tdone,ends);
-          thread47743(tdone,ends);
-          int biggest47744 = 0;
-          if(ends[29]>=biggest47744){
-            biggest47744=ends[29];
+          thread43719(tdone,ends);
+          thread43720(tdone,ends);
+          int biggest43721 = 0;
+          if(ends[29]>=biggest43721){
+            biggest43721=ends[29];
           }
-          if(ends[30]>=biggest47744){
-            biggest47744=ends[30];
+          if(ends[30]>=biggest43721){
+            biggest43721=ends[30];
           }
-          if(biggest47744 == 1){
+          if(biggest43721 == 1){
             active[26]=1;
             ends[26]=1;
             tdone[26]=1;
           }
         }
         else {
-          S39726=3;
+          S35703=3;
           if(SecondLiquidDone.getprestatus()){//sysj/controller.sysj line: 215, column: 15
-            thread47745(tdone,ends);
-            thread47746(tdone,ends);
-            int biggest47747 = 0;
-            if(ends[31]>=biggest47747){
-              biggest47747=ends[31];
+            thread43722(tdone,ends);
+            thread43723(tdone,ends);
+            int biggest43724 = 0;
+            if(ends[31]>=biggest43724){
+              biggest43724=ends[31];
             }
-            if(ends[32]>=biggest47747){
-              biggest47747=ends[32];
+            if(ends[32]>=biggest43724){
+              biggest43724=ends[32];
             }
-            if(biggest47747 == 1){
+            if(biggest43724 == 1){
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
             }
           }
           else {
-            S39726=4;
+            S35703=4;
             if(ThirdLiquidDone.getprestatus()){//sysj/controller.sysj line: 257, column: 15
-              thread47748(tdone,ends);
-              thread47749(tdone,ends);
-              int biggest47750 = 0;
-              if(ends[33]>=biggest47750){
-                biggest47750=ends[33];
+              thread43725(tdone,ends);
+              thread43726(tdone,ends);
+              int biggest43727 = 0;
+              if(ends[33]>=biggest43727){
+                biggest43727=ends[33];
               }
-              if(ends[34]>=biggest47750){
-                biggest47750=ends[34];
+              if(ends[34]>=biggest43727){
+                biggest43727=ends[34];
               }
-              if(biggest47750 == 1){
+              if(biggest43727 == 1){
                 active[26]=1;
                 ends[26]=1;
                 tdone[26]=1;
               }
             }
             else {
-              S39726=5;
+              S35703=5;
               active[26]=1;
               ends[26]=1;
               tdone[26]=1;
@@ -11129,8 +11129,8 @@ public class Controller extends ClockDomain{
     }
   }
 
-  public void thread47735(int [] tdone, int [] ends){
-        S28521=1;
+  public void thread43712(int [] tdone, int [] ends){
+        S24498=1;
     FourthLiquidInt_11.setPresent();//sysj/controller.sysj line: 105, column: 15
     currsigs.addElement(FourthLiquidInt_11);
     FourthLiquidInt_11.setValue((Integer)(FourthLiquid_in.getVal() == null ? 0 : ((Integer)FourthLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 105, column: 15
@@ -11139,8 +11139,8 @@ public class Controller extends ClockDomain{
     tdone[25]=1;
   }
 
-  public void thread47734(int [] tdone, int [] ends){
-        S28515=1;
+  public void thread43711(int [] tdone, int [] ends){
+        S24492=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 98, column: 15
     currsigs.addElement(NewOrder_11);
     FourthLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 99, column: 15
@@ -11151,27 +11151,27 @@ public class Controller extends ClockDomain{
     tdone[24]=1;
   }
 
-  public void thread47733(int [] tdone, int [] ends){
-        S28539=1;
+  public void thread43710(int [] tdone, int [] ends){
+        S24516=1;
     System.out.println("L4 START");//sysj/controller.sysj line: 95, column: 13
-    thread47734(tdone,ends);
-    thread47735(tdone,ends);
-    int biggest47736 = 0;
-    if(ends[24]>=biggest47736){
-      biggest47736=ends[24];
+    thread43711(tdone,ends);
+    thread43712(tdone,ends);
+    int biggest43713 = 0;
+    if(ends[24]>=biggest43713){
+      biggest43713=ends[24];
     }
-    if(ends[25]>=biggest47736){
-      biggest47736=ends[25];
+    if(ends[25]>=biggest43713){
+      biggest43713=ends[25];
     }
-    if(biggest47736 == 1){
+    if(biggest43713 == 1){
       active[23]=1;
       ends[23]=1;
       tdone[23]=1;
     }
   }
 
-  public void thread47731(int [] tdone, int [] ends){
-        S28487=1;
+  public void thread43708(int [] tdone, int [] ends){
+        S24464=1;
     ThirdLiquidInt_11.setPresent();//sysj/controller.sysj line: 88, column: 15
     currsigs.addElement(ThirdLiquidInt_11);
     ThirdLiquidInt_11.setValue((Integer)(ThirdLiquid_in.getVal() == null ? 0 : ((Integer)ThirdLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 88, column: 15
@@ -11180,8 +11180,8 @@ public class Controller extends ClockDomain{
     tdone[22]=1;
   }
 
-  public void thread47730(int [] tdone, int [] ends){
-        S28481=1;
+  public void thread43707(int [] tdone, int [] ends){
+        S24458=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 81, column: 15
     currsigs.addElement(NewOrder_11);
     ThirdLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 82, column: 15
@@ -11192,27 +11192,27 @@ public class Controller extends ClockDomain{
     tdone[21]=1;
   }
 
-  public void thread47729(int [] tdone, int [] ends){
-        S28505=1;
+  public void thread43706(int [] tdone, int [] ends){
+        S24482=1;
     System.out.println("L3 START");//sysj/controller.sysj line: 78, column: 8
-    thread47730(tdone,ends);
-    thread47731(tdone,ends);
-    int biggest47732 = 0;
-    if(ends[21]>=biggest47732){
-      biggest47732=ends[21];
+    thread43707(tdone,ends);
+    thread43708(tdone,ends);
+    int biggest43709 = 0;
+    if(ends[21]>=biggest43709){
+      biggest43709=ends[21];
     }
-    if(ends[22]>=biggest47732){
-      biggest47732=ends[22];
+    if(ends[22]>=biggest43709){
+      biggest43709=ends[22];
     }
-    if(biggest47732 == 1){
+    if(biggest43709 == 1){
       active[20]=1;
       ends[20]=1;
       tdone[20]=1;
     }
   }
 
-  public void thread47727(int [] tdone, int [] ends){
-        S28453=1;
+  public void thread43704(int [] tdone, int [] ends){
+        S24430=1;
     SecondLiquidInt_11.setPresent();//sysj/controller.sysj line: 71, column: 15
     currsigs.addElement(SecondLiquidInt_11);
     SecondLiquidInt_11.setValue((Integer)(SecondLiquid_in.getVal() == null ? 0 : ((Integer)SecondLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 71, column: 15
@@ -11221,8 +11221,8 @@ public class Controller extends ClockDomain{
     tdone[19]=1;
   }
 
-  public void thread47726(int [] tdone, int [] ends){
-        S28447=1;
+  public void thread43703(int [] tdone, int [] ends){
+        S24424=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 64, column: 15
     currsigs.addElement(NewOrder_11);
     SecondLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 65, column: 15
@@ -11233,27 +11233,27 @@ public class Controller extends ClockDomain{
     tdone[18]=1;
   }
 
-  public void thread47725(int [] tdone, int [] ends){
-        S28471=1;
+  public void thread43702(int [] tdone, int [] ends){
+        S24448=1;
     System.out.println("L2 START");//sysj/controller.sysj line: 61, column: 13
-    thread47726(tdone,ends);
-    thread47727(tdone,ends);
-    int biggest47728 = 0;
-    if(ends[18]>=biggest47728){
-      biggest47728=ends[18];
+    thread43703(tdone,ends);
+    thread43704(tdone,ends);
+    int biggest43705 = 0;
+    if(ends[18]>=biggest43705){
+      biggest43705=ends[18];
     }
-    if(ends[19]>=biggest47728){
-      biggest47728=ends[19];
+    if(ends[19]>=biggest43705){
+      biggest43705=ends[19];
     }
-    if(biggest47728 == 1){
+    if(biggest43705 == 1){
       active[17]=1;
       ends[17]=1;
       tdone[17]=1;
     }
   }
 
-  public void thread47723(int [] tdone, int [] ends){
-        S28419=1;
+  public void thread43700(int [] tdone, int [] ends){
+        S24396=1;
     FirstLiquidInt_11.setPresent();//sysj/controller.sysj line: 54, column: 15
     currsigs.addElement(FirstLiquidInt_11);
     FirstLiquidInt_11.setValue((Integer)(FirstLiquid_in.getVal() == null ? 0 : ((Integer)FirstLiquid_in.getVal()).intValue()));//sysj/controller.sysj line: 54, column: 15
@@ -11262,8 +11262,8 @@ public class Controller extends ClockDomain{
     tdone[16]=1;
   }
 
-  public void thread47722(int [] tdone, int [] ends){
-        S28413=1;
+  public void thread43699(int [] tdone, int [] ends){
+        S24390=1;
     NewOrder_11.setPresent();//sysj/controller.sysj line: 47, column: 15
     currsigs.addElement(NewOrder_11);
     FirstLiquidAmountInt_11.setPresent();//sysj/controller.sysj line: 48, column: 15
@@ -11274,192 +11274,192 @@ public class Controller extends ClockDomain{
     tdone[15]=1;
   }
 
-  public void thread47721(int [] tdone, int [] ends){
-        S28437=1;
+  public void thread43698(int [] tdone, int [] ends){
+        S24414=1;
     System.out.println("L1 START");//sysj/controller.sysj line: 44, column: 8
-    thread47722(tdone,ends);
-    thread47723(tdone,ends);
-    int biggest47724 = 0;
-    if(ends[15]>=biggest47724){
-      biggest47724=ends[15];
+    thread43699(tdone,ends);
+    thread43700(tdone,ends);
+    int biggest43701 = 0;
+    if(ends[15]>=biggest43701){
+      biggest43701=ends[15];
     }
-    if(ends[16]>=biggest47724){
-      biggest47724=ends[16];
+    if(ends[16]>=biggest43701){
+      biggest43701=ends[16];
     }
-    if(biggest47724 == 1){
+    if(biggest43701 == 1){
       active[14]=1;
       ends[14]=1;
       tdone[14]=1;
     }
   }
 
-  public void thread47720(int [] tdone, int [] ends){
-        S38881=1;
-    S30853=0;
+  public void thread43697(int [] tdone, int [] ends){
+        S34858=1;
+    S26830=0;
     if(request.getprestatus()){//sysj/controller.sysj line: 34, column: 14
-      S26951=0;
-      S26847=0;
+      S22928=0;
+      S22824=0;
       if(!FirstLiquid_in.isPartnerPresent() || FirstLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 35, column: 8
         FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
-        S26847=1;
+        S22824=1;
         active[13]=1;
         ends[13]=1;
         tdone[13]=1;
       }
       else {
-        S26842=0;
+        S22819=0;
         if(!FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
           FirstLiquid_in.setACK(true);//sysj/controller.sysj line: 35, column: 8
-          S26842=1;
+          S22819=1;
           if(FirstLiquid_in.isREQ()){//sysj/controller.sysj line: 35, column: 8
             FirstLiquid_in.setACK(false);//sysj/controller.sysj line: 35, column: 8
             ends[13]=2;
             ;//sysj/controller.sysj line: 35, column: 8
-            S26951=1;
-            S26869=0;
+            S22928=1;
+            S22846=0;
             if(!FirstLiquidAmount_in.isPartnerPresent() || FirstLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 36, column: 14
               FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
-              S26869=1;
+              S22846=1;
               active[13]=1;
               ends[13]=1;
               tdone[13]=1;
             }
             else {
-              S26864=0;
+              S22841=0;
               if(!FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                 FirstLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 36, column: 14
-                S26864=1;
+                S22841=1;
                 if(FirstLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 36, column: 14
                   FirstLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 36, column: 14
                   ends[13]=2;
                   ;//sysj/controller.sysj line: 36, column: 14
-                  S26951=2;
-                  S26958=0;
+                  S22928=2;
+                  S22935=0;
                   if(!SecondLiquid_in.isPartnerPresent() || SecondLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 37, column: 8
                     SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
-                    S26958=1;
+                    S22935=1;
                     active[13]=1;
                     ends[13]=1;
                     tdone[13]=1;
                   }
                   else {
-                    S26953=0;
+                    S22930=0;
                     if(!SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                       SecondLiquid_in.setACK(true);//sysj/controller.sysj line: 37, column: 8
-                      S26953=1;
+                      S22930=1;
                       if(SecondLiquid_in.isREQ()){//sysj/controller.sysj line: 37, column: 8
                         SecondLiquid_in.setACK(false);//sysj/controller.sysj line: 37, column: 8
                         ends[13]=2;
                         ;//sysj/controller.sysj line: 37, column: 8
-                        S26951=3;
-                        S27090=0;
+                        S22928=3;
+                        S23067=0;
                         if(!SecondLiquidAmount_in.isPartnerPresent() || SecondLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 38, column: 14
                           SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
-                          S27090=1;
+                          S23067=1;
                           active[13]=1;
                           ends[13]=1;
                           tdone[13]=1;
                         }
                         else {
-                          S27085=0;
+                          S23062=0;
                           if(!SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                             SecondLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 38, column: 14
-                            S27085=1;
+                            S23062=1;
                             if(SecondLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 38, column: 14
                               SecondLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 38, column: 14
                               ends[13]=2;
                               ;//sysj/controller.sysj line: 38, column: 14
-                              S26951=4;
-                              S27266=0;
+                              S22928=4;
+                              S23243=0;
                               if(!ThirdLiquid_in.isPartnerPresent() || ThirdLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 39, column: 14
                                 ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
-                                S27266=1;
+                                S23243=1;
                                 active[13]=1;
                                 ends[13]=1;
                                 tdone[13]=1;
                               }
                               else {
-                                S27261=0;
+                                S23238=0;
                                 if(!ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                   ThirdLiquid_in.setACK(true);//sysj/controller.sysj line: 39, column: 14
-                                  S27261=1;
+                                  S23238=1;
                                   if(ThirdLiquid_in.isREQ()){//sysj/controller.sysj line: 39, column: 14
                                     ThirdLiquid_in.setACK(false);//sysj/controller.sysj line: 39, column: 14
                                     ends[13]=2;
                                     ;//sysj/controller.sysj line: 39, column: 14
-                                    S26951=5;
-                                    S27486=0;
+                                    S22928=5;
+                                    S23463=0;
                                     if(!ThirdLiquidAmount_in.isPartnerPresent() || ThirdLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 40, column: 14
                                       ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
-                                      S27486=1;
+                                      S23463=1;
                                       active[13]=1;
                                       ends[13]=1;
                                       tdone[13]=1;
                                     }
                                     else {
-                                      S27481=0;
+                                      S23458=0;
                                       if(!ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                         ThirdLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 40, column: 14
-                                        S27481=1;
+                                        S23458=1;
                                         if(ThirdLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 40, column: 14
                                           ThirdLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 40, column: 14
                                           ends[13]=2;
                                           ;//sysj/controller.sysj line: 40, column: 14
-                                          S26951=6;
-                                          S27750=0;
+                                          S22928=6;
+                                          S23727=0;
                                           if(!FourthLiquid_in.isPartnerPresent() || FourthLiquid_in.isPartnerPreempted()){//sysj/controller.sysj line: 41, column: 14
                                             FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
-                                            S27750=1;
+                                            S23727=1;
                                             active[13]=1;
                                             ends[13]=1;
                                             tdone[13]=1;
                                           }
                                           else {
-                                            S27745=0;
+                                            S23722=0;
                                             if(!FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                               FourthLiquid_in.setACK(true);//sysj/controller.sysj line: 41, column: 14
-                                              S27745=1;
+                                              S23722=1;
                                               if(FourthLiquid_in.isREQ()){//sysj/controller.sysj line: 41, column: 14
                                                 FourthLiquid_in.setACK(false);//sysj/controller.sysj line: 41, column: 14
                                                 ends[13]=2;
                                                 ;//sysj/controller.sysj line: 41, column: 14
-                                                S26951=7;
-                                                S28058=0;
+                                                S22928=7;
+                                                S24035=0;
                                                 if(!FourthLiquidAmount_in.isPartnerPresent() || FourthLiquidAmount_in.isPartnerPreempted()){//sysj/controller.sysj line: 42, column: 14
                                                   FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
-                                                  S28058=1;
+                                                  S24035=1;
                                                   active[13]=1;
                                                   ends[13]=1;
                                                   tdone[13]=1;
                                                 }
                                                 else {
-                                                  S28053=0;
+                                                  S24030=0;
                                                   if(!FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                     FourthLiquidAmount_in.setACK(true);//sysj/controller.sysj line: 42, column: 14
-                                                    S28053=1;
+                                                    S24030=1;
                                                     if(FourthLiquidAmount_in.isREQ()){//sysj/controller.sysj line: 42, column: 14
                                                       FourthLiquidAmount_in.setACK(false);//sysj/controller.sysj line: 42, column: 14
                                                       ends[13]=2;
                                                       ;//sysj/controller.sysj line: 42, column: 14
-                                                      S26951=8;
-                                                      thread47721(tdone,ends);
-                                                      thread47725(tdone,ends);
-                                                      thread47729(tdone,ends);
-                                                      thread47733(tdone,ends);
-                                                      int biggest47737 = 0;
-                                                      if(ends[14]>=biggest47737){
-                                                        biggest47737=ends[14];
+                                                      S22928=8;
+                                                      thread43698(tdone,ends);
+                                                      thread43702(tdone,ends);
+                                                      thread43706(tdone,ends);
+                                                      thread43710(tdone,ends);
+                                                      int biggest43714 = 0;
+                                                      if(ends[14]>=biggest43714){
+                                                        biggest43714=ends[14];
                                                       }
-                                                      if(ends[17]>=biggest47737){
-                                                        biggest47737=ends[17];
+                                                      if(ends[17]>=biggest43714){
+                                                        biggest43714=ends[17];
                                                       }
-                                                      if(ends[20]>=biggest47737){
-                                                        biggest47737=ends[20];
+                                                      if(ends[20]>=biggest43714){
+                                                        biggest43714=ends[20];
                                                       }
-                                                      if(ends[23]>=biggest47737){
-                                                        biggest47737=ends[23];
+                                                      if(ends[23]>=biggest43714){
+                                                        biggest43714=ends[23];
                                                       }
-                                                      if(biggest47737 == 1){
+                                                      if(biggest43714 == 1){
                                                         active[13]=1;
                                                         ends[13]=1;
                                                         tdone[13]=1;
@@ -11570,15 +11570,15 @@ public class Controller extends ClockDomain{
       }
     }
     else {
-      S30853=1;
+      S26830=1;
       active[13]=1;
       ends[13]=1;
       tdone[13]=1;
     }
   }
 
-  public void thread47719(int [] tdone, int [] ends){
-        S26840=1;
+  public void thread43696(int [] tdone, int [] ends){
+        S22817=1;
     if(request.getprestatus()){//sysj/controller.sysj line: 21, column: 14
       RequestE.setPresent();//sysj/controller.sysj line: 23, column: 7
       currsigs.addElement(RequestE);
@@ -11600,14 +11600,14 @@ public class Controller extends ClockDomain{
     }
     
     RUN: while(true){
-      switch(S47693){
+      switch(S43670){
         case 0 : 
-          S47693=0;
+          S43670=0;
           break RUN;
         
         case 1 : 
-          S47693=2;
-          S47693=2;
+          S43670=2;
+          S43670=2;
           FirstLiquidInt_11.setClear();//sysj/controller.sysj line: 14, column: 4
           SecondLiquidInt_11.setClear();//sysj/controller.sysj line: 14, column: 4
           ThirdLiquidInt_11.setClear();//sysj/controller.sysj line: 14, column: 4
@@ -11617,20 +11617,20 @@ public class Controller extends ClockDomain{
           ThirdLiquidAmountInt_11.setClear();//sysj/controller.sysj line: 15, column: 4
           FourthLiquidAmountInt_11.setClear();//sysj/controller.sysj line: 15, column: 4
           NewOrder_11.setClear();//sysj/controller.sysj line: 18, column: 4
-          thread47719(tdone,ends);
-          thread47720(tdone,ends);
-          thread47738(tdone,ends);
-          int biggest47751 = 0;
-          if(ends[12]>=biggest47751){
-            biggest47751=ends[12];
+          thread43696(tdone,ends);
+          thread43697(tdone,ends);
+          thread43715(tdone,ends);
+          int biggest43728 = 0;
+          if(ends[12]>=biggest43728){
+            biggest43728=ends[12];
           }
-          if(ends[13]>=biggest47751){
-            biggest47751=ends[13];
+          if(ends[13]>=biggest43728){
+            biggest43728=ends[13];
           }
-          if(ends[26]>=biggest47751){
-            biggest47751=ends[26];
+          if(ends[26]>=biggest43728){
+            biggest43728=ends[26];
           }
-          if(biggest47751 == 1){
+          if(biggest43728 == 1){
             active[11]=1;
             ends[11]=1;
             break RUN;
@@ -11646,30 +11646,30 @@ public class Controller extends ClockDomain{
           ThirdLiquidAmountInt_11.setClear();//sysj/controller.sysj line: 15, column: 4
           FourthLiquidAmountInt_11.setClear();//sysj/controller.sysj line: 15, column: 4
           NewOrder_11.setClear();//sysj/controller.sysj line: 18, column: 4
-          thread47752(tdone,ends);
-          thread47753(tdone,ends);
-          thread48196(tdone,ends);
-          int biggest48251 = 0;
-          if(ends[12]>=biggest48251){
-            biggest48251=ends[12];
+          thread43729(tdone,ends);
+          thread43730(tdone,ends);
+          thread44173(tdone,ends);
+          int biggest44228 = 0;
+          if(ends[12]>=biggest44228){
+            biggest44228=ends[12];
           }
-          if(ends[13]>=biggest48251){
-            biggest48251=ends[13];
+          if(ends[13]>=biggest44228){
+            biggest44228=ends[13];
           }
-          if(ends[26]>=biggest48251){
-            biggest48251=ends[26];
+          if(ends[26]>=biggest44228){
+            biggest44228=ends[26];
           }
-          if(biggest48251 == 1){
+          if(biggest44228 == 1){
             active[11]=1;
             ends[11]=1;
             break RUN;
           }
           //FINXME code
-          if(biggest48251 == 0){
-            S47693=0;
+          if(biggest44228 == 0){
+            S43670=0;
             active[11]=0;
             ends[11]=0;
-            S47693=0;
+            S43670=0;
             break RUN;
           }
         
