@@ -159,7 +159,7 @@ public class Canvas extends JPanel {
 		}
 		if (States.LIQUID4ON && bottle_on == 1) {
 			if (!States.LIQUIDFILLERDONE) {
-				g.drawImage(l3on, 0, 0, null);
+				g.drawImage(l4on, 0, 0, null);
 			}
 			flag4 = 1;
 			counter = flag1+flag2+flag3+flag4;
