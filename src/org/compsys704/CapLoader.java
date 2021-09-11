@@ -16,17 +16,37 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import java.io.IOException;
+import java.util.*;
+import com.systemj.*;
+import com.systemj.netapi.*;
 
 public class CapLoader extends JFrame {
 	private JPanel panel;
 	
 	public CapLoader() {
 //		this.setPreferredSize(new Dimension(200, 300));
+
+		
+//		TCPSender s;
+//		try {
+//			s = new TCPSender("127.0.0.1", 10069);
+//			s.emit(" ", 500); 
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//			
+//		}
+		
+		
+		
+		
 		panel = new Canvas();
 		panel.setPreferredSize(new Dimension(302, 224));
 		panel.setBackground(Color.WHITE);
 		JButton enable = new JButton("enable");
 		enable.addActionListener(new SignalClient(Ports.PORT_LOADER_PLANT, Ports.ENABLE_SIGNAL));
+		
 		JButton request = new JButton("request");
 		request.addActionListener(new SignalClient(Ports.PORT_LOADER_CONTROLLER, Ports.REQUEST_SIGNAL));
 		JButton recipe = new JButton("recipe");
@@ -113,7 +133,9 @@ public class CapLoader extends JFrame {
 		while(true){
 			try {
 				cl.repaint();
+				
 				Thread.sleep(5);
+				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

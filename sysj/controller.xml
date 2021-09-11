@@ -11,7 +11,7 @@
 			<iSignal Name="ThirdLiquidDone"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30001" />
 			<iSignal Name="FourthLiquidDone"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30001" />
 			
-			
+			<iSignal Name="Ready"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30001" />
 			
 			
 			<iChannel Name="FirstLiquid" 	From="PlantCD.FirstLiquid" />
@@ -25,7 +25,7 @@
 			<iChannel Name="SecondLiquidAmount" From="PlantCD.SecondLiquidAmount" />
 			<iChannel Name="ThirdLiquidAmount" 	From="PlantCD.ThirdLiquidAmount" />
 			<iChannel Name="FourthLiquidAmount" From="PlantCD.FourthLiquidAmount" />
-		
+			
 			
 			<oSignal Name="LiquidFillerDone" To="PlantCD.LiquidFillerDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
 			<oSignal Name="Liquid1On" To="PlantCD.Liquid1On" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10001" />
@@ -68,6 +68,13 @@
 			<oChannel Name="ThirdLiquidAmount" 	To="ControllerCD.ThirdLiquidAmount" />
 			<oChannel Name="FourthLiquidAmount" To="ControllerCD.FourthLiquidAmount" />
 			
+			<oSignal Name="FirstLiquidAmountE" Class="com.systemj.ipc.TCPSender" IP="127.0.0.1" Port="20001" />
+			<oSignal Name="SecondLiquidAmountE" Class="com.systemj.ipc.TCPSender" IP="127.0.0.1" Port="20002" />
+			<oSignal Name="ThirdLiquidAmountE" Class="com.systemj.ipc.TCPSender" IP="127.0.0.1" Port="20003" />
+			<oSignal Name="FourthLiquidAmountE" Class="com.systemj.ipc.TCPSender" IP="127.0.0.1" Port="20004" />
+			
+			<oSignal Name="Ready" To="ControllerCD.Ready" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="30001" />
+			
 			<oSignal Name="FirstLiquidDone" To="ControllerCD.FirstLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="30001" />
 			<oSignal Name="SecondLiquidDone" To="ControllerCD.SecondLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="30001" />
 			<oSignal Name="ThirdLiquidDone" To="ControllerCD.ThirdLiquidDone"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="30001" />
@@ -79,6 +86,7 @@
 			<oSignal Name="Liquid4OnE" To="UI.Liquid4OnE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			<oSignal Name="LiquidFillerDoneE" To="UI.LiquidFillerDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
 			<oSignal Name="RemoveE" To="UI.RemoveE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="TestE" Class="com.systemj.ipc.TCPSender" IP="127.0.0.1" Port="20069" />
 		</ClockDomain>
 		
 		
