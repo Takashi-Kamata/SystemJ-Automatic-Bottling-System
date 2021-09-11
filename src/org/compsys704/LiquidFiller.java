@@ -21,10 +21,10 @@ import java.util.*;
 import com.systemj.*;
 import com.systemj.netapi.*;
 
-public class CapLoader extends JFrame {
+public class LiquidFiller extends JFrame {
 	private JPanel panel;
 	
-	public CapLoader() {
+	public LiquidFiller() {
 //		this.setPreferredSize(new Dimension(200, 300));
 
 		
@@ -124,7 +124,7 @@ public class CapLoader extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		CapLoader cl = new CapLoader();
+		LiquidFiller cl = new LiquidFiller();
 		cl.pack();
 		cl.setVisible(true);
 		
