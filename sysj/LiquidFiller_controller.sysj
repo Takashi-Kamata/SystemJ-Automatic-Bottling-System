@@ -1,0 +1,59 @@
+LiquidFiller_Controller(
+		input signal bottleAtPos2,dosUnitEvac,dosUnitFilled, request;
+		output signal valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend;
+		)
+->{
+/* TODO: Write control-logic */
+	class GUI implements java.lang.Runnable {
+		public void run() {
+			org.compsys704.LiquidFiller.main(null);
+		}
+	}
+	new Thread(new GUI()).start();
+	{
+		while(true) {
+			present(request && bottleAtPos2) {
+				System.out.println("BottleAtPos2");
+				abort(dosUnitFilled) {
+					System.out.println("Valve Injector On");
+					sustain valveInjectorOnOff;
+				}
+				
+
+				
+				
+				abort(dosUnitFilled) {
+					System.out.println("Bring the canister to the top");
+					sustain dosUnitValveRetract;
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(bottleAtPos2) {
+				abort(dosUnitEvac) {
+					System.out.println("Bring the canister to the top");
+					sustain dosUnitValveRetract;
+				}
+			}
+				
+			pause;
+		}
+	
+	}
+	||
+	{
+		while(true) {
+			present(request) {
+				System.out.println("Request L");
+			}
+				
+			pause;
+		}
+	
+	
+	}
+}

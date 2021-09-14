@@ -1,0 +1,12 @@
+<System xmlns="http://systemjtechnology.com">
+	<SubSystem Name="SS1" Local="true">
+		<ClockDomain Name="Conveyor_Controller" Class="Conveyor_Controller">
+		
+			<iSignal Name="bottleAtPos1" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
+			<iSignal Name="bottleLeftPos5"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
+			<iSignal Name="request" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
+
+			<oSignal Name="motConveyorOnOff" To="Orchestrator.motConveyorOnOff" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+		</ClockDomain>
+	</SubSystem>
+</System>

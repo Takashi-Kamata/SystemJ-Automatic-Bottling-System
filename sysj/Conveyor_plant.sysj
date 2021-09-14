@@ -1,0 +1,66 @@
+import run.GUI;
+
+Conveyor_Plant(
+		input signal motConveyorOnOff;
+		
+		input signal enable;
+		
+		output signal bottleAtPos1,bottleLeftPos5;
+		output signal bottleAtPos1E,bottleLeftPos5E, motConveyorOnOffE;
+		)
+->
+{
+	new Thread(new GUI()).start();
+
+	{
+		while(true) {
+			
+			
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+
+		
+			present(enable && motConveyorOnOff) {
+			
+				await(!enable);
+				abort(enable) {
+					//System.out.println("Bottle POS 1 HIGH");
+					sustain bottleAtPos1;
+				}
+				await(!enable);
+				abort(enable) {
+					//System.out.println("Bottle POS 5 HIGH");
+					sustain bottleLeftPos5;
+				}
+				await(!enable);
+			
+		
+			}
+		
+		
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(enable) {
+				//System.out.println("Enable");
+			}
+			pause;
+		}
+		
+	}
+	||
+	{// To viz
+		{while(true){present(motConveyorOnOff){emit motConveyorOnOffE;} pause;}}
+		||
+		{while(true){present(bottleAtPos1){emit bottleAtPos1E;} pause;}}
+		||
+		{while(true){present(bottleLeftPos5){emit bottleLeftPos5E;} pause;}}
+	}
+}

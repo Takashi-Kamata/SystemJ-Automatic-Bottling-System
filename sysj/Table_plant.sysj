@@ -1,0 +1,62 @@
+
+Table_Plant(
+		
+		input signal enable;
+		input signal rotaryTableTrigger;
+		output signal tableAlignedWithSensor,bottleAtPos5,capOnBottleAtPos1;
+		output signal tableAlignedWithSensorE,bottleAtPos5E,capOnBottleAtPos1E, rotaryTableTriggerE;
+
+		)
+->
+{
+	class GUI implements java.lang.Runnable {
+		public void run() {
+			org.compsys704.Table.main(null);
+		}
+	}
+	new Thread(new GUI()).start();
+
+	{
+		while(true) {
+			present(enable && rotaryTableTrigger) {
+				
+				abort(enable) {
+					System.out.println("Table Aligned");
+					sustain tableAlignedWithSensor;
+				}
+				await(!enable);		
+			}
+			
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+
+		
+		
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(enable) {
+				//System.out.println("Enable");
+			}
+			pause;
+		}
+		
+	}
+	||
+	{// To viz
+		{while(true){present(tableAlignedWithSensor){emit tableAlignedWithSensorE;} pause;}}
+		||
+		{while(true){present(bottleAtPos5){emit bottleAtPos5E;} pause;}}
+		||
+		{while(true){present(capOnBottleAtPos1){emit capOnBottleAtPos1E;} pause;}}
+		||
+		{while(true){present(rotaryTableTrigger){emit rotaryTableTriggerE;} pause;}}
+	}
+}

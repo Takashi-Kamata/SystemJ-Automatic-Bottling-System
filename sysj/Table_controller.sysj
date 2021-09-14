@@ -1,0 +1,46 @@
+Table_Controller(
+		input signal request;
+		output signal rotaryTableTrigger;
+		input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
+		)
+->{
+/* TODO: Write control-logic */
+	class GUI implements java.lang.Runnable {
+		public void run() {
+			org.compsys704.Table.main(null);
+		}
+	}
+	new Thread(new GUI()).start();
+
+	{
+		while(true) {
+			present (request && !capOnBottleAtPos1) {
+			
+				abort (bottleAtPos5 || tableAlignedWithSensor) {
+					System.out.println("Rotating");
+					sustain rotaryTableTrigger;			
+				}
+			
+			}
+
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(request) {
+				System.out.println("Request");
+			
+			}
+
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			pause;
+		}	
+	}
+}

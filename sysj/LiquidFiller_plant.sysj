@@ -1,0 +1,37 @@
+
+LiquidFiller_Plant(
+		input signal valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend;
+		input signal enable,request;
+		output signal bottleAtPos2,dosUnitEvac,dosUnitFilled;
+		output signal valveInjectorOnOffE,valveInletOnOffE,dosUnitValveRetractE,dosUnitValveExtendE;
+		)
+->
+{
+
+	
+	{
+	//Valve Injector
+		while(true) {
+			abort(enable) {
+				sustain bottleAtPos2;
+			}	
+			await(!enable);	
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			abort(enable && ) {
+				sustain bottleAtPos2;
+			}	
+			await(!enable);	
+			pause;
+		}
+
+	}
+	||
+	{
+		
+	}
+}
