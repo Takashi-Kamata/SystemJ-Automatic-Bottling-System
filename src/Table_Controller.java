@@ -12,6 +12,7 @@ public class Table_Controller extends ClockDomain{
   private char [] paused;
   private char [] suspended;
   public Signal request = new Signal("request", Signal.INPUT);
+  public Signal request_table = new Signal("request_table", Signal.INPUT);
   public Signal tableAlignedWithSensor = new Signal("tableAlignedWithSensor", Signal.INPUT);
   public Signal bottleAtPos5 = new Signal("bottleAtPos5", Signal.INPUT);
   public Signal capOnBottleAtPos1 = new Signal("capOnBottleAtPos1", Signal.INPUT);
@@ -96,7 +97,7 @@ public class Table_Controller extends ClockDomain{
           case 1 : 
             S10=1;
             S10=0;
-            if(request.getprestatus() && !capOnBottleAtPos1.getprestatus()){//sysj/Table_controller.sysj line: 17, column: 13
+            if(request_table.getprestatus() && !capOnBottleAtPos1.getprestatus()){//sysj/Table_controller.sysj line: 17, column: 13
               System.out.println("Rotating");//sysj/Table_controller.sysj line: 20, column: 6
               rotaryTableTrigger.setPresent();//sysj/Table_controller.sysj line: 21, column: 6
               currsigs.addElement(rotaryTableTrigger);
@@ -143,7 +144,7 @@ public class Table_Controller extends ClockDomain{
   public void thread87(int [] tdone, int [] ends){
         S32=1;
     S10=0;
-    if(request.getprestatus() && !capOnBottleAtPos1.getprestatus()){//sysj/Table_controller.sysj line: 17, column: 13
+    if(request_table.getprestatus() && !capOnBottleAtPos1.getprestatus()){//sysj/Table_controller.sysj line: 17, column: 13
       System.out.println("Rotating");//sysj/Table_controller.sysj line: 20, column: 6
       rotaryTableTrigger.setPresent();//sysj/Table_controller.sysj line: 21, column: 6
       currsigs.addElement(rotaryTableTrigger);
@@ -256,6 +257,7 @@ public class Table_Controller extends ClockDomain{
       else{
         if(!df){
           request.gethook();
+          request_table.gethook();
           tableAlignedWithSensor.gethook();
           bottleAtPos5.gethook();
           capOnBottleAtPos1.gethook();
@@ -264,6 +266,7 @@ public class Table_Controller extends ClockDomain{
         runClockDomain();
       }
       request.setpreclear();
+      request_table.setpreclear();
       tableAlignedWithSensor.setpreclear();
       bottleAtPos5.setpreclear();
       capOnBottleAtPos1.setpreclear();
@@ -277,6 +280,9 @@ public class Table_Controller extends ClockDomain{
       dummyint = request.getStatus() ? request.setprepresent() : request.setpreclear();
       request.setpreval(request.getValue());
       request.setClear();
+      dummyint = request_table.getStatus() ? request_table.setprepresent() : request_table.setpreclear();
+      request_table.setpreval(request_table.getValue());
+      request_table.setClear();
       dummyint = tableAlignedWithSensor.getStatus() ? tableAlignedWithSensor.setprepresent() : tableAlignedWithSensor.setpreclear();
       tableAlignedWithSensor.setpreval(tableAlignedWithSensor.getValue());
       tableAlignedWithSensor.setClear();
@@ -291,6 +297,7 @@ public class Table_Controller extends ClockDomain{
       if(paused[1]!=0 || suspended[1]!=0 || active[1]!=1);
       else{
         request.gethook();
+        request_table.gethook();
         tableAlignedWithSensor.gethook();
         bottleAtPos5.gethook();
         capOnBottleAtPos1.gethook();

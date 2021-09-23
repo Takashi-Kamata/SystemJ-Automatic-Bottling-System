@@ -4,6 +4,7 @@
 		
 			
 			<iSignal Name="request" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30000" />
+			<iSignal Name="request_table" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30000" />
 			
 			<iSignal Name="tableAlignedWithSensor" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30000" />
 			<iSignal Name="bottleAtPos5" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="30000" />

@@ -5,6 +5,7 @@
 			<iSignal Name="bottleAtPos1" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
 			<iSignal Name="bottleLeftPos5"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
 			<iSignal Name="request" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
+			<iSignal Name="request_conveyor" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="20000" />
 
 			<oSignal Name="motConveyorOnOff" To="Orchestrator.motConveyorOnOff" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
 		</ClockDomain>

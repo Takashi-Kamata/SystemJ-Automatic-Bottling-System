@@ -1,0 +1,91 @@
+Capper_Plant(
+		
+		input signal enable;
+		input signal request;
+		
+		output signal bottleAtPos4; 		// Bottle is at Pos 4
+		output signal gripperZAxisLowered; 	// Gripper is fully lowered
+		output signal gripperZAxisLifted;	// Gripper is fully lifted
+		output signal gripperTurnHomePos;	// Gripper is at the initial position
+		output signal gripperTurnFinalPos;	// Gripper is fully turned
+		
+		input signal cylPos5ZaxisExtend;	// Move Gripper down
+		input signal gripperTurnRetract;	// Untwist the Gripper
+		input signal gripperTurnExtend;		// Twist the Gripper
+		input signal capGripperPos5Extend;	// Grip the Cap
+		input signal cylClampBottleExtend;	// Clamp the Bottle
+		
+		output signal bottleAtPos4E; 		// Bottle is at Pos 4
+		output signal gripperZAxisLoweredE; 	// Gripper is fully lowered
+		output signal gripperZAxisLiftedE;	// Gripper is fully lifted
+		output signal gripperTurnHomePosE;	// Gripper is at the initial position
+		output signal gripperTurnFinalPosE;	// Gripper is fully turned
+		
+		output signal cylPos5ZaxisExtendE;	// Move Gripper down
+		output signal gripperTurnRetractE;	// Untwist the Gripper
+		output signal gripperTurnExtendE;		// Twist the Gripper
+		output signal capGripperPos5ExtendE;	// Grip the Cap
+		output signal cylClampBottleExtendE;	// Clamp the Bottle
+		)
+->
+{
+
+	{
+		while(true) {
+			abort (enable && cylPos5ZaxisExtend) {
+				sustain gripperZAxisLifted;
+			}
+			await(!enable);
+			abort (enable && !cylPos5ZaxisExtend) {
+				sustain gripperZAxisLowered;
+			}
+			await(!enable);
+		}	
+	}
+	||
+	{
+		while(true) {
+			abort (enable && gripperTurnExtend) {
+				sustain gripperTurnHomePos;
+			}
+			await(!enable);
+			abort (enable && gripperTurnRetract) {
+				sustain gripperTurnFinalPos;
+			}
+			await(!enable);
+		}
+	}
+	||
+	{
+		while(true) {
+			await(request);
+			abort (!request) {
+				sustain bottleAtPos4;
+			}
+			await(gripperTurnFinalPos);
+			await(gripperZAxisLifted);
+		}	
+	}
+	||
+	{// To viz
+		{while(true){present(bottleAtPos4){emit bottleAtPos4E;} pause;}}
+		||
+		{while(true){present(gripperZAxisLowered){emit gripperZAxisLoweredE;} pause;}}
+		||
+		{while(true){present(gripperZAxisLifted){emit gripperZAxisLiftedE;} pause;}}
+		||
+		{while(true){present(gripperTurnHomePos){emit gripperTurnHomePosE;} pause;}}
+		||
+		{while(true){present(gripperTurnFinalPos){emit gripperTurnFinalPosE;} pause;}}
+		||
+		{while(true){present(cylPos5ZaxisExtend){emit cylPos5ZaxisExtendE;} pause;}}
+		||
+		{while(true){present(gripperTurnRetract){emit gripperTurnRetractE;} pause;}}
+		||
+		{while(true){present(gripperTurnExtend){emit gripperTurnExtendE;} pause;}}
+		||
+		{while(true){present(capGripperPos5Extend){emit capGripperPos5ExtendE;} pause;}}
+		||
+		{while(true){present(cylClampBottleExtend){emit cylClampBottleExtendE;} pause;}}
+	}
+}

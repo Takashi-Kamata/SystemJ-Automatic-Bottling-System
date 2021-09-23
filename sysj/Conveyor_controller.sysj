@@ -1,5 +1,5 @@
 Conveyor_Controller(
-		input signal bottleAtPos1,bottleLeftPos5, request;
+		input signal bottleAtPos1,bottleLeftPos5, request, request_conveyor;
 		output signal motConveyorOnOff;
 		)
 ->{
@@ -13,23 +13,24 @@ Conveyor_Controller(
 
 	{
 		while(true) {
-			present(request && !bottleLeftPos5) {
+			present(request_conveyor && !bottleLeftPos5) {
 				abort(bottleAtPos1) {
-					//System.out.println("Motor On1");
+					System.out.println("Motor On1");
 					sustain motConveyorOnOff;
 				}
 				System.out.println("Motor Off1");
 				
 				abort(bottleLeftPos5) {
-					//System.out.println("Motor On2");
+					System.out.println("Motor On2");
 					sustain motConveyorOnOff;
 				}
 				//await(!bottleLeftPos5);
-				
+				/*
 				abort(!bottleLeftPos5) {
 					//System.out.println("Motor On2");
 					sustain motConveyorOnOff;
 				}
+				*/
 			}
 
 			pause;

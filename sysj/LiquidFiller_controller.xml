@@ -6,11 +6,29 @@
 			<iSignal Name="dosUnitEvac"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
 			<iSignal Name="dosUnitFilled"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
 			<iSignal Name="request"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="request_liquid_filler"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			
+			<iSignal Name="injector_closed" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="inlet_closed"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="extended"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="retracted"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			
+			<iSignal Name="FirstLiquidDone" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="SecondLiquidDone" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="ThirdLiquidDone" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
+			<iSignal Name="FourthLiquidDone" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="40000" />
 
-			<oSignal Name="valveInjectorOnOff" To="LiquidFiller_Plant.pusherExtend" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-			<oSignal Name="valveInletOnOff"        To="LiquidFiller_Plant.vacOn"        Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-			<oSignal Name="dosUnitValveRetract"    To="LiquidFiller_Plant.armSource"    Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
-			<oSignal Name="dosUnitValveExtend"      To="LiquidFiller_Plant.armDest"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="valveInjectorOnOff" To="Orchestrator.valveInjectorOnOff" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="valveInletOnOff"        To="Orchestrator.valveInletOnOff"        Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="dosUnitValveRetract"    To="Orchestrator.dosUnitValveRetract"    Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="dosUnitValveExtend"      To="Orchestrator.dosUnitValveExtend"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="liquid_filler_done"      To="Orchestrator.liquid_filler_done"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			
+			<oSignal Name="Liquid1On"      To="Orchestrator.Liquid1On"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="Liquid2On"      To="Orchestrator.Liquid2On"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="Liquid3On"      To="Orchestrator.Liquid3On"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			<oSignal Name="Liquid4On"      To="Orchestrator.Liquid4On"      Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="10000" />
+			
 		</ClockDomain>
 	</SubSystem>
 </System>

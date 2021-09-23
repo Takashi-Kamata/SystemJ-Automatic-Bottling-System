@@ -1,0 +1,96 @@
+reaction Capper_Controller(:
+		input signal bottleAtPos4, 			// Bottle is at Pos 4
+		input signal gripperZAxisLowered, 	// Gripper is fully lowered
+		input signal gripperZAxisLifted,	// Gripper is fully lifted
+		input signal gripperTurnHomePos,	// Gripper is at the initial position
+		input signal gripperTurnFinalPos,	// Gripper is fully turned
+		
+		output signal cylPos5ZaxisExtend,	// Move Gripper down
+		output signal gripperTurnRetract,	// Untwist the Gripper
+		output signal gripperTurnExtend,	// Twist the Gripper
+		output signal capGripperPos5Extend,	// Grip the Cap
+		output signal cylClampBottleExtend	// Clamp the Bottle
+		){
+	
+		// WHAT THE CAPPER NEEDS TO DO
+		// Wait for bottle to arrive at point 4
+		// Clamp bottle and lower gripper
+		// Wait till gripper is lowered, then grip the cap
+		// Twist the gripper
+		// Release the cap
+		// Untwist the gripper
+		// Raise the gripper
+		// Unclamp the bottle
+	
+	// Logic for Gripper Position
+	
+	class GUI implements java.lang.Runnable {
+		public void run() {
+			org.compsys704.Capper.main(null);
+		}
+	}
+	new Thread(new GUI()).start();
+	
+	{
+		while (true) {
+			await(bottleAtPos4);
+			abort (gripperTurnFinalPos && gripperZAxisLowered && capGripperPos5Extend){
+				System.out.println("LOWERING GRIPPER");
+				sustain cylPos5ZaxisExtend;
+			}
+			abort (gripperTurnHomePos && gripperZAxisLowered && !capGripperPos5Extend){
+				System.out.println("STILL LOWERING GRIPPER");
+				sustain cylPos5ZaxisExtend;
+			}
+			System.out.println("RAISING GRIPPER");
+		}
+	}
+	||
+	// Logic for Clamp/Unclamp Position
+	{
+		while (true) {
+			await(bottleAtPos4);
+			await(gripperZAxisLowered);
+			abort (gripperZAxisLifted){
+				System.out.println("CLAMPING BOTTLE");
+				sustain cylClampBottleExtend;
+			}
+			System.out.println("UNCLAMPING BOTTLE");
+		}
+	}
+	||
+	// Logic for Gripping/Ungripping Bottle Cap
+	{
+		while (true) {
+			await(bottleAtPos4);
+			await(gripperZAxisLowered);
+			abort (gripperTurnFinalPos){
+				System.out.println("GRIPPING");
+				sustain capGripperPos5Extend;
+			}
+			System.out.println("UNGRIPPING");
+		}
+	}
+	||
+	// Logic for Gripper Turning Bottle Cap
+	{
+		while (true) {
+			await(bottleAtPos4);
+			await (capGripperPos5Extend);
+			abort (gripperTurnFinalPos){
+				System.out.println("TIGHTENING");
+				sustain gripperTurnExtend;
+			}
+			await (!capGripperPos5Extend);
+			abort (gripperTurnHomePos){
+				System.out.println("LOOSENING");
+				sustain gripperTurnRetract;
+			}
+		}
+			
+	}
+
+}
+
+
+Capper_Controller(..)->Capper_Controller

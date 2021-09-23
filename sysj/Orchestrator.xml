@@ -2,7 +2,11 @@
 	<SubSystem Name="SS1" Local="true">
 		<ClockDomain Name="Orchestrator" Class="Orchestrator">
 			<iSignal Name="enable" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
-			
+			<oSignal Name="request_conveyor" To="Conveyor_Controller.request_conveyor" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="20000" />
+			<oSignal Name="request_table" To="Table_Controller.request_table" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="30000" />
+			<oSignal Name="request_liquid_filler" To="LiquidFiller_Controller.request_liquid_filler" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="request_caploader" To="CapLoader_Controller.request_caploader" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<!-- <oSignal Name="request_capper" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />  -->
 			
 			<!-- TABLE -->
 			<iSignal Name="rotaryTableTrigger" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
@@ -31,18 +35,85 @@
 			<iSignal Name="valveInletOnOff"        Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			<iSignal Name="dosUnitValveRetract"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			<iSignal Name="dosUnitValveExtend"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="liquid_filler_done"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			
+			<iSignal Name="Liquid1On"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="Liquid2On"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="Liquid3On"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="Liquid4On"         Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
 			
 			<oSignal Name="bottleAtPos2" To="LiquidFiller_Controller.bottleAtPos2" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
 			<oSignal Name="dosUnitEvac"  To="LiquidFiller_Controller.dosUnitEvac"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
 			<oSignal Name="dosUnitFilled"       To="LiquidFiller_Controller.dosUnitFilled"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			
+			<oSignal Name="injector_closed" To="LiquidFiller_Controller.injector_closed" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="inlet_closed" To="LiquidFiller_Controller.inlet_closed" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="extended" To="LiquidFiller_Controller.extended" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="retracted" To="LiquidFiller_Controller.retracted" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			
+			<oSignal Name="FirstLiquidDone" To="LiquidFiller_Controller.FirstLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="SecondLiquidDone" To="LiquidFiller_Controller.SecondLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="ThirdLiquidDone" To="LiquidFiller_Controller.ThirdLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
+			<oSignal Name="FourthLiquidDone" To="LiquidFiller_Controller.FourthLiquidDone" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40000" />
 
 			<oSignal Name="valveInjectorOnOffE" To="UI.valveInjectorOnOffE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
 			<oSignal Name="valveInletOnOffE"  To="UI.valveInletOnOffE"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
 			<oSignal Name="dosUnitValveRetractE"       To="UI.dosUnitValveRetractE"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
 			<oSignal Name="dosUnitValveExtendE"     To="UI.dosUnitValveExtendE"     Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
-			<oSignal Name="bottleAtPos2E"     To="UI."bottleAtPos2E""     Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
+			<oSignal Name="bottleAtPos2E"     To="UI.bottleAtPos2E"    Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
 			
+			<oSignal Name="FirstLiquidDoneE" To="UI.FirstLiquidDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
+			<oSignal Name="SecondLiquidDoneE" To="UI.SecondLiquidDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
+			<oSignal Name="ThirdLiquidDoneE" To="UI.ThirdLiquidDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
+			<oSignal Name="FourthLiquidDoneE" To="UI.FourthLiquidDoneE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="40001" />
 			
+			<!-- CAPPER -->
+			
+			<oSignal Name="bottleAtPos4" To="Capper_Controller.bottleAtPos4" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50000" />
+			<oSignal Name="gripperZAxisLowered" To="Capper_Controller.gripperZAxisLowered" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50000" />
+			<oSignal Name="gripperZAxisLifted" To="Capper_Controller.gripperZAxisLifted" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50000" />
+			<oSignal Name="gripperTurnHomePos" To="Capper_Controller.gripperTurnHomePos" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50000" />
+			<oSignal Name="gripperTurnFinalPos" To="Capper_Controller.gripperTurnFinalPos" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50000" />
+			
+			<iSignal Name="cylPos5ZaxisExtend"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="gripperTurnRetract"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="gripperTurnExtend"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="capGripperPos5Extend"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="cylClampBottleExtend"  Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			
+			<oSignal Name="bottleAtPos4E" To="UI.bottleAtPos4E" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperZAxisLoweredE" To="UI.gripperZAxisLoweredE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperZAxisLiftedE" To="UI.gripperZAxisLiftedE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperTurnHomePosE" To="UI.gripperTurnHomePosE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperTurnFinalPosE" To="UI.gripperTurnFinalPosE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			
+			<oSignal Name="cylPos5ZaxisExtendE" To="UI.cylPos5ZaxisExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperTurnRetractE" To="UI.gripperTurnRetractE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="gripperTurnExtendE" To="UI.gripperTurnExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="capGripperPos5ExtendE" To="UI.capGripperPos5ExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			<oSignal Name="cylClampBottleExtendE" To="UI.cylClampBottleExtendE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="50001" />
+			
+			<!-- CAP LOADER -->
+			<iSignal Name="pusherExtend" Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="vacOn"        Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armSource"    Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+			<iSignal Name="armDest"      Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10000" />
+
+			<iSignal Name="refill"       Class="com.systemj.ipc.SimpleServer" IP="127.0.0.1" Port="10001" />
+			
+			<oSignal Name="pusherRetracted" To="CapLoader_Controller.pusherRetracted" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<oSignal Name="pusherExtended"  To="CapLoader_Controller.pusherExtended"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<oSignal Name="WPgripped"       To="CapLoader_Controller.WPgripped"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<oSignal Name="armAtSource"     To="CapLoader_Controller.armAtSource"     Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<oSignal Name="armAtDest"       To="CapLoader_Controller.armAtDest"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+			<oSignal Name="empty"           To="CapLoader_Controller.empty"           Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60000" />
+
+			<oSignal Name="pusherRetractedE" To="UI.pusherRetractedE" Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
+			<oSignal Name="pusherExtendedE"  To="UI.pusherExtendedE"  Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
+			<oSignal Name="WPgrippedE"       To="UI.WPgrippedE"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
+			<oSignal Name="armAtSourceE"     To="UI.armAtSourceE"     Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
+			<oSignal Name="armAtDestE"       To="UI.armAtDestE"       Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
+			<oSignal Name="emptyE"           To="UI.emptyE"           Class="com.systemj.ipc.SimpleClient" IP="127.0.0.1" Port="60001" />
 		</ClockDomain>
 	</SubSystem>
 </System>

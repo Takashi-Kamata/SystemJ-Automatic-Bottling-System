@@ -1,6 +1,7 @@
 
 Orchestrator(
 		input signal enable;
+		output signal request_conveyor, request_liquid_filler, request_table, request_caploader;
 		
 		
 		input signal rotaryTableTrigger;
@@ -13,31 +14,206 @@ Orchestrator(
 		output signal bottleAtPos1E,bottleLeftPos5E, motConveyorOnOffE;
 		
 
-		input signal valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend;
+		input signal valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend,liquid_filler_done;
+		input signal Liquid1On,Liquid2On,Liquid3On,Liquid4On;
+		output signal FirstLiquidDone, SecondLiquidDone, ThirdLiquidDone,FourthLiquidDone;
+		output signal injector_closed, inlet_closed, extended, retracted;
 		output signal bottleAtPos2,dosUnitEvac,dosUnitFilled;
 		output signal valveInjectorOnOffE,valveInletOnOffE,dosUnitValveRetractE,dosUnitValveExtendE,bottleAtPos2E;
+		output signal FirstLiquidDoneE, SecondLiquidDoneE, ThirdLiquidDoneE,FourthLiquidDoneE;
+		
+		output signal bottleAtPos4; 		// Bottle is at Pos 4
+		output signal gripperZAxisLowered; 	// Gripper is fully lowered
+		output signal gripperZAxisLifted;	// Gripper is fully lifted
+		output signal gripperTurnHomePos;	// Gripper is at the initial position
+		output signal gripperTurnFinalPos;	// Gripper is fully turned
+		
+		input signal cylPos5ZaxisExtend;	// Move Gripper down
+		input signal gripperTurnRetract;	// Untwist the Gripper
+		input signal gripperTurnExtend;		// Twist the Gripper
+		input signal capGripperPos5Extend;	// Grip the Cap
+		input signal cylClampBottleExtend;	// Clamp the Bottle
+		
+		output signal bottleAtPos4E; 		// Bottle is at Pos 4
+		output signal gripperZAxisLoweredE; 	// Gripper is fully lowered
+		output signal gripperZAxisLiftedE;	// Gripper is fully lifted
+		output signal gripperTurnHomePosE;	// Gripper is at the initial position
+		output signal gripperTurnFinalPosE;	// Gripper is fully turned
+		
+		output signal cylPos5ZaxisExtendE;	// Move Gripper down
+		output signal gripperTurnRetractE;	// Untwist the Gripper
+		output signal gripperTurnExtendE;		// Twist the Gripper
+		output signal capGripperPos5ExtendE;	// Grip the Cap
+		output signal cylClampBottleExtendE;	// Clamp the Bottle
+		
+		input signal pusherExtend,vacOn,armSource,armDest;
+		input signal refill;
+		output signal pusherRetracted,pusherExtended,WPgripped,armAtSource,armAtDest,empty;
+		output signal pusherRetractedE,pusherExtendedE,WPgrippedE,armAtSourceE,armAtDestE,emptyE;
+		
 		)
 ->
 {
+	signal capDec;
+	int signal capPos;
+	emit capPos(0);
+	{
+		while (true) {
+			
+			pause;
+		}
+	}
+	||
+	{
+		while (true) {
+			{
+				present(!request_conveyor && enable) {
+	
+					await(!enable);
+					System.out.println("CONV");
+					abort(enable) {
+						sustain request_conveyor;
+					}
+					await(!enable);
+					System.out.println("FINISH ONV");
+					await(motConveyorOnOff);
+					await(!motConveyorOnOff);
+					await(enable);
+					await(!enable);
+					System.out.println("TABLE");
+					abort(enable) {
+						sustain request_table;
+					}
+					await(!enable);
+					System.out.println("FINISH TABLE");
+					
+					
+					System.out.println("LIQUID");
+					{
+						//present(enable) {
+							System.out.println("LIQUID REQUEST START");
+							{
+								abort(valveInletOnOff) {
+										sustain request_liquid_filler;
+
+								}
+								System.out.println("LIQUID REQUEST STOP");
+								await(liquid_filler_done);
+							}
+							||
+							{
+								abort(liquid_filler_done) {
+									sustain bottleAtPos2E;
+								}
+							}
+							System.out.println("LIQUID DONE DETECTED");
+						//}
+					}
+					await(!enable);
+					System.out.println("FINISH LIQUID");
+					
+					System.out.println("TABLE");
+					abort(enable) {
+						sustain request_table;
+					}
+					await(!enable);
+					System.out.println("FINISH TABLE");
+					
+					
+					System.out.println("CAP LOADER");
+					abort(enable && vacOn) {
+						sustain request_caploader;
+					}
+					await(!enable);
+					
+					
+					
+					System.out.println("FINISH CAP LOADER");
+					
+					
+					
+					System.out.println("TABLE");
+					abort(enable) {
+						sustain request_table;
+					}
+					await(!enable);
+					System.out.println("FINISH TABLE");
+					
+					
+					System.out.println("CAPPER");
+
+					abort (enable && gripperZAxisLowered) {
+						System.out.println("BOTTLE AT POS 4");
+						sustain bottleAtPos4;
+					}
+					await(gripperTurnFinalPos);
+					await(gripperZAxisLifted);
+					System.out.println("FINISH CAPPER");
+					
+					await(!enable);
+					System.out.println("TABLE");
+					abort(enable) {
+						sustain request_table;
+					}
+					await(!enable);
+					System.out.println("FINISH TABLE");
+					
+					
+					await(!enable);
+					System.out.println("CONV");
+					abort(enable) {
+						sustain request_conveyor;
+					}
+					await(!enable);
+					System.out.println("FINISH ONV");
+					await(motConveyorOnOff);
+					await(!motConveyorOnOff);
+					await(enable);
+					await(!enable);
+					
+				}
+			}
+			||
+			{
+			
+			}
+
+		
+		
+		
+		
+			pause;
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	||
 	{
 		while(true) {
+			
 			present(enable && motConveyorOnOff) {
 			
 				await(!enable);
 				abort(enable) {
-					//System.out.println("Bottle POS 1 HIGH");
+					System.out.println("Bottle POS 1 HIGH");
 					sustain bottleAtPos1;
 				}
 				await(!enable);
 				abort(enable) {
-					//System.out.println("Bottle POS 5 HIGH");
+					System.out.println("Bottle POS 5 HIGH");
 					sustain bottleLeftPos5;
 				}
 				await(!enable);
 			
 		
 			}
-
+			
 			pause;
 		}
 	}
@@ -54,7 +230,7 @@ Orchestrator(
 	{
 		while(true) {
 			present(enable && rotaryTableTrigger) {
-				
+				await(!enable);	
 				abort(enable) {
 					System.out.println("Table Aligned");
 					sustain tableAlignedWithSensor;
@@ -75,6 +251,297 @@ Orchestrator(
 		{while(true){present(capOnBottleAtPos1){emit capOnBottleAtPos1E;} pause;}}
 		||
 		{while(true){present(rotaryTableTrigger){emit rotaryTableTriggerE;} pause;}}
+	}
+	||
+	{
+		while(true) {
+			
+			present(enable && valveInjectorOnOff) {
+				System.out.println("Injector On Detected");
+				await(!enable);	
+				{
+					abort(enable && dosUnitValveRetract) {
+						System.out.println("Empty");
+						sustain dosUnitEvac;
+					}
+				}
+				||
+				{
+					abort(enable && Liquid4On) {
+						sustain inlet_closed;
+					}
+				}
+				System.out.println("Retract Detected");
+
+				await(!enable);
+				/*
+				abort(enable && dosUnitValveExtend) {
+					System.out.println("Filled");
+					sustain dosUnitFilled;
+				}
+				System.out.println("Extend Detected");
+				await(!enable);	
+				*/
+				
+			}
+			
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			
+			present(enable && valveInletOnOff) {
+				System.out.println("Inlet On Detected");
+				await(!enable);	
+				abort(enable && valveInjectorOnOff) {
+					System.out.println("Empty");
+					sustain dosUnitEvac;
+				}
+				
+				
+			}
+			
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			
+			present(enable && Liquid1On && dosUnitValveRetract) {
+				System.out.println("Liquid1On");
+				await(!enable);	
+				abort(enable && Liquid2On) {
+					{
+						sustain FirstLiquidDone;
+					}
+					||
+					{
+						sustain FirstLiquidDoneE;
+					}
+				}
+				System.out.println("Liquid1On Done");
+			}
+			
+			present(enable && Liquid2On && dosUnitValveRetract) {
+				System.out.println("Liquid2On");
+				await(!enable);	
+				abort(enable && Liquid3On) {
+					{
+					sustain SecondLiquidDone;
+					}
+					||
+					{
+						sustain SecondLiquidDoneE;
+					}
+				}	
+				System.out.println("Liquid2On Done");
+			}
+			
+			present(enable && Liquid3On && dosUnitValveRetract) {
+				System.out.println("Liquid3On");
+				await(!enable);	
+				abort(enable && Liquid4On) {
+					{
+					sustain ThirdLiquidDone;
+					}
+					||
+					{
+						sustain ThirdLiquidDoneE;
+					}
+				}
+				System.out.println("Liquid3On Done");
+			}
+			
+			present(enable && Liquid4On && dosUnitValveRetract) {
+				System.out.println("Liquid4On");
+				await(!enable);	
+				abort(enable) {
+					{
+					sustain dosUnitFilled;
+					}
+					||
+					{
+						sustain FourthLiquidDoneE;
+					}
+				}
+				System.out.println("Liquid4On Done");
+			}
+			pause;
+		}
+	}
+	||
+	{//valveInjectorOnOffE,valveInletOnOffE,dosUnitValveRetractE,dosUnitValveExtendE,bottleAtPos2E;
+		{while(true){present(valveInjectorOnOff){emit valveInjectorOnOffE;} pause;}}
+		||
+		{while(true){present(valveInletOnOff){emit valveInletOnOffE;} pause;}}
+		||
+		{while(true){present(dosUnitValveRetract){emit dosUnitValveRetractE;} pause;}}
+		||
+		{while(true){present(dosUnitValveExtend){emit dosUnitValveExtendE;} pause;}}
+		//||
+		//{while(true){present(bottleAtPos2E){emit bottleAtPos2E;} pause;}}
+	}
+	||
+	{
+		while(true) {
+			abort (enable && cylPos5ZaxisExtend) {
+				sustain gripperZAxisLifted;
+			}
+			await(!enable);
+			abort (enable && !cylPos5ZaxisExtend) {
+				sustain gripperZAxisLowered;
+			}
+			await(!enable);
+		}	
+	}
+	||
+	{
+		while(true) {
+			abort (enable && gripperTurnExtend) {
+				sustain gripperTurnHomePos;
+			}
+			await(!enable);
+			abort (enable && gripperTurnRetract) {
+				sustain gripperTurnFinalPos;
+			}
+			await(!enable);
+		}
+	}
+	||
+	{
+		while(true) {
+		/*
+			await(request_capper);
+			abort (!request_capper) {
+				sustain bottleAtPos4;
+			}
+			await(gripperTurnFinalPos);
+			await(gripperZAxisLifted);
+		*/
+		pause;
+		}	
+	}
+	||
+	{// To viz
+		{while(true){present(bottleAtPos4){emit bottleAtPos4E;} pause;}}
+		||
+		{while(true){present(gripperZAxisLowered){emit gripperZAxisLoweredE;} pause;}}
+		||
+		{while(true){present(gripperZAxisLifted){emit gripperZAxisLiftedE;} pause;}}
+		||
+		{while(true){present(gripperTurnHomePos){emit gripperTurnHomePosE;} pause;}}
+		||
+		{while(true){present(gripperTurnFinalPos){emit gripperTurnFinalPosE;} pause;}}
+		||
+		{while(true){present(cylPos5ZaxisExtend){emit cylPos5ZaxisExtendE;} pause;}}
+		||
+		{while(true){present(gripperTurnRetract){emit gripperTurnRetractE;} pause;}}
+		||
+		{while(true){present(gripperTurnExtend){emit gripperTurnExtendE;} pause;}}
+		||
+		{while(true){present(capGripperPos5Extend){emit capGripperPos5ExtendE;} pause;}}
+		||
+		{while(true){present(cylClampBottleExtend){emit cylClampBottleExtendE;} pause;}}
+	}
+	||
+	{// Arm
+		while(true){
+			abort(armSource && enable){
+				sustain armAtDest;
+			}
+			await(!enable);
+			abort(armDest && enable){
+				sustain armAtSource;
+			}
+			await(!enable);
+		}
+	}
+	||
+	{// Pusher
+		while(true){
+			abort(pusherExtend && enable){
+				sustain pusherRetracted;
+			}
+			await(!enable);
+			abort(!pusherExtend && enable){
+				sustain pusherExtended;
+			}
+			await(!enable);
+		}
+	}
+	||
+	{// Vacuum
+		while(true){
+			present(vacOn && armAtSource){
+				if((Integer)#capPos == 1){
+					emit capPos(0);
+					abort(!vacOn){
+						sustain WPgripped; 
+					}
+					present(armAtSource){
+						emit capPos(1);
+					}
+				}
+			}
+			pause;
+		}
+	}
+	||
+	{
+		/*
+		 * Cap positions
+		 * 0 = at Mag
+		 * 1 = at pick-up
+		 */
+		while(true){
+			// At mag
+			abort(empty){
+				while(true){
+						await(pusherRetracted);
+						await(pusherExtended);
+						// At pick-up
+						emit capPos(1);
+						await(pusherRetracted);
+						emit capDec;
+				}
+			}
+			await(refill);
+		}
+	}
+	||
+	{
+		int capcount = 5;
+		while(true){
+			present(capDec){
+				if(capcount > 0)
+					capcount--;
+			}
+			present(refill){
+				capcount = 5;
+			}
+//			present(pusherRetracted){
+				if(capcount == 0)
+					emit empty;
+//			}
+			pause;
+		}
+	}
+	||
+	{// To viz
+		{while(true){present(pusherRetracted){emit pusherRetractedE;} pause;}}
+		||
+		{while(true){present(pusherExtended){emit pusherExtendedE;} pause;}}
+		||
+		{while(true){present(WPgripped){emit WPgrippedE;} pause;}}
+		||
+		{while(true){present(armAtSource){emit armAtSourceE;} pause;}}
+		||
+		{while(true){present(armAtDest){emit armAtDestE;} pause;}}
+		||
+		{while(true){present(empty){emit emptyE;} pause;}}
 	}
 
 }

@@ -1,5 +1,5 @@
 Table_Controller(
-		input signal request;
+		input signal request,request_table; 
 		output signal rotaryTableTrigger;
 		input signal tableAlignedWithSensor, bottleAtPos5, capOnBottleAtPos1;
 		)
@@ -14,7 +14,7 @@ Table_Controller(
 
 	{
 		while(true) {
-			present (request && !capOnBottleAtPos1) {
+			present (request_table && !capOnBottleAtPos1) {
 			
 				abort (bottleAtPos5 || tableAlignedWithSensor) {
 					System.out.println("Rotating");

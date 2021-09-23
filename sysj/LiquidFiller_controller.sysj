@@ -1,6 +1,10 @@
 LiquidFiller_Controller(
-		input signal bottleAtPos2,dosUnitEvac,dosUnitFilled, request;
+		input signal bottleAtPos2,dosUnitEvac,dosUnitFilled, request, request_liquid_filler;
+		input signal injector_closed, inlet_closed, extended, retracted;
+		input signal FirstLiquidDone, SecondLiquidDone, ThirdLiquidDone,FourthLiquidDone;
+		
 		output signal valveInjectorOnOff,valveInletOnOff,dosUnitValveRetract,dosUnitValveExtend;
+		output signal Liquid1On,Liquid2On,Liquid3On,Liquid4On,liquid_filler_done;
 		)
 ->{
 /* TODO: Write control-logic */
@@ -12,48 +16,134 @@ LiquidFiller_Controller(
 	new Thread(new GUI()).start();
 	{
 		while(true) {
-			present(request && bottleAtPos2) {
+				// Assume the cylinder is at bottom and injector closed
+			
+			present(request || bottleAtPos2 || request_liquid_filler) {
 				System.out.println("BottleAtPos2");
-				abort(dosUnitFilled) {
-					System.out.println("Valve Injector On");
-					sustain valveInjectorOnOff;
+				{
+					abort(dosUnitFilled) {
+						System.out.println("INJECTOR ON");
+						sustain valveInjectorOnOff;
+					}
 				}
-				
+				||
+				{
+					abort(dosUnitValveRetract) {
+						sustain dosUnitValveExtend;
+					}
+				}
 
-				
-				
+				System.out.println("INJECTOR OFF");
+			}
+			pause;
+		}
+	}
+	||
+	{
+		while(true) {
+			present(dosUnitEvac && inlet_closed) {
+				System.out.println("Empty");
+				/*
 				abort(dosUnitFilled) {
-					System.out.println("Bring the canister to the top");
+					System.out.println("RETRACT");
 					sustain dosUnitValveRetract;
 				}
+				*/
+				System.out.println("First Liquid");
+				abort(FirstLiquidDone) {
+					{
+						sustain Liquid1On;
+					}
+					||
+					{
+						sustain dosUnitValveRetract;
+					}
+				}
+				
+				System.out.println("Second Liquid");
+				abort(SecondLiquidDone) {
+					{
+						sustain Liquid2On;
+					}
+					||
+					{
+						sustain dosUnitValveRetract;
+					}
+				}
+				
+				System.out.println("Third Liquid");
+				abort(ThirdLiquidDone) {
+					{
+						sustain Liquid3On;
+					}
+					||
+					{
+						sustain dosUnitValveRetract;
+					}
+				}
+				
+				System.out.println("Fourth Liquid");
+				abort(dosUnitFilled) {
+					{
+						sustain Liquid4On;
+					}
+					||
+					{
+						sustain dosUnitValveRetract;
+					}
+				}
 			}
+				
 			pause;
 		}
+	
 	}
 	||
 	{
 		while(true) {
-			present(bottleAtPos2) {
+			present(dosUnitFilled) {
+				System.out.println("Filled");
+				
 				abort(dosUnitEvac) {
-					System.out.println("Bring the canister to the top");
-					sustain dosUnitValveRetract;
+					System.out.println("EXTEND");
+					sustain dosUnitValveExtend;
 				}
-			}
 				
+				
+			}
 			pause;
 		}
-	
 	}
 	||
 	{
 		while(true) {
-			present(request) {
-				System.out.println("Request L");
+			present(dosUnitFilled) {
+				System.out.println("Filled");
+				abort(dosUnitEvac) {
+					System.out.println("INLET ON");
+					sustain valveInletOnOff;
+				}
+				System.out.println("INLET OFF");
+				{
+					abort(request || bottleAtPos2 || request_liquid_filler) {
+						{
+						sustain dosUnitValveExtend;
+						}
+						||
+						{
+						System.out.println("DOEOENOEN");
+						sustain liquid_filler_done;
+						}
+					}
+				}
+				||
+				{
+					abort(request || bottleAtPos2 || request_liquid_filler) {
+						sustain dosUnitValveExtend;
+					}
+				}
 			}
-				
 			pause;
 		}
-	
-	
 	}
 }
